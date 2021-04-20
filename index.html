@@ -3,71 +3,175 @@
 <head>
 <title> Site Web Marketing</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="./css/normalize.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+  </style>
+  <link rel="stylesheet" href="normalize.csss">
   <link rel="stylesheet" href="./css/stylePage.css" >
-   
-   <style>
-   </style>
 </head>
 
 <body>
 
        <!-- start header  -->
-   <div class="header">
+       <div class="header">
 
-    <div class="navbar">
-        <div class="div1">
-          <img src="./img/logo.png" alt="logo">
+        <div class="navbar">
+            <div class="div1">
+              <img src="./img/logo.png" alt="logo">
+            </div>
+            <div class="div2">
+             <ul>
+              <li class="lien1">
+                <a href="#contform1" id="l1">Traget</a>
+              </li>
+              <li>
+                <a href="#contform1" id="l2">Trip</a>
+              </li>
+              <li>
+                <a href="#contform2" id="l3">Activities</a>
+              </li>
+              <li  class="lien4">
+                <a href="#contform2" id="l4">Excursions</a>
+              </li>
+              <li class="lien6">
+                <a href="#form1" >Login</a>
+              </li>
+              <li class="lien5">
+                <a href="#form1">Blog</a>
+              </li>
+    
+            </ul>
+          </div>
+    
         </div>
-        <div class="div2">
-         <ul>
-          <li class="lien1">
-            <a href="#">Traget</a>
-          </li>
-          <li>
-            <a href="#">Trip</a>
-          </li>
-          <li>
-            <a href="#">Activities</a>
-          </li>
-          <li  class="lien4">
-            <a href="#">Excursions</a>
-          </li>
-          <li class="lien6">
-            <a href="#" >Login</a>
-          </li>
-          <li class="lien5">
-            <a href="#" >Blog</a>
-          </li>
-
-        </ul>
+    
+    
       </div>
+    
+         <!-- End header -->
 
-    </div>
+   <!--------------------------- Form ---------------->
+   <form action="/action_page.php" id="form1">
+    <div class="container contentform" >
+ <div class="row">
 
-
+  <div class="flex-container" id="contform1">   
+    <input type="text" id="input1" name="fname" placeholder="D'ou" class="item1">
+    <input type="text" id="input2" name="fname" placeholder="Vers ou" class="item2" >
+    <input type="text" id="input3" name="fname" placeholder="Quand" class="item3">
+    <input type="text" id="input4" name="fname" placeholder="Qui" class="item4">
+  <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-search"></span></button>
   </div>
+  <div class="flex-container" id="contform2" style="display: none;flex: 30%;" >   
+    <input type="text" id="input2" name="fname" placeholder="Vers ou" class="item2" >
+  <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-search"></span></button>
+  </div>
+  </div>
+     <!-- Resulta recheche -->
+     <div class="divtable">
+  <div class="flex-container3">
+    <div class="flex-item-left">
+    <table style="width:100%">
+      <tr>
+        <td><img src="./img/car.png"></td>
+        <td>opel corsa</td>
+        <td>3<img src="./img/person.svg"></td>
+        <td>2<img src="./img/bag.svg"></td>
+        <td>200dh/h</td>
+      </tr>
+      <tr>
+        <td><img src="./img/car.png"></td>
+        <td>Santafe</td>
+        <td>3<img src="./img/person.svg"></td>
+        <td>2<img src="./img/bag.svg"></td>
+        <td>200dh/h</td>
+      </tr>
+      <tr>
+        <td><img src="./img/car.png"></td>
+        <td>E220</td>
+        <td>3<img src="./img/person.svg"></td>
+        <td>2<img src="./img/bag.svg"></td>
+        <td>200dh/h</td>
+      </tr>
+      <tr>
+        <td><img src="./img/car.png"></td>
+        <td>Vito</td>
+        <td>3<img src="./img/person.svg"></td>
+        <td>2<img src="./img/bag.svg"></td>
+        <td>200dh/h</td>
+      </tr>
+      <tr>
+        <td><img src="./img/car.png"></td>
+        <td>Bmw</td>
+        <td>3<img src="./img/person.svg" ></td>
+        <td>2<img src="./img/bag.svg"></td>
+        <td>200dh/h</td>
+      </tr>
+  </table> 
+    </div>
+    <div class="flex-item-right">
+      <table style="width:100%">
+        <tr>
+          <td><img src="./img/car.png"></td>
+          <td>opel corsa</td>
+          <td>3<img src="./img/person.svg"></td>
+          <td>2<img src="./img/bag.svg"></td>
+          <td>200dh/h</td>
+        </tr>
+        <tr>
+          <td><img src="./img/car.png"></td>
+          <td>Santafe</td>
+          <td>3<img src="./img/person.svg"></td>
+          <td>2<img src="./img/bag.svg"></td>
+          <td>200dh/h</td>
+        </tr>
+        <tr>
+          <td><img src="./img/car.png"></td>
+          <td>E220</td>
+          <td>3<img src="./img/person.svg"></td>
+          <td>2<img src="./img/bag.svg"></td>
+          <td>200dh/h</td>
+        </tr>
+        <tr>
+          <td><img src="./img/car.png"></td>
+          <td>Vito</td>
+          <td>3<img src="./img/person.svg" ></td>
+          <td>2<img src="./img/bag.svg"></td>
+          <td>200dh/h</td>
+        </tr>
+        <tr>
+          <td><img src="./img/car.png"></td>
+          <td>Bmw</td>
+          <td>3<img src="./img/person.svg"></td>
+          <td>2<img src="./img/bag.svg"></td>
+          <td>200dh/h</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
 
-     <!-- End header -->
+<!-- <img src="img1.jpeg"> -->
+</form>
 
 
+   <!---------------------------End Form ---------------->
 
 
+   
+  <script src="./js/js.js"></script>
 
-
-  <script language="JavaScript" type="text/JavaScript" src="js.js" ></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  
 	</body>
 </html>
 
