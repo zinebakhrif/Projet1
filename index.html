@@ -3,9 +3,15 @@
 <head>
 <title> Site Web Marketing</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Vendor CSS Files -->
+  <link href="vendor/aos/aos.css" rel="stylesheet">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -31,30 +37,49 @@
               <img src="./img/logo.png" alt="logo">
             </div>
             <div class="div2">
-             <ul>
+             <ul class="menu1">
               <li class="lien1">
-                <a href="#contform1" id="l1">Traget</a>
+                <a href="#" id="l1">Traget</a>
               </li>
               <li>
-                <a href="#contform1" id="l2">Trip</a>
+                <a href="#" id="l2">Trip</a>
               </li>
               <li>
-                <a href="#contform2" id="l3">Activities</a>
+                <a href="#" id="l3">Activities</a>
               </li>
               <li  class="lien4">
-                <a href="#contform2" id="l4">Excursions</a>
+                <a href="#" id="l4">Excursions</a>
               </li>
               <li class="lien6">
-                <a href="#form1" >Login</a>
+                <a href="#" >Login</a>
               </li>
               <li class="lien5">
-                <a href="#form1">Blog</a>
+                <a href="#">Blog</a>
               </li>
-    
+              <li class="lien7">
+                <a href="#" class="bi bi-bag-fill"></a>
+              </li>             
             </ul>
-          </div>
-    
+          </div> 
         </div>
+
+        <div class="navbar">
+          <ul class="menu2">
+            <li class="lien1">
+              <a href="#" id="l1">Traget</a>
+            </li>
+            <li class="lien2">
+              <a href="#" id="l2">Trip</a>
+            </li>
+            <li class="lien3">
+              <a href="#" id="l3">Activities</a>
+            </li>
+            <li  class="lien4">
+              <a href="#" id="l4">Excursions</a>
+            </li>
+            </ul>
+        </div>
+
     
     
       </div>
@@ -62,29 +87,40 @@
          <!-- End header -->
 
    <!--------------------------- Form ---------------->
+   
    <form action="/action_page.php" id="form1">
-    <div class="container contentform" >
- <div class="row">
+    <div class="container contentform">
+ <div class="row" >
 
-  <div class="flex-container" id="contform1">   
+  <div class="flex-container" id="contform1"  style="display: none;">   
     <input type="text" id="input1" name="fname" placeholder="D'ou" class="item1">
     <input type="text" id="input2" name="fname" placeholder="Vers ou" class="item2" >
     <input type="text" id="input3" name="fname" placeholder="Quand" class="item3">
     <input type="text" id="input4" name="fname" placeholder="Qui" class="item4">
-  <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-search"></span></button>
+  <button type="button" class="btn btn-warning"  id="btn1">
+    <span class="glyphicon glyphicon-search"></span>
+    <i class="bi bi-arrow-right arrow" style="font-size: 25px;color: black;"></i>
+  </button>
+  <button type="button" class="btn btn-warning"  id="btn2">
+    <span class="glyphicon glyphicon-search"></span>
+    <i class="bi bi-arrow-right arrow" style="font-size: 25px;color: black;"></i>
+  </button>
   </div>
-  <div class="flex-container" id="contform2" style="display: none;flex: 30%;" >   
-    <input type="text" id="input2" name="fname" placeholder="Vers ou" class="item2" >
-  <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-search"></span></button>
+  <div class="flex-container" id="contform2" style="display: none;" >   
+    <input type="text" id="input2" name="fname" placeholder="Vers ou" class="item2" style="border-right: none;" >
+  <button type="button" class="btn btn-warning" 
+   id="btn3"><span class="glyphicon glyphicon-search"></span>
+  <i class="bi bi-arrow-right arrow" style="font-size: 25px;color: black;"></i>
+</button>
   </div>
   </div>
      <!-- Resulta recheche -->
-     <div class="divtable">
+     <div class="divtable" style="display: none;">
   <div class="flex-container3">
     <div class="flex-item-left">
     <table style="width:100%">
       <tr>
-        <td><img src="./img/car.png"></td>
+        <td ><div><img src="./img/car.png"></div></td>
         <td>opel corsa</td>
         <td>3<img src="./img/person.svg"></td>
         <td>2<img src="./img/bag.svg"></td>
@@ -162,7 +198,6 @@
   </div>
 </div>
 
-<!-- <img src="img1.jpeg"> -->
 </form>
 
 
@@ -170,7 +205,7 @@
 
 
    
-  <script src="./js/js.js"></script>
+  <script src="js.js"></script>
 
 	</body>
 </html>
