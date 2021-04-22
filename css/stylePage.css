@@ -1,5 +1,13 @@
 
 /*     Start Main rulez    */
+@-o-viewport{
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+@-ms-viewport{
+  width: extend-to-zoom;
+  zoom: 1.0;
+}
 body {
 	margin: 0;
 	padding: 0;
@@ -29,59 +37,68 @@ body {
   padding: 30px 0;
 }
 
-.header .navbar img{
+.header .navbar .div1 img{
 float: left;
 }
+.header .navbar:last-child{
+  display: none;
+}
 
-.header .navbar ul{
+.header .navbar ul.menu1{
   list-style: none;
   width: 100%;
   float:left;
 }
 
-.header .navbar ul li a{
+.header .navbar ul.menu1 li a{
   color:#f4f4f4;
   font-size:25px;     
 }
-.header .navbar ul li:not(.lien5,.lien6){
+.header .navbar ul.menu1 li:not(.lien5,.lien6,.lien7){
   text-decoration: none;
   display: inline-block;
   padding:0 30px;
 }
-.header .navbar ul li.lien4{
+.header .navbar ul.menu1 li.lien4{
   padding-left:30px;
   padding-right: 0;
 }
-.header .navbar ul li.lien5,.header .navbar ul li.lien6{
+.header .navbar ul.menu1 li.lien5,.header .navbar ul.menu1 li.lien6
+,.header .navbar ul.menu1 li.lien7{
   text-decoration: none;
   float: right;
   display: inline-block;
   padding:0 10px;
 }
 
-.header .navbar ul li:not(.lien4,.lien5,.lien6){
+.header .navbar ul.menu1 li:not(.lien4,.lien5,.lien6,.lien7){
   border-right: 3px solid lightgrey; 
 }
-.header .navbar ul li a {
+
+.header .navbar ul.menu1 li.lien7{
+  display: none;
+}
+
+.header .navbar ul.menu1 li a {
   text-decoration: none;
 }
 
-.header .navbar ul .active > a,
-.header .navbar ul a.active,
-.header .navbar ul a.show,
-.header .navbar ul .show > a {
+.header .navbar ul.menu1 .active > a,
+.header .navbar ul.menu1 a.active,
+.header .navbar ul.menu1 a.show,
+.header .navbar ul.menu1 .show > a {
   color:#f8d001;
 
 }
- .header .navbar ul li a:active{ 
+ .header .navbar ul.menu1 li a:active{ 
   color:#f8d001; 
  }
 
-.header .navbar ul li.lien5 a{
+.header .navbar ul.menu1 li.lien5 a{
   font-size: 20px;
   color: #f8d001;
 }
-.header .navbar ul li.lien6 a{
+.header .navbar ul.menu1 li.lien6 a{
   font-size: 22px;
   background: white;
   color: black;
@@ -96,21 +113,21 @@ float: left;
     .header .navbar div:last-child{
       width: 83%;
     }
-     .header .navbar ul{
+     .header .navbar ul.menu1{
       padding-left:0px;
       margin-left:0px;
             }  
   }
 
   @media only screen and (max-width: 960px){
-    .header .navbar ul{
+    .header .navbar ul.menu1{
       padding-left:0px;
       margin-left:0px;
     }
-    .header .navbar ul li a{
+    .header .navbar ul.menu1 li a{
       font-size:16px;     
     }
-    .header .navbar ul li.lien6 a{
+    .header .navbar ul.menu1 li.lien6 a{
       font-size: 15px;
       padding: 6px 17px;
       border-radius: 10px;
@@ -118,22 +135,22 @@ float: left;
       .header .navbar .div1 img{
         width: 80px;
         }
-        .header .navbar ul li.lien5,.header .navbar ul li.lien6{
+        .header .navbar ul.menu1 li.lien5,.header .navbar ul.menu1 li.lien6{
           padding:0 4px;
         }
   }
   @media only screen and (max-width: 810px){
-    .header .navbar ul{
+    .header .navbar ul.menu1{
       padding-left:0px;
       margin-left:0px;
     }
-    .header .navbar ul li {
+    .header .navbar ul.menu1 li {
       font-size:20px;     
     }
-    .header .navbar ul li a{
+    .header .navbar ul.menu1 li a{
       font-size:20px;     
     }
-    .header .navbar ul li.lien6 a{
+    .header .navbar ul.menu1 li.lien6 a{
       font-size: 13px;
       padding: 6px 17px;
       border-radius: 10px;
@@ -141,67 +158,109 @@ float: left;
       .header .navbar .div1 img{
         width: 80px;
         }
-        .header .navbar ul li.lien5,.header .navbar ul li.lien6{
+        .header .navbar ul.menu1 li.lien5,.header .navbar ul.menu1 li.lien6{
           padding:0 4px;
         }
   }
   @media only screen and (max-width: 809px){
-     .header .navbar ul{
+     .header .navbar ul.menu1{
       padding-left:0px;
       margin-left:0px;
     }
-    .header .navbar ul li:not(.lien5,.lien6) {
+    .header .navbar ul.menu1 li:not(.lien5,.lien6) {
        padding: 0 10px;
     }
-    .header .navbar ul li a{
+    .header .navbar ul.menu1 li a{
       font-size:18px;     
     }
-    .header .navbar ul li.lien6 a{
+    .header .navbar ul.menu1 li.lien6 a{
       font-size: 13px;
       padding: 6px 17px;
       border-radius: 10px;
       } 
-      .header .navbar ul li.lien5 a{
+      .header .navbar ul.menu1 li.lien5 a{
       font-size: 15px;
       }
       .header .navbar .div1 img{
         width: 70px;
         }
-        .header .navbar ul li.lien5,.header .navbar ul li.lien6{
+        .header .navbar ul.menu1 li.lien5,.header .navbar ul.menu1 li.lien6{
           padding:0 4px;
         }
 
   }
 
-
+  /**
+* Mobile Navigation 
+*/
+ 
   @media only screen and (max-width: 600px){
+    .navbar{
+      margin-bottom: 0;
+    }
+
+    .header .navbar:last-child{
+      display: block;
+    }
     .header .navbar ul{
-      padding-left:6px;
-      margin-left:0px;
+      padding:0px;
     }
     .header .navbar .div1 img{
-      width: 60px;
+      width: 70px;
+      padding-left: 10px;
+    }   
+    .header .navbar div:first-child{
+      width: 35%;
     }
-    .header .navbar ul li:not(.lien5,.lien6) {
-       padding: 0 8px;
+    .header .navbar div:last-child{
+      width: 63%;
     }
-    .header .navbar ul li.lien4{
-      padding-left: 2px;
+    .header .navbar:first-child{
+      border-bottom-right-radius: 30px;
+      border-bottom-left-radius: 30px;
     }
-    .header .navbar ul li a{
-      font-size:14px;     
+    .header .navbar:last-child{
+      width: 100%;
+      background:#131313;
+      padding: 25px 0;
+      border-top-right-radius: 30px;
+      border-top-left-radius: 30px;
+      position: fixed;
+      bottom: 0;
+      text-align: center;
     }
-    .header .navbar ul li.lien6 a{
-      font-size: 13px;
-      padding: 4px 13px;
-      border-radius: 7px;
-      } 
-      .header .navbar ul li.lien5 a{
-        font-size: 14px;
-      }
-        .header .navbar ul li.lien5,.header .navbar ul li.lien6{
-          padding:0 3px;
-        }
+    .header .navbar ul.menu1 li:not(.lien5,.lien6) {
+      display: none;
+   }
+    .header .navbar ul.menu2{
+      list-style: none;
+      width: 100%;
+    }
+    .header .navbar ul.menu2 li{
+      display: inline-block;
+      padding: 0 12px;
+    }
+
+    .header .navbar ul.menu2 li a {
+      text-decoration: none;
+    }
+    .header .navbar ul.menu1 li.lien6 a{
+    margin-right: 8px;
+    }
+    .header .navbar ul.menu1 li.lien7{
+      display: block;
+    }
+    .header .navbar ul.menu2 li:not(.lien4){
+      border-right: 3px solid lightgrey; 
+    }
+    .header .navbar ul.menu2 li a{
+      color:#f4f4f4;
+      font-size:13px;      
+    }
+    .header .navbar ul.menu2 li a:active{ 
+      color:#f8d001; 
+     }
+
   }
 
 /*     End Header    */
@@ -221,7 +280,7 @@ float: left;
 		 .flex-container {
 		 position: relative;
 		 top: -45px;;
-		 /* width: 100%; */
+		 width: 100%;
 		 height: auto;
 		 display: flex;
 		 flex-wrap: wrap;
@@ -260,6 +319,9 @@ float: left;
 		  padding-inline-start: 14px;
       font-size: 20px;
 		  }
+      #btn2{
+        display: none;
+      }
 		  input.item1{
 		  padding-inline-start: 20px;
 		  }
@@ -278,7 +340,7 @@ float: left;
 		   padding-left: 20px;
 		   font-size: 20px;
 	   }
-	   input:not(#input4,#input2){
+	   input:not(#input4){
 		border-right: 2px solid #a8a383;  
 		 }
 		 .btn:focus{
@@ -315,16 +377,62 @@ float: left;
         }
       }
       @media (max-width: 600px) {
+        form{
+         width: 100%;
+         position: fixed;
+         bottom:40px;
+         z-index: 1;
+         }
+         .btn{
+          position: fixed;
+          right: 16px;
+          bottom: 69px;
+          z-index: 9;
+          display: block;
+         }
+        .flex-container {
+          bottom:20px;
+          width: 100%;
+          background-color: #f8f2ce;
+          border-radius: 30px 30px 0 0;
+          justify-content: center;
+          padding:18px;
+          }
+
+          .item1,.item2,.item3,.item4{
+            flex: 100%;
+          }
+          input:not(#input4){
+          border-right:none;  
+          }
+          input{
+          border-bottom: 2px solid #a8a383;  
+          }
+          input.item1{
+            padding-inline-start:0;
+            }
+      
+           input.item4{
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          width: 20%;
+          }
+          input.item1{
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          }
         input::placeholder{
-          padding-left: 5px;
+          padding-left:0;
           font-size: 15px;
         }
         input{
+          padding-inline-start: 0;
           font-size: 14px;
+          margin:13px;
         }
       }
 
-       /* style resulta recherch  */
+       /* style resuta recherch  */
 
        table{
          margin:5px 0;
@@ -372,14 +480,16 @@ float: left;
       }
       td{
         color:#b1b1b1;
+        padding-bottom: 17px;
       }
       td:last-child{
         color:#91d65f;
         font-weight: bold;
       }
-      td{
-        padding-bottom: 17px;
+      .arrow{
+        display:none;
       }
+   
       @media (max-width: 770px) {
         .flex-item-right, .flex-item-left {
           flex: 100%;
@@ -395,8 +505,40 @@ float: left;
           width: 72%;
          }
       }
-      @media (max-width: 576px) {
+      @media (max-width: 600px) {
+        .glyphicon{
+          display: none;
+        }
+        #btn1{
+          display: none;
+        }
+        #btn2{
+          display: block;
+        }
+        /* .contentform{
+          display: none;
+        } */
         .container{
           width: 80%;
          }
+         .divtable{
+           top:0;
+          background-color: #fff;
+          padding-top:40px;
+          padding-bottom:50px;
+          padding-top:30px;
+          border-top-right-radius: 35px;
+          border-top-left-radius: 35px; 
+          margin: 0;
+         }
+         .flex-item-left {
+          border-right:none;
+         }
+         .header .navbar:last-child{
+          z-index: -1;
+         }
+         .arrow{
+          display: block;
+        }
+
       }
