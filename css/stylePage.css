@@ -35,6 +35,7 @@ body {
   width: 100%;
   background:#131313;
   padding: 30px 0;
+  overflow: hidden;
   position: fixed;
   z-index: 1;
 }
@@ -217,9 +218,11 @@ float: left;
       padding: 25px 0;
       border-top-right-radius: 30px;
       border-top-left-radius: 30px;
+      overflow: hidden;
       position: fixed;
       bottom: 0;
       text-align: center;
+
     }
     .header .navbar ul.menu2{
       list-style: none;
