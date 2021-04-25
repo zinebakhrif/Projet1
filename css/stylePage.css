@@ -35,6 +35,8 @@ body {
   width: 100%;
   background:#131313;
   padding: 30px 0;
+  position: fixed;
+  z-index: -1;
 }
 
 .header .navbar .div1 img{
@@ -47,7 +49,7 @@ float: left;
 .header .navbar ul.menu1{
   list-style: none;
   width: 100%;
-  float:left;
+  display: inline-flex;
 }
 
 .header .navbar ul.menu1 li a{
@@ -66,7 +68,6 @@ float: left;
 .header .navbar ul.menu1 li.lien5,.header .navbar ul.menu1 li.lien6
 ,.header .navbar ul.menu1 li.lien7{
   text-decoration: none;
-  float: right;
   display: inline-block;
   padding:0 10px;
 }
@@ -82,7 +83,10 @@ float: left;
 .header .navbar ul.menu1 li a {
   text-decoration: none;
 }
-
+.header .navbar ul.menu1 li a:hover,
+.header .navbar ul.menu2 li a:hover{
+  color:#f8d001;
+}
  .header .navbar ul.menu1 li a:active{ 
   color:#f8d001; 
  }
@@ -90,6 +94,9 @@ float: left;
 .header .navbar ul.menu1 li.lien5 a{
   font-size: 20px;
   color: #f8d001;
+  position: absolute;
+  right: 126px;
+  top: 40px;
 }
 .header .navbar ul.menu1 li.lien6 a{
   font-size: 22px;
@@ -97,6 +104,9 @@ float: left;
   color: black;
   padding: 8px 20px;
   border-radius: 17px;
+  position: absolute;
+  right: 12px;
+  top: 27px;
   } 
 
   @media (max-width:1070px){
@@ -120,10 +130,16 @@ float: left;
     .header .navbar ul.menu1 li a{
       font-size:16px;     
     }
+    .header .navbar ul.menu1 li.lien5 a{
+      font-size: 17px;
+      right: 100px;
+      top: 36px;
+    }
     .header .navbar ul.menu1 li.lien6 a{
       font-size: 15px;
       padding: 6px 17px;
       border-radius: 10px;
+      top: 32px;
       } 
       .header .navbar .div1 img{
         width: 80px;
@@ -133,35 +149,21 @@ float: left;
         }
   }
   @media only screen and (max-width: 810px){
-    .header .navbar ul.menu1{
-      padding-left:0px;
-      margin-left:0px;
+
+    .header .navbar ul.menu1 li a {
+      font-size:15px;     
     }
-    .header .navbar ul.menu1 li {
-      font-size:20px;     
+    .header .navbar ul.menu1 li.lien4 {
+      padding-left: 25px;
     }
-    .header .navbar ul.menu1 li a{
-      font-size:20px;     
-    }
-    .header .navbar ul.menu1 li.lien6 a{
-      font-size: 13px;
-      padding: 6px 17px;
-      border-radius: 10px;
-      } 
       .header .navbar .div1 img{
         width: 80px;
         }
-        .header .navbar ul.menu1 li.lien5,.header .navbar ul.menu1 li.lien6{
-          padding:0 4px;
-        }
+
   }
-  @media only screen and (max-width: 809px){
-     .header .navbar ul.menu1{
-      padding-left:0px;
-      margin-left:0px;
-    }
+  @media only screen and (max-width: 700px){
     .header .navbar ul.menu1 li:not(.lien5,.lien6) {
-       padding: 0 10px;
+      padding: 0 13px;
     }
     .header .navbar ul.menu1 li a{
       font-size:18px;     
@@ -172,15 +174,12 @@ float: left;
       border-radius: 10px;
       } 
       .header .navbar ul.menu1 li.lien5 a{
-      font-size: 15px;
+      font-size: 16px;
+      right: 90px;
       }
       .header .navbar .div1 img{
         width: 70px;
         }
-        .header .navbar ul.menu1 li.lien5,.header .navbar ul.menu1 li.lien6{
-          padding:0 4px;
-        }
-
   }
 
   /**
@@ -222,9 +221,6 @@ float: left;
       bottom: 0;
       text-align: center;
     }
-    .header .navbar ul.menu1 li:not(.lien5,.lien6) {
-      display: none;
-   }
     .header .navbar ul.menu2{
       list-style: none;
       width: 100%;
@@ -233,15 +229,16 @@ float: left;
       display: inline-block;
       padding: 0 12px;
     }
-
+      
     .header .navbar ul.menu2 li a {
       text-decoration: none;
     }
-    .header .navbar ul.menu1 li.lien6 a{
-    margin-right: 8px;
-    }
     .header .navbar ul.menu1 li.lien7{
       display: block;
+      display: block;
+      position: absolute;
+      top: 35px;
+      right: 128px;
     }
     .header .navbar ul.menu2 li:not(.lien4){
       border-right: 3px solid lightgrey; 
@@ -253,6 +250,7 @@ float: left;
     .header .navbar ul.menu2 li a:active{ 
       color:#f8d001; 
      }
+
 
   }
 
@@ -276,18 +274,17 @@ float: left;
 			 background-color:#f8d001 ;
 		 }
 		 .flex-container {
-		 position: relative;
-		 top: -45px;;
-		 width: 100%;
-		 height: auto;
-		 display: flex;
-		 flex-wrap: wrap;
-		 background-color: #f8f2ce;
-		 border-radius: 50px;
-		 justify-content: center;
-		 padding:18px;
-     z-index: 1;
-
+      position: fixed;
+      top: 85px;
+      width: 77%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #f8f2ce;
+      border-radius: 50px;
+      justify-content: center;
+      padding: 18px;
+      z-index: 1;
 		 }
 		    .item1,.item2,.item3,.item4 {
 			background-color: #f8f2ce;
@@ -377,11 +374,11 @@ float: left;
         }
       }
       @media (max-width: 600px) {
-        form{
+        /* form{
          width: 100%;
          position: fixed;
          bottom:80px;
-         }
+         } */
          .btn{
           position: fixed;
           right: 9%;
