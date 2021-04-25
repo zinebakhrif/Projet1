@@ -381,11 +381,12 @@ float: left;
         }
       }
       @media (max-width: 600px) {
-        /* form{
-         width: 100%;
-         position: fixed;
-         bottom:80px;
-         } */
+        form{
+            position: absolute;
+            top: 20%;
+            bottom: 18%;
+            z-index: -1;
+         }
          .btn{
           position: fixed;
           right: 9%;
