@@ -23,7 +23,6 @@ body {
 
 .header .navbar .div1 img{
   width: 100px;
-  cursor: pointer;
 }
 
 .header .navbar div:first-child{
@@ -49,7 +48,6 @@ float: left;
   list-style: none;
   width: 100%;
   float:left;
-  text-align: center;
 }
 
 .header .navbar ul.menu1 li a{
@@ -85,10 +83,9 @@ float: left;
   text-decoration: none;
 }
 
-.header .navbar ul.menu1 li a:hover,
-.header .navbar ul.menu2 li a:hover{
-  color:#f8d001;
-}
+ .header .navbar ul.menu1 li a:active{ 
+  color:#f8d001; 
+ }
 
 .header .navbar ul.menu1 li.lien5 a{
   font-size: 20px;
@@ -102,7 +99,7 @@ float: left;
   border-radius: 17px;
   } 
 
-  @media only screen and (max-width:1440px){
+  @media (max-width:1070px){
     .header .navbar div:first-child{
       width: 15%;
     }
@@ -194,6 +191,7 @@ float: left;
     .navbar{
       margin-bottom: 0;
     }
+
     .header .navbar:last-child{
       display: block;
     }
@@ -201,8 +199,8 @@ float: left;
       padding:0px;
     }
     .header .navbar .div1 img{
-      width: 75px;
-      padding-left: 13px;
+      width: 70px;
+      padding-left: 10px;
     }   
     .header .navbar div:first-child{
       width: 35%;
@@ -224,7 +222,7 @@ float: left;
       bottom: 0;
       text-align: center;
     }
-    .header .navbar ul.menu1 li:not(.lien5,.lien6,.lien7) {
+    .header .navbar ul.menu1 li:not(.lien5,.lien6) {
       display: none;
    }
     .header .navbar ul.menu2{
@@ -252,6 +250,9 @@ float: left;
       color:#f4f4f4;
       font-size:13px;      
     }
+    .header .navbar ul.menu2 li a:active{ 
+      color:#f8d001; 
+     }
 
   }
 
@@ -263,17 +264,14 @@ float: left;
     padding-top: 5px;
     display: none;
     }
-  
-   .btn{
+  .btn-warning {
 		background-color: #f8d001;
 		border-color: #ffc107;
 		border-radius: 50%;  
-		width: 50px;
-		height: 40px;
+		width: 48px;
 		outline: none;
-    border: 1px solid #f8d001;
 		 }
-		 .btn:hover{
+		 .btn-warning:hover{
 			 border-color:#f8d001;
 			 background-color:#f8d001 ;
 		 }
@@ -288,6 +286,8 @@ float: left;
 		 border-radius: 50px;
 		 justify-content: center;
 		 padding:18px;
+     z-index: 1;
+
 		 }
 		    .item1,.item2,.item3,.item4 {
 			background-color: #f8f2ce;
@@ -308,7 +308,7 @@ float: left;
 		  }		  
 	
 		 .container{
-		  width: 70%;
+		  width: 80%;
 		 }
 		 input{
 		  padding-right:0;
@@ -336,11 +336,11 @@ float: left;
 		border-bottom-left-radius: 25px;
 	  }
 
-	   input:not(#btn1)::placeholder{
+	   input::placeholder{
 		   padding-left: 20px;
 		   font-size: 20px;
 	   }
-	   input:not(#input4,#btn1){
+	   input:not(#input4){
 		border-right: 2px solid #a8a383;  
 		 }
 		 .btn:focus{
@@ -363,16 +363,16 @@ float: left;
           justify-content: center;
           padding-bottom: 10px;
           }
-          input:not(#btn1){
+          input{
             font-size: 16px;
           }
         }
         @media (max-width: 760px) {
-        input:not(#btn1)::placeholder{
+        input::placeholder{
           padding-left: 7px;
           font-size: 17px;
         }
-        input:not(#btn1){
+        input{
           font-size:14px;
         }
       }
@@ -404,10 +404,10 @@ float: left;
           .item1,.item2,.item3,.item4{
             flex: 100%;
           }
-          input:not(#input4,#btn1){
+          input:not(#input4){
           border-right:none;  
           }
-          input:not(#btn1){
+          input{
           border-bottom: 2px solid #a8a383;  
           }
           input.item1{
@@ -438,13 +438,15 @@ float: left;
 
        table{
          margin:5px 0;
-         z-index: 99;
        }
-
-       td{
-         cursor: pointer;
+         
+       tr{
+        cursor: pointer;
+       }
+       tr:hover{
+         background-color: lightgray;
         }
-          
+
       .flex-container3 {
         display: flex;
         flex-wrap: wrap;
@@ -452,7 +454,6 @@ float: left;
         text-align: center;
         border-bottom-right-radius: 35px;
         border-bottom-left-radius: 35px;
-	  margin-right: 2px;
 
       }
       
@@ -479,12 +480,12 @@ float: left;
        margin:0 20px;
        position: relative;
        top: -68px;
+       Z-INDEX: -1;
        background-color: #fff;
        padding-top:40px;
        padding-bottom:20px;
        border-bottom-right-radius: 35px;
        border-bottom-left-radius: 35px; 
-       z-index: -1;
       }
       td{
         color:#b1b1b1;
@@ -524,13 +525,14 @@ float: left;
           display: block;
         }
         .container{
-          width: 100%;
+          width: 80%;
          }
          .divtable{
            top:0;
           background-color: #fff;
           padding-top:40px;
           padding-bottom:50px;
+          padding-top:30px;
           border-top-right-radius: 35px;
           border-top-left-radius: 35px; 
           margin: 0;
