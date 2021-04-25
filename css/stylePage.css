@@ -381,13 +381,11 @@ float: left;
          width: 100%;
          position: fixed;
          bottom:80px;
-         z-index: 1;
          }
          .btn{
           position: fixed;
-          right: 35px;
-          bottom: 69px;
-          z-index: 9;
+          right: 9%;
+          bottom: 10%;
           display: block;
          }
         .flex-container {
@@ -432,6 +430,9 @@ float: left;
           font-size: 14px;
           margin:13px;
         }
+        label#lblerreur {
+         font-size: 12px;
+         }
       }
 
        /* style resuta recherch  */
@@ -444,14 +445,13 @@ float: left;
         cursor: pointer;
        }
        tr:hover{
-         background-color: lightgray;
+         background-color: #f8f2ce;
         }
 
       .flex-container3 {
         display: flex;
         flex-wrap: wrap;
         font-size: 13px;
-        text-align: center;
         border-bottom-right-radius: 35px;
         border-bottom-left-radius: 35px;
 
@@ -479,13 +479,12 @@ float: left;
       .divtable{
        margin:0 20px;
        position: relative;
-       top: -68px;
-       Z-INDEX: -1;
+       top: -55px;
+       padding-right: 2px;
        background-color: #fff;
-       padding-top:40px;
+       padding-top:30px;
        padding-bottom:20px;
-       border-bottom-right-radius: 35px;
-       border-bottom-left-radius: 35px; 
+       border-radius: 10px 10px 35px 35px ;
       }
       td{
         color:#b1b1b1;
@@ -528,20 +527,16 @@ float: left;
           width: 80%;
          }
          .divtable{
-           top:0;
+          top: 0;
           background-color: #fff;
-          padding-top:40px;
-          padding-bottom:50px;
-          padding-top:30px;
           border-top-right-radius: 35px;
-          border-top-left-radius: 35px; 
+          border-top-left-radius: 35px;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;  
           margin: 0;
          }
          .flex-item-left {
           border-right:none;
-         }
-         .header .navbar:last-child{
-          z-index: -1;
          }
          .arrow{
           display: block;
