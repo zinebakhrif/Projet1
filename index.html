@@ -24,7 +24,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap');
   </style>
   <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/stylePage.css" >
+  <link rel="stylesheet" href="./css/stylePage.css">
 </head>
 
 <body>
@@ -36,20 +36,20 @@
             <div class="div1">
               <img src="./img/logo.png" alt="logo">
             </div>
-            <div class="div2">
-             <ul class="menu1">
-              <li class="lien1 w3-hide-small">
-                <a href="#" id="l1">Traget</a>
-              </li>
-              <li class=" w3-hide-small">
-                <a href="#" id="l2">Trip</a>
-              </li>
-              <li class=" w3-hide-small">
-                <a href="#" id="l3">Activities</a>
-              </li>
-              <li  class="lien4 w3-hide-small">
-                <a href="#" id="l4">Excursions</a>
-              </li>
+            <div class="div2" >
+              <ul class="menu1">
+               <li class="lien1">
+                 <a href="#" id="l1" class="lien" onclick="reset()">Traget</a>
+               </li>
+               <li class="lien2">
+                 <a href="#" id="l2" class="lien" onclick="reset()">Trip</a>
+               </li>
+               <li class="lien3">
+                 <a href="#" id="l3" class="lien" onclick="reset()">Activities</a>
+               </li>
+               <li  class="lien4">
+                 <a href="#" id="l4" class="lien" onclick="reset()">Excursions</a>
+               </li>
               <li class="lien6">
                 <a href="#" >Login</a>
               </li>
@@ -64,18 +64,18 @@
         </div>
 
         <div class="navbar">
-          <ul class="menu2">
-            <li class="lien1">
-              <a href="#" id="l1">Traget</a>
+          <ul class="menu2" id="navmob">
+            <li class="lien1 ">
+              <a href="#" id="l1" class="lien" onclick="reset()">Traget</a>
             </li>
-            <li class="lien2">
-              <a href="#" id="l2">Trip</a>
+            <li class="lien2 ">
+              <a href="#" id="l2" class="lien" onclick="reset()">Trip</a>
             </li>
-            <li class="lien3">
-              <a href="#" id="l3">Activities</a>
+            <li class="lien3 ">
+              <a href="#" id="l3" class="lien" onclick="reset()">Activities</a>
             </li>
-            <li  class="lien4">
-              <a href="#" id="l4">Excursions</a>
+            <li  class="lien4 ">
+              <a href="#" id="l4" class="lien" onclick="reset()">Excursions</a>
             </li>
             </ul>
         </div>
@@ -93,40 +93,43 @@
  <div class="row" >
 
   <div class="flex-container" id="contform1"  style="display: none;">   
-    <input type="text" id="input1" name="fname" placeholder="D'ou" class="item1">
-    <input type="text" id="input2" name="fname" placeholder="Vers ou" class="item2" >
-    <input type="text" id="input3" name="fname" placeholder="Quand" class="item3">
-    <input type="text" id="input4" name="fname" placeholder="Qui" class="item4">
-    <button type="button" class="btn btn-warning" onclick="myshow()" id="btn1">
+    <input type="text" id="input1" name="text1" placeholder="D'ou" class="item1" >
+    <input type="text" id="input2" name="text2" placeholder="Vers ou" class="item2" >
+    <input type="text" id="input3" name="text3" placeholder="Quand" class="item3" >
+    <input type="text" id="input4" name="text4" placeholder="Qui" class="item4" >
+
+    <button type="button" class="btn btn-warning" onclick="myshow1()" id="btn1">
     <span class="glyphicon glyphicon-search"></span>
-    <i class="bi bi-arrow-right arrow" style="font-size: 25px;color:black;"></i>
+    <i class="bi bi-arrow-right arrow" style="font-size: 25px;color:black"></i>
   </button>
   <label id="lblerreur">veuillez renseigner tous les champ!</label>
 
   <button type="button" class="btn btn-warning"  id="btn2">
     <span class="glyphicon glyphicon-search"></span>
-    <i class="bi bi-arrow-right arrow" onclick="myshow()" style="font-size: 25px;color:black;"></i>
+    <i class="bi bi-arrow-right arrow" onclick="myshow2()" style="font-size: 25px;color:black"></i>
   </button>
 
   </div> 
   <div class="flex-container" id="contform2" style="display: none;" >   
     <input type="text" id="input2" name="fname" placeholder="Vers ou" class="item2" style="border-right: none;" >
-  <button type="submit" class="btn btn-warning"id="btn3"><span class="glyphicon glyphicon-search"></span>
-  <i class="bi bi-arrow-right arrow" style="font-size: 25px;color:black;"></i>
+  <button type="button" class="btn btn-warning"id="btn3"><span class="glyphicon glyphicon-search"></span>
+  <i class="bi bi-arrow-right arrow" style="font-size: 25px;color:black"></i>
 </button>
+
   </div>
+
   </div>
      <!-- Resulta recheche -->
      <div class="divtable w3-animate-bottom" id="frm" style="display: none;">
   <div class="flex-container3">
-    <div class="flex-item-left">
+    <div class="flex-item-left" id="table1">
     <table style="width:100%">
       <tr>
-        <td ><div><img src="./img/car.png"></div></td>
-        <td>opel corsa</td>
-        <td>3<img src="./img/person.svg"></td>
-        <td>2<img src="./img/bag.svg"></td>
-        <td>200dh/h</td>
+          <td><img src="./img/car.png"></td>
+          <td>opel corsa</td>
+          <td>3<img src="./img/person.svg"></td>
+          <td>2<img src="./img/bag.svg"></td>
+          <td>200dh/h</td>
       </tr>
       <tr>
         <td><img src="./img/car.png"></td>
@@ -158,7 +161,7 @@
       </tr>
   </table> 
     </div>
-    <div class="flex-item-right">
+    <div class="flex-item-right" id="table2">
       <table style="width:100%">
         <tr>
           <td><img src="./img/car.png"></td>
@@ -197,6 +200,10 @@
         </tr>
       </table>
     </div>
+    <button type="button" class="btn btn-warning"  id="btn2">
+      <span class="glyphicon glyphicon-search"></span>
+      <i class="bi bi-arrow-right arrow" onclick="myshow2()" style="font-size: 25px;color:black"></i>
+    </button>
   </div>
 </div>
 
