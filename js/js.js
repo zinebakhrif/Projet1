@@ -21,11 +21,8 @@ $(document).ready(function(){
       $("#contform2").css("display", "none");
         $("#contform1").css("display", "flex");
         $(".flex-container").css("flex", "100%");
-
-
     });
   });
-
 //    Lien 2 
   $(document).ready(function(){
     $("#l3,#l4").click(function(){
@@ -34,13 +31,18 @@ $(document).ready(function(){
       $("#contform1").css("display", "none");
         $("#contform2").css("display", "flex");
         $(".container").css("width", "77%");
-
     });
   });
 
- 
+  function reset() {
+    var myCollection = document.getElementsByTagName("input");
+    var i;
+    for (i = 0; i < myCollection.length; i++) {
+      myCollection[i].value = "";
+    }
+  }
 
-  function myshow(){
+  function myshow1(){
     var txt1=document.getElementById("input1").value;
     var txt2=document.getElementById("input2").value;
     var txt3=document.getElementById("input3").value;
@@ -50,17 +52,30 @@ $(document).ready(function(){
       document.getElementById("frm").style.display="block";
       document.getElementById("lblerreur").style.display="none";
 
-    }else{
+    }else
+      {
+      document.getElementById("lblerreur").style.display="block";
+    }
+  }
+  function myshow2(){
+    var txt1=document.getElementById("input1").value;
+    var txt2=document.getElementById("input2").value;
+    var txt3=document.getElementById("input3").value;
+    var txt4=document.getElementById("input4").value;
+    if(txt1!='' && txt2!='' && txt3!='' && txt4!=''){
+      document.getElementById("lblerreur").style.display="none";
+      document.getElementById("contform1").style.display="none";
+      document.getElementById("contform2").style.display="none";
+      document.getElementById("frm").style.display="block";
+      document.getElementById("table2").style.display="block";
+      document.getElementById("table2").style.display="none";
+    }else
+      {
       document.getElementById("lblerreur").style.display="block";
     }
   }
   
-
-
  
-
-
-
 
 
 
