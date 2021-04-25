@@ -257,6 +257,13 @@ float: left;
 /*     End Header    */
 
 	/*------------------- Style Form -------------->*/
+   form{
+    position: absolute;
+    top: 32%;
+    width: 100%;
+    height: auto;
+   }
+
   label#lblerreur{
     color: red;
     padding-top: 5px;
