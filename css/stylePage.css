@@ -81,6 +81,15 @@ h1 {
   color: white;
 }
 
+@media only screen and (max-width: 600px){
+  h1{
+    font-size: 45px;
+    line-height: 1.5;
+  }
+  .demo-table-cell a span {
+    font-size: 17px;
+  }
+}
 
 
 /************End jarallax *********/
@@ -283,6 +292,7 @@ float: left;
       border-bottom-right-radius: 30px;
       border-bottom-left-radius: 30px;
       position: fixed;
+      z-index: 3;
     }
     .header .navbar:last-child{
       width: 100%;
@@ -294,7 +304,6 @@ float: left;
       bottom: 0;
       text-align: center;
       display: block;
-      z-index: -1;
     }
     .header .navbar ul.menu2{
       list-style: none;
@@ -458,7 +467,8 @@ float: left;
       @media (max-width: 600px) {
         form{
             position: absolute;
-            bottom: 11%;
+            bottom: 156px;
+            z-index: 2;
          }
          .btn{
           position: fixed;
