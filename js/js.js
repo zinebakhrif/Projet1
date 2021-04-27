@@ -1,7 +1,7 @@
 
     $(document).ready(function(){
       $(".menu1 > li:not(.lien6,.lien5) a").click(function(){
-      $(".menu1 > li:not(.lien6,.lien5) a").css("color", "#f4f4f4");
+      $(".menu1 > li:not(.lien6,.lien5) a").css("color", "black");
         $(this).css("color", "#f8d001"); 
       });
       });
