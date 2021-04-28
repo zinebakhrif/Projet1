@@ -31,7 +31,7 @@ body {
 
 
 .jarallax {
-  min-height: 625px;
+  min-height: 600px;
 }
 
 
@@ -39,7 +39,7 @@ body {
 .demo-table {
   display: table;
   width: 100%;
-  height: 625px;
+  height: 600px;
 }
 .demo-table-cell:not(#demoTable1) {
   text-align: center;
@@ -354,14 +354,14 @@ float: left;
     }
   .btn-warning {
 		background-color: #f8d001;
-		border-color: #ffc107;
+		border-color: #f8d001;
 		border-radius: 50%;  
 		width: 48px;
 		outline: none;
 		 }
 		 .btn-warning:hover{
-			 border-color:#f8d001;
-			 background-color:#f8d001 ;
+			 border-color:#ffc107;
+			 background-color:#ffc107 ;
 		 }
 
      .flex-container {
@@ -374,14 +374,14 @@ float: left;
       background-color: #f8f2ce;
       border-radius: 50px;
       justify-content: center;
-      padding:18px;
+      padding:14px;
       z-index: 1;
       }
 		    .item1,.item2,.item3,.item4 {
 			background-color: #f8f2ce;
 		  }
 		  .item1,.item2{
-			  flex: 28%;
+			  flex: 24%;
 		  }
 		  .item3{
 			flex: 19%;
@@ -396,7 +396,7 @@ float: left;
 		  }		  
 	
 		 .container{
-		  width: 80%;
+		  width: 65%;
 		 }
 		 input{
 		  padding-right:0;
@@ -429,7 +429,7 @@ float: left;
 		   font-size: 20px;
 	   }
 	   input:not(#input4){
-		border-right: 2px solid #a8a383;  
+		border-right: 1px solid #a8a383;  
 		 }
 		 .btn:focus{
 			background-color: #f8cf03;
@@ -466,9 +466,9 @@ float: left;
       }
       @media (max-width: 600px) {
         form{
-            position: absolute;
-            bottom: 156px;
-            z-index: 2;
+          position: fixed;
+          bottom: 68px;
+          z-index: 2;
          }
          .btn{
           position: fixed;
@@ -481,8 +481,6 @@ float: left;
           width: 100%;
           background-color: #f8f2ce;
           border-radius: 30px 30px 0 0;
-          justify-content: center;
-          padding:18px;
           position: static;
           z-index: 1;
           }
@@ -494,7 +492,7 @@ float: left;
           border-right:none;  
           }
           input{
-          border-bottom: 2px solid #a8a383;  
+          border-bottom: 1px solid #a8a383;  
           }
           input.item1{
             padding-inline-start:0;
@@ -519,7 +517,8 @@ float: left;
           margin:8px;
         }
         label#lblerreur {
-         font-size: 12px;
+         font-size: 9px;
+         padding-top: 0;
          }
       }
 
@@ -612,7 +611,7 @@ float: left;
           display: block;
         }
         .container{
-          width: 80%;
+          width: 85%;
          }
          .divtable{
           top: 0;
