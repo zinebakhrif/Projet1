@@ -203,9 +203,7 @@ float: left;
   padding:0 10px;
 }
 
-.header .navbar ul.menu1 li:not(.lien4,.lien5,.lien6,.lien7){
-  border-right: 3px solid lightgrey; 
-}
+
 
 .header .navbar ul.menu1 li.lien7{
   display: none;
