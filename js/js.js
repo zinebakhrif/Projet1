@@ -75,7 +75,40 @@ $(document).ready(function(){
     }
   }
   
+   //function hide form and input
+
  
+  document.getElementById("link1").addEventListener('click', myFunction1);
+  document.getElementById("link2").addEventListener('click', myFunction1);
+
+function myFunction1(){
+  var x = document.getElementById("contform1");
+  var y = document.getElementById("frm");
+  var z = document.getElementById("contform2");
+  z.style.display = "none";
+  if (x.style.display == "none") {
+  y.style.display = "none";
+   x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+document.getElementById("link3").addEventListener('click', myFunction2);
+document.getElementById("link4").addEventListener('click', myFunction2);
+
+function myFunction2(){               
+  var z= document.getElementById("contform1");
+  var x = document.getElementById("contform2");
+  var y = document.getElementById("frm");
+  z.style.display = "none";
+  if (x.style.display == "none") {
+  y.style.display = "none";
+   x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+}
 
 
 
