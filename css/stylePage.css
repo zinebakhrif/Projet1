@@ -322,7 +322,8 @@ float: left;
       z-index: -1;
     }
     .header .navbar{
-      background: linear-gradient(to top left, #878588, #8a99a5);
+            background: linear-gradient(to top left, rgb(135 133 136 / 50%), rgb(138 153 165 / 70%));
+
       margin-bottom: 0;
       z-index: 2;
     }
