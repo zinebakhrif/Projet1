@@ -152,14 +152,14 @@ h1 {
    /* &.scrollUp
     transform: translateY(-80px); */
 }
-.header.header-scrolled {
+/* .header.header-scrolled {
   background: #2c3e50;
   padding: 0;
 }
 .header-scrolled .menu1 a:hover, .header-scrolled .menu1 .active > a, .header-scrolled .nav-menu li:hover > a {
   background: rgb(103 176 209 / 21%);
   border-bottom: 3px solid;
-}
+} */
 
 
 .header .navbar .div1 img{
