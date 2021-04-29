@@ -522,8 +522,8 @@ float: left;
          }
          .btn{
           position: fixed;
-          right: 9%;
-          bottom: 10%;
+         right: 20px;
+          bottom: 54px;
           display: block;
          }
          .container{
