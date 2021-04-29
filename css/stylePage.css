@@ -144,7 +144,8 @@ h1 {
 } */
 .header .navbar{
   width: 100%;
-  background-image: linear-gradient(to bottom, rgb(255 255 255 / 80%),white);
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,0.8981967787114846) 0%, rgba(255,255,255,0) 100%);
   padding: 30px 0;
   transition: top 0.3s;
   width: 100%;
