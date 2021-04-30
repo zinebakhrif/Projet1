@@ -520,7 +520,7 @@ float: left;
       @media (max-width: 600px) {
         form{
           position: fixed;
-          bottom: 68px;
+          bottom: 66px;
           z-index: 2;
          }
          .btn{
