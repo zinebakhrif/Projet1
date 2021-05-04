@@ -1,5 +1,25 @@
+        // object-fit polyfill run
+        objectFitImages();
 
-    $(document).ready(function(){
+        /* init Jarallax */
+        jarallax(document.querySelectorAll('.jarallax'));
+
+
+//-----------Login-----------
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+    
+
+
+
+
+$(document).ready(function(){
       $(".menu1 > li:not(.lien6,.lien5) a").click(function(){
       $(".menu1 > li:not(.lien6,.lien5) a").css("color", "black");
         $(this).css("color", "#f8d001"); 
