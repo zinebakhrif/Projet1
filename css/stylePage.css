@@ -436,7 +436,7 @@ float: left;
         top:2px;
 		  }		  
 	
-      .flex-container#contform1 input{
+      .flex-container input{
 		  padding-right:0;
 		  padding-left:0;
 		  border:none;
@@ -462,17 +462,13 @@ float: left;
 		border-bottom-left-radius: 25px;
 	  }
 
-	  .flex-container#contform1 input::placeholder{
+	  .flex-container input::placeholder{
 		   padding-left: 20px;
 		   font-size: 20px;
 	   }
-     .flex-container#contform1 input:not(#input4){
+     .flex-container input:not(#input4){
 		border-right: 1px solid #a8a383;  
 		 }
-     button:focus{
-      outline-style:double;
-
-     }
 		 .btn:focus{
 			background-color: #f8cf03;
 			border-color: #f8cf03;
@@ -493,16 +489,16 @@ float: left;
           justify-content: center;
           padding-bottom: 10px;
           }
-          .flex-container#contform1 input{
+          .flex-container input{
             font-size: 16px;
           }
         }
         @media (max-width: 760px) {
-          .flex-container#contform1 input::placeholder{
+          .flex-container input::placeholder{
           padding-left: 7px;
           font-size: 17px;
         }
-        .flex-container#contform1 input{
+        .flex-container input{
           font-size:14px;
         }
       }
@@ -534,10 +530,10 @@ float: left;
           .item1,.item2,.item3,.item4{
             flex: 100%;
           }
-          .flex-container#contform1 input:not(#input4){
+          .flex-container input:not(#input4){
           border-right:none;  
           }
-          .flex-container#contform1 input{
+          .flex-container input{
           border-bottom: 1px solid #a8a383;  
           }
           input.item1{
@@ -553,11 +549,11 @@ float: left;
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
           }
-          .flex-container#contform1 input::placeholder{
+          .flex-container input::placeholder{
           padding-left:0;
           font-size: 15px;
         }
-        .flex-container#contform1 input{
+        .flex-container input{
           padding-inline-start: 0;
           font-size: 14px;
           margin:8px;
