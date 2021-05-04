@@ -267,21 +267,42 @@
       </div>
   </div>
 </div>
+    
+     <!--           start Login             -->
+ <div id="id01" class="modal">
+  
+  <form id="form2" class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p>Log in </p>
+    </div>
+    <hr>
+
+    <div class="containerlogin">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button id="loginfm" type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="containerlogin" style="background-color:#f1f1f1">
+      <button id="btncancel" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+  <!--           End Login                -->
+
 
   
     <script src="./js/js.js" ></script>
   
-    <script type="text/javascript">
-        // object-fit polyfill run
-        objectFitImages();
 
-        /* init Jarallax */
-        jarallax(document.querySelectorAll('.jarallax'));
-
-        // jarallax(document.querySelectorAll('.jarallax-keep-img'), {
-        //     keepImg: true,
-        // });
-
-    </script>
 </body>
 </html>
