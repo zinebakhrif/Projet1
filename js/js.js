@@ -35,6 +35,7 @@ $(document).ready(function(){
 //    Lien 1 
 $(document).ready(function(){
     $("#l1,#l2").click(function(){
+      $(".container").css("width", "77%");            
       $(".divtable").css("display", "none");
       $("#lblerreur").css("display", "none");
       $(".container").css("width", "77%");
@@ -46,6 +47,7 @@ $(document).ready(function(){
 //    Lien 2 
   $(document).ready(function(){
     $("#l3,#l4").click(function(){
+      $(".container").css("width", "50%");
       $("#lblerreur").css("display", "none");
       $(".divtable").css("display", "none");
       $("#contform1").css("display", "none");
