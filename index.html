@@ -302,7 +302,18 @@
 
   
     <script src="./js/js.js" ></script>
-  
+      <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos < currentScrollPos) {
+          document.getElementById("contform1").style.display = "none";
+          document.getElementById("contform2").style.display = "none";
+        }
+        prevScrollpos = currentScrollPos;
+      }
+      
+      </script>
 
 </body>
 </html>
