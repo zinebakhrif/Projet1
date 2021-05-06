@@ -35,7 +35,7 @@ $(document).ready(function(){
 //    Lien 1 
 $(document).ready(function(){
     $("#l1,#l2").click(function(){
-      $(".container").css("width", "77%");            
+      $(".container").css("width", "67%");            
       $(".divtable").css("display", "none");
       $("#lblerreur").css("display", "none");
       $("#contform2").css("display", "none");
