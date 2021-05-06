@@ -175,8 +175,13 @@ float: left;
 .header .navbar ul.menu1 li:not(.lien5,.lien6,.lien7){
   text-decoration: none;
   display: inline-block;
+}
+.header .navbar ul.menu1 li.lien1,.header .navbar ul.menu1 li.lien2,
+.header .navbar ul.menu1 li.lien3,.header .navbar ul.menu1 li.lien4{
   padding:0 30px;
 }
+
+
 .header .navbar ul.menu1 li.lien4{
   padding-left:30px;
   padding-right: 0;
@@ -275,9 +280,11 @@ float: left;
 
   }
   @media only screen and (max-width: 700px){
-    .header .navbar ul.menu1 li:not(.lien5,.lien6) {
-      padding: 0 13px;
-    }
+    .header .navbar ul.menu1 li.lien1,.header .navbar ul.menu1 li.lien2,
+.header .navbar ul.menu1 li.lien3,.header .navbar ul.menu1 li.lien4,
+.header .navbar ul.menu1 li.lien7{
+  padding: 0 13px;
+}
     .header .navbar ul.menu1 li a{
       font-size:18px;     
     }
