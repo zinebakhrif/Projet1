@@ -38,7 +38,6 @@ $(document).ready(function(){
       $(".container").css("width", "77%");            
       $(".divtable").css("display", "none");
       $("#lblerreur").css("display", "none");
-      $(".container").css("width", "77%");
       $("#contform2").css("display", "none");
         $("#contform1").css("display", "flex");
         $(".flex-container").css("flex", "100%");
@@ -52,7 +51,6 @@ $(document).ready(function(){
       $(".divtable").css("display", "none");
       $("#contform1").css("display", "none");
         $("#contform2").css("display", "flex");
-        $(".container").css("width", "77%");
     });
   });
 
