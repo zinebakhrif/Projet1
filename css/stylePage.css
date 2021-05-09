@@ -485,7 +485,7 @@ float: left;
           padding-bottom: 25px !important;
           padding-left: 17px;
         }
-        img ,svg{
+        .flex-content .flex-left img ,svg{
           vertical-align: revert !important;
           margin-left: 13px !important;
         }
@@ -502,7 +502,7 @@ float: left;
           float: left;
           flex: 50%;
         }
-        hr{
+        hr#hrone{
           height: 0;
           margin-top:0 !important;
           margin-bottom: 0 !important;
