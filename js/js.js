@@ -56,7 +56,7 @@ $(document).ready(function(){
         $("#input1").css("display", "flex");
         $("#input3").css("display", "flex");
         $("#input4").css("display", "flex");
-        $("#input2").css("border-right", "3px solid lightgrey");
+        $("#input2").css("border-right", "1px solid #a8a383");
         $(".flex-container").css("flex", "100%");
     });
   });
