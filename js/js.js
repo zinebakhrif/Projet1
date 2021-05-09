@@ -159,7 +159,7 @@ $(document).ready(function(){
 
 
    //******************* code scroll vertical
- const slider = document.querySelector('.grid-container >.grid-item >.items');
+const slider = document.querySelector('.items');
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -180,6 +180,7 @@ slider.addEventListener('mouseup', () => {
 });
 slider.addEventListener('mousemove', (e) => {
   if(!isDown) return;
+  console.log('do work');
   e.preventDefault();
   const x = e.pageX - slider.offsetLeft;
   const walk = (x - startX) * 3; //scroll-fast
