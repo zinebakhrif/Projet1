@@ -29,14 +29,14 @@
 
 
   <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/stylePage.css">
+  <link rel="stylesheet" href="./css/style1.css">
 
 
 
 </head>
 <body id="body" style="background:#2e2e2e" >
     <div  id="app">
-                      <!-- start header  -->
+     <!-- start header  -->
        <div class="header">
 
         <div class="nav" id="nav3">
@@ -55,7 +55,6 @@
           </div> 
         </div>
 
-
      </div>
     
          <!-- End header -->
@@ -71,46 +70,52 @@
         <hr id="hrone">
          <div id="div2">Arrivée</div>
         </div>
-    <table>
-      <tr">
+
+    <table id="table1">
+      <tr>
           <td><i class="fas fa-car-side"></i></td>
           <td>opel corsa</td>
           <td>3<i class="far fa-user"></i></td>
           <td>2<i class="fas fa-shopping-bag"></i></td>
-          <td>200dh/h</td>
+          <td class="tdprix1">200</td>
+          <td class="tdprix2">dh/h</td>
       </tr>
       <tr>
         <td><i class="fas fa-car-side"></i></td>
         <td>Santafe</td>
         <td>3<i class="far fa-user"></i></td>
         <td>2<i class="fas fa-shopping-bag"></i></td>
-        <td>200dh/h</td>
+        <td class="tdprix1">300</td>
+        <td class="tdprix2">dh/h</td>
       </tr>
       <tr>
         <td><i class="fas fa-car-side"></i></td>
         <td>E220</td>
         <td>3<i class="far fa-user"></i></td>
-        <td>2<i class="fas fa-shopping-bag"></i></td>
-        <td>200dh/h</td>
+        <td >2<i class="fas fa-shopping-bag"></i></td>
+        <td class="tdprix1">250</td>
+        <td class="tdprix2">dh/h</td>
       </tr>
       <tr>
         <td><i class="fas fa-car-side"></i></td>
         <td>Vito</td>
         <td>3<i class="far fa-user"></i></td>
         <td>2<i class="fas fa-shopping-bag"></i></td>
-        <td>200dh/h</td>
+        <td class="tdprix1">180</td>
+        <td class="tdprix2">dh/h</td>
       </tr>
       <tr>
         <td><i class="fas fa-car-side"></i></td>
         <td>Bmw</td>
         <td>3<i class="far fa-user"></td>
         <td>2<i class="fas fa-shopping-bag"></i></td>
-        <td>200dh/h</td>
+        <td class="tdprix1">240</td>
+        <td class="tdprix2">dh/h</td>
       </tr>
 
   </table> 
   <div id="divbottom">
-     <div id="divprix"><span id="span1">Book your trip</span> <span id="span2"> 2000 dh</span></div>
+     <div id="divprix"><span id="span1">Book your trip</span> <span id="span2"><span id="prix">2000</span>  dh</span></div>
     </div>
 
     </div>
@@ -124,25 +129,30 @@
   </div> 
   </div>
 
-                                                                            
-</div>
    <!---------------------------End CONTENT ---------------->
-
+   <section class="example example1">
    <div class="grid-container">
     <div class="textslide1"><span>More plans</span> </div>
     <main class="grid-item main">
       <div class="items">
-        <div class="item slide1"><div class="dvcircle"><p>+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-        <div class="item slide2"><div class="dvcircle"><p>+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-        <div class="item slide3"><div class="dvcircle"><p>+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-        <div class="item slide4"><div class="dvcircle"><p>+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-        <div class="item slide5"><div class="dvcircle"><p>+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-        <div class="item slide6"><div class="dvcircle"><p>+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-        <div class="item slide7"><div class="dvcircle"><p>+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
+        <div class="item slide1"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="id1" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
+        <div class="item slide2"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="id2" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
+        <div class="item slide3"><div class="dvcircle" ><p onclick="addPrix(this.id)"  id="id3" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
+        <div class="item slide4"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id4" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
+        <div class="item slide5"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id5" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
+        <div class="item slide6"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id6" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
+        <div class="item slide7"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id7" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
+        <div class="item slide7"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id8" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
+        <div class="item slide7"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id9" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
+        <div class="item slide7"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id10" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
+        <div class="btnMore"><div class="btntext"><a>show More >></a></div></div>
+
       </div>  
     </main>
   </div>
+</section>
 
+<section class="example example4">
   <div class="grid-container">
     <div class="textslide1"><span>More Activities</span> </div>
     <main class="grid-item main">
@@ -154,17 +164,64 @@
         <div class="item slide5"><div class="dvcircle"><p>+</p></div><div class="dvtext"><p>Quad</p></div></div>
         <div class="item slide6"><div class="dvcircle"><p>+</p></div><div class="dvtext"><p>Parashute</p></div></div>
         <div class="item slide7"><div class="dvcircle"><p>+</p></div><div class="dvtext"><p>Yakht</p></div></div>
+        <div class="item slide7"><div class="dvcircle"><p>+</p></div><div class="dvtext"><p>Diving</p></div></div>
+        <div class="item slide7"><div class="dvcircle"><p>+</p></div><div class="dvtext"><p>Parashute</p></div></div>
+        <div class="item slide7"><div class="dvcircle"><p>+</p></div><div class="dvtext"><p>Quad</p></div></div>
+        <div class="btnMore"><div class="btntext"><a>show More >></a></div></div>
 
       </div>  
     </main>
   </div>
+</section>
+
+
+
+</div>
 
 
 
   
     <script src="./js/js.js" ></script>
 
+    <script>
 
+
+function addPrix(id) {
+ x= document.getElementById(id).innerText;
+ y= document.getElementById("prix").innerText;
+ z=parseInt(y);
+
+ 
+   if(x =="+"){
+  document.getElementById(id).innerHTML="-";
+  document.getElementById("prix").innerHTML=z+100;
+   }else{
+     document.getElementById(id).innerHTML="+";
+  document.getElementById("prix").innerHTML=z-100;
+   }
+
+}
+// ************ click rows table *******
+
+var table = document.getElementById('table1');
+for(var i = 0; i < table.rows.length; i++) {
+  table.rows[i].addEventListener('click', function() {
+    for(var j = 0; j < this.cells.length-1; j++) {
+      msg = this.cells[j].innerHTML;
+    }
+    document.getElementById("prix").innerHTML=msg;
+    $("tr").css("background", "none");
+        $(this).css("color", "#f8d001"); 
+    this.style.background="#6d6d65a8";
+
+    $("p.text1").html("+");
+
+  });
+}
+
+
+
+    </script>
 
 
 </body>
