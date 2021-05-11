@@ -482,8 +482,8 @@ float: left;
          margin-top: 20px;
         }
         .flex-content .flex-left table tr td{
-          padding-bottom: 25px !important;
-          padding-left: 17px;
+          padding-top: 15px;
+          padding-bottom: 15px;
         }
         .flex-content .flex-left img ,svg{
           vertical-align: revert !important;
@@ -530,6 +530,14 @@ float: left;
           font-size: 16px;
           font-weight: bold;
           text-align: center;
+          cursor: pointer;
+        }
+        .flex-left div#divbottom div#divprix:hover{
+          width: 86%;
+          padding: 18px 18px 18px 26px;
+          color: #e2ffce;
+          font-size: 18px;
+          border-radius: 27px;
         }
         .flex-left div#divbottom div#divprix span#span1{
           padding-right: 20%;
@@ -573,8 +581,20 @@ float: left;
           .flex-left div#divbottom div#divprix{
             width: 90%;
           }
-
+          .flex-content .flex-left table{
+            width: 77%;
+          }
         }
+        @media only screen and (max-width: 700px){
+ 
+          .flex-content .flex-left table{
+            width: 85%;
+          }
+        .flex-content .flex-left table tr td{
+          font-size: 11px;
+        }
+      }
+
 
   @media only screen and (max-width: 600px){
     .header .nav{
@@ -610,7 +630,7 @@ float: left;
           padding: 14px 14px 14px 20px;
         }
         .flex-content .flex-left table{
-          width: 80%;
+          width: 88%;
         }
         .flex-content .flex-left table tr td{
           font-size: 10px;
@@ -825,6 +845,12 @@ float: left;
        tr{
         cursor: pointer;
        }
+       /* tr:hover{
+         background-color: rgb(179, 174, 174);
+       }
+       tr:focus{
+        background-color: gray;
+      } */
 
       .flex-container3 {
         display: flex;
@@ -872,6 +898,17 @@ float: left;
         color:#91d65f;
         font-weight: bold;
       }
+      td.tdprix1,td.tdprix2{
+        color:#91d65f;
+        font-weight: bold;
+      }
+      td.tdprix1{
+      padding-right: 0 !important;
+      text-align: right;
+      }
+      td.tdprix2{
+        padding-left: 0 !important;
+        }
       .arrow{
         display:none;
       }
@@ -1103,9 +1140,7 @@ hr{
 
       /* ********** Style scroll vertical page two ***** */
 
-  /* .grid-container{
-    border: 1px solid red;
-  } */
+ 
   .grid-container div.textslide1{
     margin-left: auto;
     margin-right: auto;
@@ -1120,16 +1155,13 @@ hr{
   }
 
   .grid-item {
-    color: #fff;
     padding: 3.5em 1em;
     font-size: 1em;
-    font-weight: 700;
   }
   
 
 
   .main {
-    grid-area: main;
     padding: 0;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -1151,12 +1183,18 @@ hr{
     padding-left: 30px;
   }
 
-  .grid-container .grid-item .items.active ,.grid-container .grid-item .items2.active{
+  /* .grid-container .grid-item .items.active ,.grid-container .grid-item .items2.active{
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  } */
+
+
+.items.active,.items2.active  {
     cursor: grabbing;
     cursor: -webkit-grabbing;
     transform: scale(1);
   }
-
 
 
   .item {
@@ -1167,6 +1205,30 @@ hr{
     margin: 2em 1em;
     border-radius: 30px;
   }
+  .btnMore {
+    display: inline-block;
+    min-width: 180px;
+    border-radius: 30px;
+  }
+  .btntext{
+    color: #2c2c2c;
+    font-size: 17px;
+    top: 90px;
+    position: relative;
+    text-align: left;
+  }
+  .btntext a{
+    padding: 12px;
+    background: white;
+    border-radius: 23px;
+    margin-left: 15px;
+    font-family: 'Poppins';
+  }
+  .btntext a:hover{
+    padding: 14px;
+    font-size: 20px;
+  }
+
   .dvcircle{
     width:50px;
     height:50px;
@@ -1178,6 +1240,7 @@ hr{
     border: 2px solid #ffc107;
     color: #ffc107;
     text-align: center;
+    cursor: pointer;
   }
   .dvcircle p{
   margin-top: 8px;
@@ -1194,7 +1257,23 @@ hr{
   font-family: 'Poppins';
   }
 
+  
+  @media screen and (max-width: 1440px) {
+    .grid-container .grid-item .items {
+    overflow-x: scroll;
+    }
+    .grid-container .grid-item .items::-webkit-scrollbar{
+      display: none;
+    }
+    .grid-container .grid-item .items2 {
+      overflow-x: scroll;
+      }
+      .grid-container .grid-item .items2::-webkit-scrollbar{
+        display: none;
+      }
+    }
   @media screen and (max-width: 600px) {
+
     .items,.items2{
       padding: 20px;
     }
@@ -1215,6 +1294,10 @@ hr{
     .dvtext p{
     top: 133px;
     font-size: 15px;
+    }
+    .btntext{
+      top:70px;
+      font-size: 15px;
     }
 
     .grid-container div.textslide1{
