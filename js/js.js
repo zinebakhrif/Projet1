@@ -51,6 +51,8 @@ $(document).ready(function(){
       event.preventDefault();
       $(".container").css("width", "67%");
       $(".divtable").css("display", "none");
+       $("#btn3").css("display", "none");
+      $("#btn1").css("display", "block");
       $("#lblerreur").css("display", "none");
         $("#contform1").css("display", "flex");
         $("#input1").css("display", "flex");
@@ -67,6 +69,8 @@ $(document).ready(function(){
       $("#lblerreur").css("display", "none");
       $(".container").css("width", "50%");
       $(".divtable").css("display", "none");
+      $("#btn3").css("display", "block");
+      $("#btn1").css("display", "none");
       $("#lblerreur").css("display", "none");
       $("#contform1").css("display", "flex");
         $("#input1").css("display", "none");
