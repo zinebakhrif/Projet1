@@ -19,6 +19,8 @@ body {
 	padding: 0;
   height: 100%;
   font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+
      }
 
 /************ Start jarallax *********/
@@ -407,7 +409,7 @@ float: left;
    }
   .header .nav .div1 img{
     float: left;
-    width: 70px;
+    width: 72px;
     margin-left: 16px ;
     }
 
@@ -688,7 +690,7 @@ float: left;
       z-index: 2;
       }
 
-		    .item1,.item2,.item3,.item4 {
+		    .item1,.item2,.item3,.item4,.item5 {
 			background-color: #f8f2ce;
 		  }
 		  .item1,.item2{
@@ -700,6 +702,7 @@ float: left;
 		.item4{
 			flex: 17%;
 		}
+
 
 		  .glyphicon-search{
 			  font-weight: 300;
@@ -1140,7 +1143,80 @@ hr{
 
       /* ********** Style scroll vertical page two ***** */
 
- 
+      /* .grid-container {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        width: 100%;
+      } */
+      /* .grid-item {
+        padding: 3.5em 1em;
+        font-size: 1em;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        cursor: grab;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      } */
+      .grid-item  {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+	      -webkit-overflow-scrolling: touch;
+        cursor: grab;
+        top: 20px;
+        left: 25px;
+        /* border-top: 10px solid #f00; */
+      }
+/* 
+      .grid-container .grid-item .items,.grid-container .grid-item .items2{
+        position: relative;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        white-space: nowrap;
+        transition: all 0.2s;
+        transform: scale(0.98);
+        will-change: transform;
+        user-select: none;
+        cursor: pointer;
+        padding-left: 30px;
+        display: inline;
+      } */
+      .grid-container .grid-item .items,.grid-container .grid-item .items2{
+        position: absolute;
+        top: 0;
+        left: 20px;
+        grid-template-columns: repeat(11, 300px);
+        grid-template-rows: repeat(11, 200px);
+        cursor: pointer;
+        user-select: none;
+        display: -ms-grid;
+        display: grid;
+        pointer-events: none;
+
+      }
+
+      /* .item {
+        display: inline-block;
+        background: white;
+        min-height: 200px;
+        min-width: 340px;
+        margin: 2em 1em;
+        border-radius: 30px;
+        overflow: hidden;
+      } */
+      .item{
+        background: white;
+        overflow: hidden;
+        /* margin: 2em 1em; */
+        margin:1.5em 1.7em;
+        border-radius: 30px;
+
+      }
+      
   .grid-container div.textslide1{
     margin-left: auto;
     margin-right: auto;
@@ -1154,34 +1230,7 @@ hr{
     font-family: 'Poppins';
   }
 
-  .grid-item {
-    padding: 3.5em 1em;
-    font-size: 1em;
-  }
-  
 
-
-  .main {
-    padding: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-  
-
-
-  .grid-container .grid-item .items,.grid-container .grid-item .items2 {
-    position: relative;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    white-space: nowrap;
-    transition: all 0.2s;
-    transform: scale(0.98);
-    will-change: transform;
-    user-select: none;
-    cursor: pointer;
-    padding-left: 30px;
-  }
 
   /* .grid-container .grid-item .items.active ,.grid-container .grid-item .items2.active{
     cursor: grabbing;
@@ -1190,25 +1239,28 @@ hr{
   } */
 
 
-.items.active,.items2.active  {
+/* .items.active,.items2.active  {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  } */
+
+  .items.active {
+    background: rgba(255,255,255,0.3);
     cursor: grabbing;
     cursor: -webkit-grabbing;
     transform: scale(1);
   }
 
-
-  .item {
-    display: inline-block;
-    background: white;
-    min-height: 200px;
-    min-width: 340px;
-    margin: 2em 1em;
-    border-radius: 30px;
-  }
   .btnMore {
     display: inline-block;
     min-width: 180px;
     border-radius: 30px;
+    pointer-events: visible;
+  }
+
+  .btnMore:hover {
+    opacity: 0.9;
   }
   .btntext{
     color: #2c2c2c;
@@ -1224,10 +1276,10 @@ hr{
     margin-left: 15px;
     font-family: 'Poppins';
   }
-  .btntext a:hover{
+  /* .btntext a:hover{
     padding: 14px;
     font-size: 20px;
-  }
+  } */
 
   .dvcircle{
     width:50px;
@@ -1235,12 +1287,14 @@ hr{
     position:absolute;
     background:white;
     border-radius:50%;
-    margin-left: 305px;
+    margin-left: 223px;
     margin-top: -15px;
     border: 2px solid #ffc107;
     color: #ffc107;
     text-align: center;
     cursor: pointer;
+    pointer-events:visible;
+
   }
   .dvcircle p{
   margin-top: 8px;
@@ -1249,7 +1303,7 @@ hr{
   }
   .dvtext p{
   position: relative;
-  top: 169px;
+  top: 123px;
   color: #2c2c2c;
   text-align: center;
   font-size: 16px;
@@ -1259,40 +1313,42 @@ hr{
 
   
   @media screen and (max-width: 1440px) {
-    .grid-container .grid-item .items {
+    .grid-container .grid-item  {
     overflow-x: scroll;
     }
-    .grid-container .grid-item .items::-webkit-scrollbar{
+    .grid-container .grid-item::-webkit-scrollbar{
       display: none;
     }
-    .grid-container .grid-item .items2 {
+    .grid-container .grid-item {
       overflow-x: scroll;
       }
-      .grid-container .grid-item .items2::-webkit-scrollbar{
+      .grid-container .grid-item::-webkit-scrollbar{
         display: none;
       }
     }
   @media screen and (max-width: 600px) {
-
-    .items,.items2{
-      padding: 20px;
+    .grid-container .grid-item .items,.grid-container .grid-item .items2{
+      padding: 0;
+      left: 0 !important;
     }
     .item {
-      min-height: 160px;
-      min-width: 210px;
+      margin: 2em 2.4em;
+    }
+    .grid-item{
+      left: 0;
     }
     .dvcircle {
       width: 40px;
       height: 40px;
-      margin-left: 180PX;
-      margin-top: -9px;
+      margin-left: 208PX;
+      margin-top: -15px;
   }
   .dvcircle p {
     margin-top: 6px;
     font-size: 18px;
   }
     .dvtext p{
-    top: 133px;
+    top: 115px;
     font-size: 15px;
     }
     .btntext{
@@ -1314,5 +1370,180 @@ hr{
   }
 
 
+  /* ************ style page tree *********** */
+ .divcontent-pg3{
+  width: 100%;
+  height: 530px;
+  background-image: url('Jmaalefna-870x480.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+ }
+ .flex-pg3{
+  padding-top: 40px;
+  }
+   form#form3{
+    position: relative;
+    width: 100%;
+    height: auto;
+   }
+
+   .flex-container-pg3 {
+    position: relative;
+    width: 500px;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f8f2ce;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+ 
+
+    .flex-container-pg3 input{
+		  padding-right:0;
+		  padding-left:0;
+		  border:none;
+		  width: 80%;
+		  outline: none;
+		  padding-inline-start: 14px;
+      font-size: 20px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      margin-left: 17px;
+		  }
+   .flex-container-pg3 span.spanErreur{
+    color: red;
+    font-size: 26px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5px;
+    visibility: hidden;
+   }
 
 
+      .flex-container-pg3 button {
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        cursor: pointer;
+        background-color: #f8d001;
+        border-color: #f8d001;
+        border-radius: 50%;  
+        width: 55px;
+        height: 55px;
+        outline: none;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+      .flex-container-pg3 button:hover{
+        opacity: 0.7;
+         }
+
+         .grid-pg3{
+          margin-top: 60px;
+         }
+
+.container1-pg3{
+  width: 95%;
+  height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+
+}
+
+.row-1-pg3{
+  display: flex;
+  display: -webkit-flex;
+  width: 100%;
+  /* margin: 0px 22px; */
+  /* border: 1px solid yellow; */
+  margin-top: 20px;
+}
+.dv2{
+  margin-top: 55px;
+}
+.row-1-pg3 div.item1-pg3{
+  width: 270px;
+  height: 200px;
+  background: white;
+  border-radius: 35px;
+  font-size: 20px;
+  font-weight: 600;
+  
+}
+.row-1-pg3 div.item1-pg3 p{
+  margin: auto;
+  text-align: center;
+  transform: translate(1px, 85px);
+
+}
+.row-1-pg3 .content-1-pg3{
+  width: 70%;
+  margin-left: 35px;
+  margin-top: 25px;
+}
+
+.row-1-pg3 .content-1-pg3 p.text1-pg3{
+    color: white;
+  font-size: 15px;
+  line-height: 22.5px;
+
+}
+.row-1-pg3 .content-1-pg3 button.link-AddToCard{
+  color: white;
+  background:#66b830;
+  display: inline-block;
+  float: right;
+  padding: 10px 22px;
+  border-radius: 12px;
+  font-size: 16px;
+  margin-top: 6px;
+  border-color: transparent;
+}
+.row-1-pg3 .content-1-pg3 button.link-AddToCard:hover{
+  opacity: 0.7;
+}
+.container1-pg3 div.textstop-pg3{
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+
+}
+.container1-pg3 div.textstop-pg3 p{
+  border-top: 3px solid #c5c5c5;
+  font-family: 'Poppins';
+  display: inline-block;
+  margin-top: -2px;
+}
+.container1-pg3 div.textstop-pg3 p span{
+  padding: 15px;
+  display: inline-block;
+}
+@media only screen and (max-width: 600px){
+  .flex-container-pg3 {
+    width: 256px;
+    height: 60px;
+  }
+  .flex-container-pg3 input{
+    font-size: 14px;
+    width: 76%;
+    margin-left: 5px;
+  }
+  .flex-container-pg3 span.spanErreur {
+    font-size: 20px;
+    margin-right: 2px;
+}
+.flex-container-pg3 button {
+  font-size: 17px;
+  width: 40px;
+  height: 40px;
+}
+
+}
