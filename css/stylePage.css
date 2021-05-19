@@ -535,11 +535,7 @@ float: left;
           cursor: pointer;
         }
         .flex-left div#divbottom div#divprix:hover{
-          width: 86%;
-          padding: 18px 18px 18px 26px;
-          color: #e2ffce;
-          font-size: 18px;
-          border-radius: 27px;
+		opacity: 0.8;
         }
         .flex-left div#divbottom div#divprix span#span1{
           padding-right: 20%;
