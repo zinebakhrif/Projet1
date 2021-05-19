@@ -535,7 +535,7 @@ float: left;
           cursor: pointer;
         }
         .flex-left div#divbottom div#divprix:hover{
-		opacity: 0.8;
+          opacity: 0.8;
         }
         .flex-left div#divbottom div#divprix span#span1{
           padding-right: 20%;
@@ -578,9 +578,13 @@ float: left;
           }
           .flex-left div#divbottom div#divprix{
             width: 90%;
+            font-size: 14px;
           }
           .flex-content .flex-left table{
             width: 77%;
+          }
+          .flex-left div#divbottom div#divprix span#span1{
+            padding-right: 11%;
           }
         }
         @media only screen and (max-width: 700px){
@@ -635,7 +639,7 @@ float: left;
           padding-left: 10px;
         }
         .flex-left div#divbottom div#divprix{
-          font-size: 12px;
+          font-size: 13px;
         }
 
 
@@ -1376,7 +1380,7 @@ hr{
  .divcontent-pg3{
   width: 100%;
   height: 530px;
-  background-image: url('/img/Jmaalefna.jpg');
+  background-image: url('Jmaalefna.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -1418,7 +1422,7 @@ hr{
    .flex-container-pg3 span#spanErreur{
     color: red;
     font-size: 26px;
-    margin-top: 20px;
+    margin-top: auto;
     margin-bottom: auto;
     margin-right: 5px;
     visibility: hidden;
@@ -1506,7 +1510,6 @@ hr{
   font-size: 16px;
   margin-top: 6px;
   border-color: transparent;
-  margin-right: 7px;
 }
 .row-1-pg3 .content-1-pg3 button.link-AddToCard:hover{
   opacity: 0.7;
