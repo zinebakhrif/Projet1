@@ -1422,7 +1422,7 @@ hr{
    .flex-container-pg3 span#spanErreur{
     color: red;
     font-size: 26px;
-    margin-top: auto;
+    margin-top: 20px;
     margin-bottom: auto;
     margin-right: 5px;
     visibility: hidden;
