@@ -1504,12 +1504,13 @@ hr{
   color: white;
   background:#66b830;
   display: inline-block;
-/*   float: right; */
+  float: right;
   padding: 10px 22px;
   border-radius: 12px;
   font-size: 16px;
   margin-top: 6px;
   border-color: transparent;
+  margin-right: 20px;
 }
 .row-1-pg3 .content-1-pg3 button.link-AddToCard:hover{
   opacity: 0.7;
