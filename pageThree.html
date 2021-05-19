@@ -28,9 +28,8 @@
     </style>
 
 
-  <link rel="stylesheet" href="./css/normalize.css"> 
-  <link rel="stylesheet" href="./css/stylePage.css">
-
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style1.css">
 
 
 </head>
@@ -69,7 +68,7 @@
             <div class="flex-container-pg3" id="contform1">   
                 <input type="text" id="input5" name="text1" placeholder="choose your destination" class="item5" >
             <span class="spanErreur">*</span>
-                <button type="button" class="btnsearch">
+                <button type="button" class="btnsearch" id="btnville">
                 <span class="glyphicon glyphicon-search"></span>
                 <i class="bi bi-arrow-right arrow" style="font-size: 25px;color:black"></i>
               </button>            
@@ -83,15 +82,15 @@
         <main class="grid-item main">
           <div class="items">
             <div class="item slide1"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="id1" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
-            <div class="item slide2"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="id2" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
-            <div class="item slide3"><div class="dvcircle" ><p onclick="addPrix(this.id)"  id="id3" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
-            <div class="item slide4"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id4" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
-            <div class="item slide5"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id5" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
-            <div class="item slide6"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id6" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
-            <div class="item slide7"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id7" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
-            <div class="item slide8"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id8" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
-            <div class="item slide9"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id9" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
-            <div class="item slide10"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id10" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
+            <div class="item slide2"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="id2" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></p></div></div>
+            <div class="item slide3"><div class="dvcircle" ><p onclick="addPrix(this.id)"  id="id3" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></p></div></div>
+            <div class="item slide4"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id4" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></p></div></div>
+            <div class="item slide5"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id5" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></p></div></div>
+            <div class="item slide6"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id6" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></p></div></div>
+            <div class="item slide7"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id7" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></p></div></div>
+            <div class="item slide8"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id8" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></p></div></div>
+            <div class="item slide9"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id9" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></p></div></div>
+            <div class="item slide10"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id10" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></p></div></div>
             <div class="btnMore"><div class="btntext"><a>show More >></a></div></div>
     
           </div>  
@@ -135,11 +134,22 @@
 
 
   
-    <script src="./js/js.js" ></script>
+    <script src="/js/js.js" ></script>
 
     <script>
-        
-        //**********  add Ville ***
+        $(document).ready(function(){
+    $("#btnville").click(function(){
+    var txt1=document.getElementById("input5").value;
+    if(txt1!=''){
+      document.getElementById("spanErreur").style.visibility="hidden";
+
+    }else
+      {
+      document.getElementById("spanErreur").style.visibility="visible";
+    }
+  });
+});
+//**********  add Ville ***
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const txtvalue = urlParams.get('text2')
@@ -147,7 +157,9 @@ var x=document.getElementsByClassName('ville');
 for(var i=0;i<x.length;i++){
   x[i].innerHTML=txtvalue;
 }
-        
+
+
+
 
 // ************ function add prix **********
 function addPrix(id) {
@@ -167,9 +179,7 @@ function addPrix(id) {
 }
 
 
-
-
-
+// ******** slider *************
 
 const container = document.querySelector(".grid-item");
 const cards = document.querySelector(".items");
