@@ -82,16 +82,16 @@
      <div class="grid-container grid-pg3">
         <main class="grid-item main">
           <div class="items">
-            <div class="item slide1"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="id1" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-            <div class="item slide2"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="id2" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-            <div class="item slide3"><div class="dvcircle" ><p onclick="addPrix(this.id)"  id="id3" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-            <div class="item slide4"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id4" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-            <div class="item slide5"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id5" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-            <div class="item slide6"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id6" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-            <div class="item slide7"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id7" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-            <div class="item slide8"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id8" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-            <div class="item slide9"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id9" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-            <div class="item slide10"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id10" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
+            <div class="item slide1"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="id1" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
+            <div class="item slide2"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="id2" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
+            <div class="item slide3"><div class="dvcircle" ><p onclick="addPrix(this.id)"  id="id3" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
+            <div class="item slide4"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id4" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
+            <div class="item slide5"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id5" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
+            <div class="item slide6"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id6" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
+            <div class="item slide7"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id7" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
+            <div class="item slide8"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id8" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
+            <div class="item slide9"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id9" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
+            <div class="item slide10"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id10" class="text1">+</p></div><div class="dvtext"><p>1h <span class="ville"></span></p></div></div>
             <div class="btnMore"><div class="btntext"><a>show More >></a></div></div>
     
           </div>  
@@ -138,8 +138,18 @@
     <script src="./js/js.js" ></script>
 
     <script>
+        
+        //**********  add Ville ***
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const txtvalue = urlParams.get('text2')
+var x=document.getElementsByClassName('ville');
+for(var i=0;i<x.length;i++){
+  x[i].innerHTML=txtvalue;
+}
+        
 
-
+// ************ function add prix **********
 function addPrix(id) {
  x= document.getElementById(id).innerText;
  y= document.getElementById("prix").innerText;
