@@ -67,7 +67,7 @@
         <form action="#" id="form3">
             <div class="flex-container-pg3" id="contform1">   
                 <input type="text" id="input5" name="text1" placeholder="choose your destination" class="item5" >
-            <span class="spanErreur">*</span>
+            <span id="spanErreur">*</span>
                 <button type="button" class="btnsearch" id="btnville">
                 <span class="glyphicon glyphicon-search"></span>
                 <i class="bi bi-arrow-right arrow" style="font-size: 25px;color:black"></i>
@@ -142,10 +142,14 @@
     var txt1=document.getElementById("input5").value;
     if(txt1!=''){
       document.getElementById("spanErreur").style.visibility="hidden";
-
+      var x=document.getElementsByClassName('ville');
+      for(var i=0;i<x.length;i++){
+      x[i].innerHTML=txt1;
+      }
     }else
       {
       document.getElementById("spanErreur").style.visibility="visible";
+
     }
   });
 });
