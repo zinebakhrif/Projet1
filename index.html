@@ -309,7 +309,7 @@
         var txt1=document.getElementById("input2").value;
     if(txt1!=''){
       document.getElementById("lblerreur").style.display="none";
-      $("p").show("slow", function(){
+      $("body").show("slow", function(){
       window.location="pageThree.html?text2="+document.getElementById("input2").value;
     });
     }else
