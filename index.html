@@ -113,7 +113,7 @@
     <span class="glyphicon glyphicon-search"></span>
     <i class="bi bi-arrow-right arrow" style="font-size: 25px;color:black"></i>
   </button>
-  <button type="button" class="btn btn-warning" onclick="window.location='pageThree.html';"  id="btn3">
+  <button type="button" class="btn btn-warning"  id="btn3">
  <span class="glyphicon glyphicon-search"></span>
  <i class="bi bi-arrow-right arrow" style="font-size: 25px;color:black"></i>
 </button>
@@ -301,6 +301,25 @@
   
     <script src="./js/js.js" ></script>
       <script>
+         
+          //********* Function url
+          
+          $(document).ready(function(){
+  $("#btn3").click(function(){
+        var txt1=document.getElementById("input2").value;
+    if(txt1!=''){
+      document.getElementById("lblerreur").style.display="none";
+      $("p").show("slow", function(){
+      window.location="pageThree.html?text2="+document.getElementById("input2").value;
+    });
+    }else
+      {
+      document.getElementById("lblerreur").style.display="block";
+    }
+  });
+});
+          
+          //******** Function scroll *******
       var prevScrollpos = window.pageYOffset;
       window.onscroll = function() {
       var currentScrollPos = window.pageYOffset;
