@@ -341,6 +341,12 @@ float: left;
     .header .navbar ul{
       padding:0px;
     }
+    .header .navbar ul.menu1 li.lien1,
+    .header .navbar ul.menu1 li.lien2,
+    .header .navbar ul.menu1 li.lien3,
+    .header .navbar ul.menu1 li.lien4{
+      display: none;
+    }
     .header .navbar .div1 img{
       width: 70px;
       padding-left: 10px;
