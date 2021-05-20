@@ -127,9 +127,10 @@ $(document).ready(function(){
       $("#input1").show();
       $("#input3").show();
       $("#input4").show();
+      $("#btn2").show();
+      $("#btn3").hide();
       $("#contform1").toggle();
       $("#frm").hide();
-      $("#contform2").hide();
     });
   });
   $(document).ready(function(){
@@ -137,15 +138,18 @@ $(document).ready(function(){
       $("#input1").show();
       $("#input3").show();
       $("#input4").show();
+      $("#btn2").show();
+      $("#btn3").hide();
       $("#contform1").toggle();
       $("#frm").hide();
-      $("#contform2").hide();
     });
   });
   $(document).ready(function(){
     $("#link3").click(function(){
       $("#contform1").toggle();
       $("#frm").hide();
+      $("#btn3").show();
+      $("#btn2").hide();
       $("#input1").hide();
       $("#input3").hide();
       $("#input4").hide();
@@ -154,7 +158,9 @@ $(document).ready(function(){
   $(document).ready(function(){
     $("#link4").click(function(){
       $("#contform1").toggle();
+      $("#btn3").show();
       $("#frm").hide();
+      $("#btn2").hide();
       $("#input1").hide();
       $("#input3").hide();
       $("#input4").hide();
