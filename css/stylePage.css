@@ -1474,8 +1474,8 @@ hr{
   margin-top: 55px;
 }
 .row-1-pg3 div.item1-pg3{
-  width: 270px;
-  height: 200px;
+  width: 290px;
+  height: 180px;
   background: white;
   border-radius: 35px;
   font-size: 20px;
@@ -1485,7 +1485,7 @@ hr{
 .row-1-pg3 div.item1-pg3 p{
   margin: auto;
   text-align: center;
-  transform: translate(1px, 85px);
+  transform: translate(1px, 80px);
 
 }
 .row-1-pg3 .content-1-pg3{
@@ -1497,7 +1497,7 @@ hr{
 .row-1-pg3 .content-1-pg3 p.text1-pg3{
     color: white;
   font-size: 15px;
-  line-height: 22.5px;
+  /* line-height: 22.5px; */
 
 }
 .row-1-pg3 .content-1-pg3 button.link-AddToCard{
@@ -1508,7 +1508,6 @@ hr{
   padding: 10px 22px;
   border-radius: 12px;
   font-size: 16px;
-  margin-top: 6px;
   border-color: transparent;
 }
 .row-1-pg3 .content-1-pg3 button.link-AddToCard:hover{
@@ -1552,24 +1551,37 @@ hr{
   height: 40px;
 }
 .row-1-pg3{
-  flex-flow: wrap;
+  flex-flow: nowrap;
   margin-top: 10px;
 }
 .container1-pg3 div.textstop-pg3{
   font-size: 17px;
 }
 .row-1-pg3 .content-1-pg3 p.text1-pg3{
-  font-size: 13.5px;
+  font-size: 10.5px;
 }
 .row-1-pg3 div.item1-pg3{
-  width: 230px;
-    height: 180px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 290px;
+  height: 140px;
+  margin: auto;
+  font-size: 15px;
 }
 .row-1-pg3 .content-1-pg3{
-  width: 90%;
-  margin-left: auto;
+    width: 85%;
+    margin-left: 6px;
     margin-right: auto;
+    margin-top: 15px;
 }
+.row-1-pg3 div.item1-pg3 p{
+  transform: translate(1px, 60px);
+}
+.row-1-pg3 .content-1-pg3 button.link-AddToCard{
+  padding: 7px 15px;
+  font-size: 13px;
+}
+
+div.dv1{
+  margin-top: 0px ;
+} 
+
 }
