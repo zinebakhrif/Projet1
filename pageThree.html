@@ -179,8 +179,14 @@ function addPrix(id) {
      document.getElementById(id).innerHTML="+";
   // document.getElementById("prix").innerHTML=z-100;
    }
-
 }
+        // ************** change text **********
+        document.getElementById("btnville").addEventListener("click", function() {
+  var num=document.getElementsByClassName("text1");
+  for(var i=0;i<num.length;i++){
+    num[i].innerHTML="+";
+  }
+});
 
 
 // ******** slider *************
