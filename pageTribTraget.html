@@ -153,7 +153,7 @@
   <div class="grid-container grid-slider2">
     <div class="textslide1"><span>More Activities</span> </div>
     <main class="grid-item main slider-item">
-      <div class="items" id="itemslide">
+      <div class="items2" id="itemslide">
         <div class="item slide1"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp1" class="text1">+</p></div><div class="dvtext"><p>Quad</p></div></div>
         <div class="item slide2"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp2" class="text1" >+</p></div><div class="dvtext"><p>Parashute</p></div></div>
         <div class="item slide3"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp3" class="text1">+</p></div><div class="dvtext"><p>Yakht</p></div></div>
@@ -214,7 +214,7 @@ for(var i = 0; i < table.rows.length; i++) {
 }
 
 
-
+//******** slider 1 ***************
 
 const container = document.querySelector(".grid-item");
 const cards = document.querySelector(".items");
@@ -256,7 +256,46 @@ function boundCards() {
   }
 }
 
-// slider 2
+//******** slider 2 ***************
+const container2 = document.querySelector(".slider-item");
+  const cards2 = document.querySelector(".items2");
+  
+  /* keep track of user's mouse down and up */
+  let isPressedDown2 = true;
+  /* x horizontal space of cursor from inner container */
+  let cursorXSpace2;
+  
+  container2.addEventListener("mousedown", (e) => {
+    isPressedDown2 = true;
+    cursorXSpace2 = e.offsetX - cards2.offsetLeft;
+    container2.style.cursor = "grabbing";
+  });
+  
+  container2.addEventListener("mouseup", () => {
+    container2.style.cursor = "grab";
+  });
+  
+  window.addEventListener("mouseup", () => {
+    isPressedDown2 = false;
+  });
+  
+  container2.addEventListener("mousemove", (e) => {
+    if (!isPressedDown2) return;
+    e.preventDefault();
+    cards2.style.left = `${e.offsetX - cursorXSpace2}px`;
+    boundCards2();
+  });
+  
+  function boundCards2() {
+    const container_rect = container2.getBoundingClientRect();
+    const cards_rect = cards2.getBoundingClientRect();
+  
+    if (parseInt(cards2.style.left) > 0) {
+      cards2.style.left = 0;
+    } else if (cards_rect.right < container_rect.right) {
+      cards2.style.left = `-${cards_rect.width - container_rect.width}px`;
+    }
+  }
 
 
     </script>
