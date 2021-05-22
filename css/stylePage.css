@@ -1155,78 +1155,34 @@ hr{
 
       /* ********** Style scroll vertical page two ***** */
 
-      /* .grid-container {
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-        width: 100%;
-      } */
-      /* .grid-item {
-        padding: 3.5em 1em;
-        font-size: 1em;
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-        cursor: grab;
-        padding: 0;
-        overflow-x: hidden;
-        overflow-y: hidden;
-      } */
       .grid-item  {
         position: relative;
         width: 100%;
         height: 250px;
         overflow: hidden;
-	      -webkit-overflow-scrolling: touch;
+	-webkit-overflow-scrolling: touch;
         cursor: grab;
         top: 20px;
         left: 25px;
-        /* border-top: 10px solid #f00; */
       }
-/* 
-      .grid-container .grid-item .items,.grid-container .grid-item .items2{
-        position: relative;
-        width: 100%;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        white-space: nowrap;
-        transition: all 0.2s;
-        transform: scale(0.98);
-        will-change: transform;
-        user-select: none;
-        cursor: pointer;
-        padding-left: 30px;
-        display: inline;
-      } */
       .grid-container .grid-item .items,.grid-container .grid-item .items2{
         position: absolute;
         top: 0;
         left: 20px;
-        grid-template-columns: repeat(11, 300px);
-        grid-template-rows: repeat(11, 200px);
         cursor: pointer;
         user-select: none;
         display: -ms-grid;
-        display: grid;
+        display: flex;
         pointer-events: none;
 
       }
-
-      /* .item {
-        display: inline-block;
-        background: white;
-        min-height: 200px;
-        min-width: 340px;
-        margin: 2em 1em;
-        border-radius: 30px;
-        overflow: hidden;
-      } */
       .item{
         background: white;
         overflow: hidden;
-        /* margin: 2em 1em; */
         margin:1.5em 1.7em;
         border-radius: 30px;
-
+        width: 250px;
+        height: 160px;
       }
       
   .grid-container div.textslide1{
@@ -1241,21 +1197,6 @@ hr{
     padding: 13px;
     font-family: 'Poppins';
   }
-
-
-
-  /* .grid-container .grid-item .items.active ,.grid-container .grid-item .items2.active{
-    cursor: grabbing;
-    cursor: -webkit-grabbing;
-    transform: scale(1);
-  } */
-
-
-/* .items.active,.items2.active  {
-    cursor: grabbing;
-    cursor: -webkit-grabbing;
-    transform: scale(1);
-  } */
 
   .items.active {
     background: rgba(255,255,255,0.3);
@@ -1288,11 +1229,6 @@ hr{
     margin-left: 15px;
     font-family: 'Poppins';
   }
-  /* .btntext a:hover{
-    padding: 14px;
-    font-size: 20px;
-  } */
-
   .dvcircle{
     width:50px;
     height:50px;
@@ -1345,6 +1281,8 @@ hr{
     }
     .item {
       margin: 2em 2.4em;
+      width: 230px;
+      height: 140px;
     }
     .grid-item{
       left: 0;
