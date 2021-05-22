@@ -546,23 +546,29 @@ float: left;
         .flex-left div#divbottom div#divprix span#span1{
           padding-right: 20%;
         }
+        .flex-left div#divtop input{
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+            background: #f8f2ce;
+            padding: 17px 17px 17px 25px;
+            color: black;
+            outline: none;
+            border-color: transparent;
+             }
+         .flex-left div#divtop input::placeholder{
+            color: black;
+             }
+        .flex-left div#divtop input#inputDep{
+            border-top-left-radius: 18px;
+            border-top-right-radius: 18px;
+             }
+       .flex-left div#divtop input#inputArv{
+         border-bottom-left-radius: 18px;
+         border-bottom-right-radius: 18px;
+        }
 
-        .flex-left div#div1,.flex-left div#div2{
-          width: 85%;
-          margin-left: auto;
-          margin-right: auto;
-          background: #f8f2ce;
-          padding: 17px 17px 17px 25px;
-          color: black;
-        }
-        .flex-left div#div1{
-          border-top-left-radius: 18px;
-          border-top-right-radius: 18px;
-        }
-        .flex-left div#div2{
-          border-bottom-left-radius: 18px;
-          border-bottom-right-radius: 18px;
-        }
+
         .flex-content .flex-right div#divmetre{
           color: white;
           font-size: 20px;
