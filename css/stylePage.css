@@ -1269,7 +1269,9 @@ hr{
   font-family: 'Poppins';
   pointer-events:visible;
   }
-
+  .dvtext p:hover{
+   color:#ffc107 ;
+  }
 
   
   @media screen and (max-width: 1440px) {
