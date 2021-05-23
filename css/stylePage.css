@@ -1137,32 +1137,14 @@ hr{
 
       /* ********** Style scroll vertical page two ***** */
 
-      /* .grid-container {
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-        width: 100%;
-      } */
-      /* .grid-item {
-        padding: 3.5em 1em;
-        font-size: 1em;
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-        cursor: grab;
-        padding: 0;
-        overflow-x: hidden;
-        overflow-y: hidden;
-      } */
       .grid-item  {
         position: relative;
         width: 100%;
         height: 250px;
         overflow: hidden;
-	      -webkit-overflow-scrolling: touch;
         cursor: grab;
         top: 20px;
         left: 25px;
-        /* border-top: 10px solid #f00; */
       }
 
       .grid-container .grid-item .items,.grid-container .grid-item .items2{
@@ -1232,10 +1214,6 @@ hr{
     margin-left: 15px;
     font-family: 'Poppins';
   }
-  /* .btntext a:hover{
-    padding: 14px;
-    font-size: 20px;
-  } */
 
   .dvcircle{
     width:50px;
