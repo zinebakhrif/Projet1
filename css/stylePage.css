@@ -22,7 +22,24 @@ body {
   overflow: hidden;
 
      }
-
+     body.refreshing #inbox {
+      filter: blur(1px);
+      touch-action: none; /* prevent scrolling */
+    }
+    body.refreshing .refresher {
+      transform: translate3d(0,150%,0) scale(1);
+      z-index: 1;
+    }
+    .refresher {
+      --refresh-width: 55px;
+      pointer-events: none;
+      width: var(--refresh-width);
+      height: var(--refresh-width);
+      border-radius: 50%;
+      position: absolute;
+      transition: all 300ms cubic-bezier(0,0,0.2,1);
+      will-change: transform, opacity;
+    }
 /************ Start jarallax *********/
 /* demo styles */
 *, *:after, *:before {
@@ -493,7 +510,7 @@ float: left;
           padding-top: 15px;
           padding-bottom: 15px;
         }
-        .flex-content .flex-left img ,svg{
+        .flex-content .flex-left svg{
           vertical-align: revert !important;
           margin-left: 13px !important;
         }
@@ -520,7 +537,7 @@ float: left;
           width: 85%;
           margin-left: auto;
           margin-right: auto;
-	  text-align: center;
+
         }
         .flex-left div#divbottom{
           width: 80%;
@@ -546,29 +563,6 @@ float: left;
         .flex-left div#divbottom div#divprix span#span1{
           padding-right: 20%;
         }
-        .flex-left div#divtop input{
-            width: 85%;
-            margin-left: auto;
-            margin-right: auto;
-            background: #f8f2ce;
-            padding: 17px 17px 17px 25px;
-            color: black;
-            outline: none;
-            border-color: transparent;
-             }
-         .flex-left div#divtop input::placeholder{
-            color: black;
-             }
-        .flex-left div#divtop input#inputDep{
-            border-top-left-radius: 18px;
-            border-top-right-radius: 18px;
-             }
-       .flex-left div#divtop input#inputArv{
-         border-bottom-left-radius: 18px;
-         border-bottom-right-radius: 18px;
-        }
-
-
         .flex-content .flex-right div#divmetre{
           color: white;
           font-size: 20px;
@@ -1161,30 +1155,50 @@ hr{
 
       /* ********** Style scroll vertical page two ***** */
 
+      /* .grid-container {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        width: 100%;
+      } */
+      /* .grid-item {
+        padding: 3.5em 1em;
+        font-size: 1em;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        cursor: grab;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      } */
       .grid-item  {
         position: relative;
         width: 100%;
         height: 250px;
         overflow: hidden;
-	-webkit-overflow-scrolling: touch;
+	      -webkit-overflow-scrolling: touch;
         cursor: grab;
         top: 20px;
         left: 25px;
+        /* border-top: 10px solid #f00; */
       }
+
       .grid-container .grid-item .items,.grid-container .grid-item .items2{
         position: absolute;
         top: 0;
         left: 20px;
         cursor: pointer;
         user-select: none;
-        display: -ms-grid;
         display: flex;
         pointer-events: none;
 
       }
-      .item{
+
+
+       .item{
         background: white;
         overflow: hidden;
+        /* margin: 2em 1em; */
         margin:1.5em 1.7em;
         border-radius: 30px;
         width: 250px;
@@ -1203,6 +1217,7 @@ hr{
     padding: 13px;
     font-family: 'Poppins';
   }
+
 
   .items.active {
     background: rgba(255,255,255,0.3);
@@ -1235,6 +1250,11 @@ hr{
     margin-left: 15px;
     font-family: 'Poppins';
   }
+  /* .btntext a:hover{
+    padding: 14px;
+    font-size: 20px;
+  } */
+
   .dvcircle{
     width:50px;
     height:50px;
@@ -1248,6 +1268,7 @@ hr{
     text-align: center;
     cursor: pointer;
     pointer-events:visible;
+    z-index: 1;
 
   }
   .dvcircle p{
@@ -1255,6 +1276,7 @@ hr{
   font-size: 21px;
   font-family: 'Poppins';
   }
+
   .dvtext p{
   position: relative;
   top: 123px;
@@ -1263,7 +1285,9 @@ hr{
   font-size: 16px;
   font-weight: 600;
   font-family: 'Poppins';
+  pointer-events:visible;
   }
+
 
   
   @media screen and (max-width: 1440px) {
@@ -1285,7 +1309,7 @@ hr{
       padding: 0;
       left: 0 !important;
     }
-    .item {
+     .item {
       margin: 2em 2.4em;
       width: 230px;
       height: 140px;
@@ -1399,6 +1423,7 @@ hr{
 
          .grid-pg3{
           margin-top: 60px;
+          position: relative;
          }
 
 .container1-pg3{
@@ -1416,8 +1441,6 @@ hr{
   display: flex;
   display: -webkit-flex;
   width: 100%;
-  /* margin: 0px 22px; */
-  /* border: 1px solid yellow; */
   margin-top: 20px;
 }
 .dv2{
@@ -1535,3 +1558,200 @@ div.dv1{
 } 
 
 }
+
+
+.grid-container1{
+  border: 1px solid red;
+}
+
+.grid-item1{
+  border: 1px solid yellow;
+}
+
+.items1{
+  border: 1px solid green;
+}
+
+.items1 .items{
+  border: 1px solid black;
+}
+
+
+.flex-left div#divtop{
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.flex-left div#divtop input{
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #f8f2ce;
+  padding: 17px 17px 17px 25px;
+  color: black;
+  outline: none;
+  border-color: transparent;
+}
+.flex-left div#divtop input::placeholder{
+  color: black;
+}
+.flex-left div#divtop input#inputDep{
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+.flex-left div#divtop input#inputArv{
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+
+/**************** Style Page Four  ****************/
+.flex-left div#divtop p#NameAct{
+  color: white;
+  font-size: 20px;
+}
+.flex-left div.divBtm{
+  width: 100%;
+}
+
+form .grid-container div#dvslider{
+  width: 50%;
+  background: rgb(22 17 17 / 40%);
+  position: absolute;
+  top: -20px;
+  margin: 0 28% 0 28%;
+  z-index: 2;
+  border-radius: 7px;
+  display: none;
+}
+
+.mySlides {display: none}
+.mySlides img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width:94%;
+  margin: auto;
+  position: relative;
+}
+
+/* Next & previous buttons */
+.slideshow-container a.prev, .slideshow-container a.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.slideshow-container a.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.slideshow-container a.prev:hover, .slideshow-container a.next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.fade:not(.show) {
+  opacity: 1;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .slideshow-container a.prev, .slideshow-container a.next {font-size: 11px}
+}
+
+.dvBtmSld{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 12px 10px 0 10px;
+}
+
+.dvBtmSld p#idpicon {
+  color: red;
+  background: #e2ffce;
+  border-radius: 10px;
+  padding: 6px 12px;
+}
+.dvBtmSld p#idpicon span#spanIcon{
+  padding-right: 10px;
+}
+
+.dvBtmSld p#idpPrix {
+  padding: 6px 20px;
+  color: #e2ffce;
+  background: #66b830;
+  border-radius: 10px;
+}
+div#dvslider .flex-right p {
+  color: white;
+  font-size: 1vw;
+}
+
+div#dvslider .flex-right .google-map iframe#ifram2{
+  width: 100%;
+  border-radius: 20px;
+  height: 90px;
+}
+
+div#dvslider span#spanclose{
+    color: white;
+    font-size: 23px;
+    float: right;
+    margin-right: 10px; 
+    cursor: pointer; 
+}
+div#dvslider span#spanclose:hover{
+  color: red;
+}
+
+
