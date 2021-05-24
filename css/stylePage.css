@@ -479,7 +479,7 @@ float: left;
         padding:12px;
         }
         iframe#iframe1{
-          width: 85%;
+          width: 100%;
           border-radius: 20px;
           height: 340px;
         }
