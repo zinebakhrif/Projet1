@@ -66,7 +66,7 @@
 
 
      <!-- **********Input recherche ************ -->
-    <div class="flex-pg3" >
+    <div class="flex-pg3 animate" id="grid1">
         <form action="#" id="form3">
             <div class="flex-container-pg3" id="contform1">   
                 <input type="text" id="input5" name="text1" placeholder="choose your destination" class="item5" >
@@ -80,8 +80,8 @@
     </div>
      <!-- ********** Resulta Input recherche ************ -->
      
-    <form action="#" method="GET">
-     <div class="grid-container grid-pg3">
+    <div>
+     <div class="grid-container grid-pg3 animate" id="grid2">
         <main class="grid-item main">
           <div class="items">
             <div class="item slide1"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="id1" class="text1">+</p></div><div class="dvtext"><p onclick="showDetail()">1h <span class="ville" id="idville1"></span></p></div></div>
@@ -98,9 +98,9 @@
     
           </div>  
         </main>
-         
+         </div>
                  <div id="dvslider" class="animate">
-      <span id="spanclose" onclick="document.getElementById('dvslider').style.display='none'" title="Close">&times;</span>
+      <span id="spanclose" onclick="CloseContent()" title="Close">&times;</span>
 
           <div class="flex-left">
             <div id="divtop">
@@ -157,8 +157,8 @@
         </div>
          
       </div>
-    </form>
     </div>
+    
 
     <div class="container1-pg3">
     <div class="textstop-pg3"><p><span>More Plants</span></p> </div>
@@ -199,8 +199,20 @@
 
     <script>
         
-             function showDetail(){
+
+// ************** Function Close Content ************
+
+    function CloseContent(){
+      document.getElementById('dvslider').style.display='none';
+       document.getElementById('grid1').style.display='block';
+       document.getElementById('grid2').style.display='block';
+   }
+
+// ************* Function Show Detail **************
+     function showDetail(){
        document.getElementById('dvslider').style.display='block';
+       document.getElementById('grid1').style.display='none';
+       document.getElementById('grid2').style.display='none';
        var val=document.getElementsByClassName('ville');
        for(var i=0;i<x.length;i++){
        document.getElementById('NameAct').innerHTML=val[i].innerText;
