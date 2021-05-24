@@ -228,6 +228,10 @@ float: left;
  .header .navbar ul.menu1 li a:active{ 
   color:#f8d001; 
  }
+ .header .navbar ul.menu1 li.lien1 a,
+ .header .navbar ul.menu2 li.lien1 a{
+  color: #f8d001;
+ }
 
 .header .navbar ul.menu1 li.lien5 a{
   font-size: 20px;
