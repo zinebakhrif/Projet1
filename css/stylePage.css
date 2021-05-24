@@ -478,12 +478,12 @@ float: left;
         display: inline-block;
         padding:12px;
         }
-        iframe{
+        iframe#iframe1{
           width: 85%;
           border-radius: 20px;
           height: 340px;
         }
-        .google-map{
+        .google-map1{
           width: 85%;
           margin: auto;
         }
