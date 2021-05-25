@@ -1779,7 +1779,7 @@ div#dvslider span#spanclose:hover{
 
   div#dvslider .flex-left{
     padding: 0;
-    margin-top: -25px;
+    margin-top: -20px;
   }
   div#dvslider span#spanclose{
     margin: 10px 15px 0 15px;
@@ -1805,15 +1805,15 @@ div#dvslider span#spanclose:hover{
     margin:0;
   }
   div#dvslider .flex-right{
-    padding: 4px 10px;
+    padding: 6px 10px;
   }
   div#dvslider .flex-right p{
-    font-size: 8px;
+    font-size: 9px;
     line-height: 12px;
     padding-bottom: 2px;
   }
   div#dvslider .flex-right .google-map2 iframe#ifram2{
-    height: 100px;
+    height: 125px;
   }
 
   .header .nav .div2 ul li.lienShop a{
