@@ -1779,7 +1779,7 @@ div#dvslider span#spanclose:hover{
 
   div#dvslider .flex-left{
     padding: 0;
-    margin-top: -15px;
+    margin-top: -25px;
   }
   div#dvslider span#spanclose{
     margin: 10px 15px 0 15px;
@@ -1787,31 +1787,33 @@ div#dvslider span#spanclose:hover{
 
   .flex-left div#divtop p#NameAct{
     font-size: 16px;
+    margin:0;
   }
   .flex-left div.divBtm{
     padding-top: 0;
   }
   .slideshow-container{
-    width: 56%;
+    width: 85%;
   }
   .dvBtmSld{
     margin: 8px auto 0px auto;
-    max-width: 50%;
+    max-width: 65%;
   }
   .dvBtmSld p#idpicon,.dvBtmSld p#idpPrix{
     border-radius: 8px;
     padding: 5px 8px;
+    margin:0;
   }
   div#dvslider .flex-right{
     padding: 4px 10px;
   }
   div#dvslider .flex-right p{
-    font-size: 12.5px;
-    line-height: 18px;
-    padding-bottom: 2vh;
+    font-size: 8px;
+    line-height: 12px;
+    padding-bottom: 2px;
   }
   div#dvslider .flex-right .google-map2 iframe#ifram2{
-    height: 73px;
+    height: 100px;
   }
 
   .header .nav .div2 ul li.lienShop a{
