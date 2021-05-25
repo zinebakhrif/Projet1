@@ -1810,7 +1810,7 @@ div#dvslider span#spanclose:hover{
   div#dvslider .flex-right p{
     font-size: 9px;
     line-height: 12px;
-    padding-bottom: 2px;
+    padding: 4px;
   }
   div#dvslider .flex-right .google-map2 iframe#ifram2{
     height: 125px;
