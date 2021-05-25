@@ -1716,7 +1716,7 @@ div.dv1{
 
 div#dvslider .flex-right p {
   color: white;
-  font-size: 1.1vw;
+  font-size: 1vw;
   padding-bottom: 10vh;
   width: 85%;
   margin: auto;
@@ -1732,7 +1732,7 @@ div#dvslider .flex-right .google-map2{
 div#dvslider .flex-right .google-map2 iframe#ifram2{
   width: 100%;
   border-radius: 20px;
-  height: 90px;
+  height: 155px;
 }
 
 div#dvslider span#spanclose{
