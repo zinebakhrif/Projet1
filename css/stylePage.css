@@ -1684,18 +1684,19 @@ div.dv1{
 
 .dvBtmSld p#idpicon {
   color: red;
-  background: #e2ffce;
+  background: white;
   border-radius: 10px;
   padding: 6px 12px;
   cursor:pointer;
 }
+
 .dvBtmSld p#idpicon span#spanIcon{
   padding-right: 10px;
 }
 
 .dvBtmSld p#idpPrix {
   padding: 6px 20px;
-  color: #e2ffce;
+  color: white;
   background: #66b830;
   border-radius: 10px;
   cursor:pointer;
@@ -1704,6 +1705,15 @@ div.dv1{
 .dvBtmSld p#idpicon:hover,.dvBtmSld p#idpPrix:hover{
   opacity: 0.9;
 }
+.dvBtmSld p#idpicon:active {
+    color: white;
+    background: red;
+}
+.dvBtmSld p#idpPrix:active {
+  color: #66b830;
+  background: white;
+}
+
 div#dvslider .flex-right p {
   color: white;
   font-size: 1.1vw;
