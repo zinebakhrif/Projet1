@@ -1592,7 +1592,7 @@ div.dv1{
     background: rgb(46 46 46 / 70%);
     position: absolute;
     z-index: 2;
-    margin-top: -20px;
+    margin-top: 0;
   display: none;
 }
 .styleDvDetail{
