@@ -1593,7 +1593,7 @@ div.dv1{
   display: none;
 }
 div.dvsld{
-height: 85%;
+height: 85% !important;
 }
 .styleDvDetail{
   display: none;
@@ -1817,7 +1817,7 @@ div#dvslider span#spanclose:hover{
     padding-top: 0;
   }
   div.dvsld{ 
-      height: 95%;
+      height: 95% !important;
     }
   .slideshow-container{
     width: 85%;
