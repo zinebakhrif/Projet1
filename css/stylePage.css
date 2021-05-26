@@ -1588,7 +1588,7 @@ div.dv1{
 
  div#dvslider{
     width: 100%;
-    height: 90%;
+    height: 95%;
     background: rgb(46 46 46 / 70%);
     position: absolute;
     z-index: 2;
@@ -1596,7 +1596,7 @@ div.dv1{
   display: none;
 }
 div.dvsld{
-height: 85% !important;
+height: 90% !important;
 }
 .styleDvDetail{
   display: none;
