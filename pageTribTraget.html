@@ -129,25 +129,26 @@
 
     </div>
 
-  </div> 
   </div>
 
    <!---------------------------End CONTENT ---------------->
+        <div class="dvGrids">
+            
    <div class="grid-container">
     <div class="textslide1"><span>More plans</span> </div>
-    <main class="grid-item main">
+    <main class="grid-item main animate" id="dvgrid1">
       <div class="items">
-        <div class="item slide1"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="id1" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-        <div class="item slide2"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="id2" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-        <div class="item slide3"><div class="dvcircle" ><p onclick="addPrix(this.id)"  id="id3" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-        <div class="item slide4"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id4" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-        <div class="item slide5"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id5" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-        <div class="item slide6"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id6" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-        <div class="item slide7"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id7" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-        <div class="item slide8"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id8" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-        <div class="item slide9"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id9" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-        <div class="item slide10"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id10" class="text1">+</p></div><div class="dvtext"><p>1h Tangier</p></div></div>
-        <div class="btnMore"><div class="btntext"><a>show More >></a></div></div>
+        <div class="item slide1"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="id1" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailPlan(this.id)" id="idPlan1">1h <span id="idville1">Tangier</span></p></div></div>
+        <div class="item slide2"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="id2" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailPlan(this.id)" id="idPlan2">1h <span id="idville2">Tangier</span></p></div></div>
+        <div class="item slide3"><div class="dvcircle" ><p onclick="addPrix(this.id)"  id="id3" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailPlan(this.id)" id="idPlan3">1h <span id="idville3">Tangier</span></p></div></div>
+        <div class="item slide4"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id4" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailPlan(this.id)" id="idPlan4">1h <span id="idville4">Tangier</span></p></div></div>
+        <div class="item slide5"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id5" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailPlan(this.id)" id="idPlan5">1h <span id="idville5">Tangier</span></p></div></div>
+        <div class="item slide6"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id6" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailPlan(this.id)" id="idPlan6">1h <span id="idville6">Tangier</span></p></div></div>
+        <div class="item slide7"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id7" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailPlan(this.id)" id="idPlan7">1h <span id="idville7">Tangier</span></p></div></div>
+        <div class="item slide8"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id8" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailPlan(this.id)" id="idPlan8">1h <span id="idville8">Tangier</span></p></div></div>
+        <div class="item slide9"><div class="dvcircle" ><p onclick="addPrix(this.id)" id="id9" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailPlan(this.id)" id="idPlan9">1h <span id="idville9">Tangier</span></p></div></div>
+        <div class="item slide10"><div class="dvcircle"  ><p onclick="addPrix(this.id)" id="id10" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailPlan(this.id)" id="idPlan10">1h <span id="idville10">Tangier</span></p></div></div>
+        <div class="btnMore"><div class="btntext"><a href="pageTribTraget.html">show More >></a></div></div>
 
       </div>  
     </main>
@@ -155,23 +156,85 @@
 
   <div class="grid-container grid-slider2">
     <div class="textslide1"><span>More Activities</span> </div>
-    <main class="grid-item main slider-item">
+    <main class="grid-item main slider-item animate" id="dvgrid2">
       <div class="items2" id="itemslide">
-        <div class="item slide1"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp1" class="text1">+</p></div><div class="dvtext"><p>Quad</p></div></div>
-        <div class="item slide2"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp2" class="text1" >+</p></div><div class="dvtext"><p>Parashute</p></div></div>
-        <div class="item slide3"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp3" class="text1">+</p></div><div class="dvtext"><p>Yakht</p></div></div>
-        <div class="item slide4"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp4" class="text1">+</p></div><div class="dvtext"><p>Diving</p></div></div>
-        <div class="item slide5"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp5" class="text1">+</p></div><div class="dvtext"><p>Quad</p></div></div>
-        <div class="item slide6"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp6" class="text1">+</p></div><div class="dvtext"><p>Parashute</p></div></div>
-        <div class="item slide7"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp7" class="text1">+</p></div><div class="dvtext"><p>Yakht</p></div></div>
-        <div class="item slide8"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp8" class="text1">+</p></div><div class="dvtext"><p>Diving</p></div></div>
-        <div class="item slide9"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp9" class="text1">+</p></div><div class="dvtext"><p>Parashute</p></div></div>
-        <div class="item slide10"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp10" class="text1">+</p></div><div class="dvtext"><p>Quad</p></div></div>
-        <div class="btnMore"><div class="btntext"><a>show More >></a></div></div>
+        <div class="item slide1"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp1" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailActivitie2(this.id)" class="txtActv" id="idact1">Quad</p></div></div>
+        <div class="item slide2"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp2" class="text1" >+</p></div><div class="dvtext"><p onclick="showDetailActivitie2(this.id)" class="txtActv"id="idact2">Parashute</p></div></div>
+        <div class="item slide3"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp3" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailActivitie2(this.id)" class="txtActv" id="idact3">Yakht</p></div></div>
+        <div class="item slide4"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp4" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailActivitie2(this.id)" class="txtActv" id="idact4">Diving</p></div></div>
+        <div class="item slide5"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp5" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailActivitie2(this.id)" class="txtActv" id="idact5">Quad</p></div></div>
+        <div class="item slide6"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp6" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailActivitie2(this.id)" class="txtActv" id="idact6">Parashute</p></div></div>
+        <div class="item slide7"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp7" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailActivitie2(this.id)" class="txtActv" id="idact7">Yakht</p></div></div>
+        <div class="item slide8"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp8" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailActivitie2(this.id)" class="txtActv" id="idact8">Diving</p></div></div>
+        <div class="item slide9"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp9" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailActivitie2(this.id)" class="txtActv" id="idact9">Parashute</p></div></div>
+        <div class="item slide10"><div class="dvcircle"><p onclick="addPrix(this.id)"  id="idp10" class="text1">+</p></div><div class="dvtext"><p onclick="showDetailActivitie2(this.id)" class="txtActv" id="idact10">Quad</p></div></div>
+        <div class="btnMore"><div class="btntext"><a href="pageTribTraget.html">show More >></a></div></div>
 
       </div>  
-    </main>
+    </main>    
   </div>
+             <!-- ******************** Show Detail ************ -->
+ <div class="styleDvDetail" id="idstyleDvDetail">
+ <div id="dvslider" class="animate">
+  <span id="spanclose" onclick="ClosePage()" title="Close">&times;</span>
+
+      <div class="flex-left">
+        <div id="divtop">
+            <p id="NameAct"></p>
+        </div>
+
+      <div class="divBtm">
+          <div class="slideshow-container">
+
+              <div class="mySlides fade">
+                <img src="c1.jpg" style="width:100%;">
+              </div>
+              
+              <div class="mySlides fade">
+                <img src="c2.jpg" style="width:100%;">
+              </div>
+              
+              <div class="mySlides fade">
+                <img src="c3.jpg" style="width:100%;">
+              </div>
+                                
+              <div class="mySlides fade">
+                <img src="c4.jpg" style="width:100%;">
+              </div>
+                                
+              <div class="mySlides fade">
+                <img src="c5.jpg" style="width:100%;">
+              </div>
+                                
+              <div class="mySlides fade">
+                <img src="c6.jpg" style="width:100%;">
+              </div>
+              
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+          </div>
+          <div class="dvBtmSld">
+        <p id="idpicon"><span id="spanIcon">&#x2764</span><span>9999</span> </p>
+        <p id="idpPrix"><span >200</span>dh</p>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="flex-right">
+    <p id="idTxtSld">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="google-map2"><iframe id="ifram2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103637.95722047047!2d-5.87378919377006!3d35.73393617008424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b875cf04c132d%3A0x76bfc571bfb4e17a!2sTangier!5e0!3m2!1sen!2sma!4v1620503686281!5m2!1sen!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+  </div>
+  
+  </div>
+</div>
+</div>
+            
+            
+</div>
+
 
 </div>
 
@@ -182,7 +245,53 @@
 
     <script>
 
+  // ************* Function Show Detail **************
+  function showDetailPlan(id){
+         document.getElementById('idstyleDvDetail').style.display='block';
+         document.getElementById('dvslider').style.display='block';
+         var val1=document.getElementById(id);
+         var y = val1.getElementsByTagName("span");
+         document.getElementById('NameAct').innerHTML=y[0].innerText;
+         document.getElementById('dvgrid1').style.visibility='hidden';
+       }
+       function showDetailActivitie2(id){
+         document.getElementById('idstyleDvDetail').style.display='block';
+         document.getElementById('dvslider').style.display='block';
+         var val2=document.getElementById(id);
+         document.getElementById('NameAct').innerHTML=val2.innerText;
+         document.getElementById('dvgrid2').style.visibility='hidden';
+       }
+     //*************** slider Activity *************
 
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides1 = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides1.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides1.length}
+  for (i = 0; i < slides1.length; i++) {
+      slides1[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace("active", "");
+  }
+  slides1[slideIndex-1].style.display = "block";  
+}
+
+
+
+//  ******************* Function Add Prix **********
 function addPrix(id) {
  x= document.getElementById(id).innerText;
  y= document.getElementById("prix").innerText;
