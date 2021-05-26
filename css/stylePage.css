@@ -1592,9 +1592,9 @@ div.dv1{
     margin-top: 0;
   display: none;
 }
-/* div.dvsld{
-height: 85% !important;
-} */
+div.dvsld{
+height: 85%;
+}
 .styleDvDetail{
   display: none;
 }
@@ -1816,6 +1816,9 @@ div#dvslider span#spanclose:hover{
   .flex-left div.divBtm{
     padding-top: 0;
   }
+  div.dvsld{ 
+      height: 95%;
+    }
   .slideshow-container{
     width: 85%;
   }
