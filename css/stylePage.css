@@ -1403,7 +1403,6 @@ hr{
          }
 
          .grid-pg3{
-          /* margin-top: 60px; */
           padding-top: 60px;
           position: relative;
          }
@@ -1423,8 +1422,6 @@ hr{
   display: flex;
   display: -webkit-flex;
   width: 100%;
-  /* margin: 0px 22px; */
-  /* border: 1px solid yellow; */
   margin-top: 20px;
 }
 .dv2{
