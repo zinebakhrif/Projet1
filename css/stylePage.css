@@ -1218,7 +1218,6 @@ hr{
     opacity: 0.9;
   }
   .btntext{
-    color: #2c2c2c;
     font-size: 17px;
     top: 90px;
     position: relative;
@@ -1229,7 +1228,9 @@ hr{
     background: white;
     border-radius: 23px;
     margin-left: 15px;
-    font-family: 'Poppins';
+    font-family: 'Poppins'; 
+    text-decoration: none;
+    color: black;
   }
 
   .dvcircle{
