@@ -311,13 +311,7 @@ function fncBtn3(){
     }
 }
 
-document.getElementById("input2")
-    .addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13 && document.getElementById("input1").style.display=="none") {
-        document.getElementById("btn3").click();
-    }
-});
+
 
 //******** Evente Enter In inpits *******
 document.getElementById("input2")
@@ -331,21 +325,33 @@ document.getElementById("input1")
     .addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13) {
+      if(document.getElementById("btn1").style.display=="block"){
         document.getElementById("btn1").click();
+      }else{
+        document.getElementById("btn2").click();
+      }
     }
 });
 document.getElementById("input2")
     .addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13) {
+      if(document.getElementById("btn1").style.display=="block"){
         document.getElementById("btn1").click();
+      }else{
+        document.getElementById("btn2").click();
+      }
     }
 });
 document.getElementById("input3")
     .addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13) {
+      if(document.getElementById("btn1").style.display=="block"){
         document.getElementById("btn1").click();
+      }else{
+        document.getElementById("btn2").click();
+      }
     }
 });
 
@@ -353,7 +359,11 @@ document.getElementById("input4")
     .addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13) {
+      if(document.getElementById("btn1").style.display=="block"){
         document.getElementById("btn1").click();
+      }else{
+        document.getElementById("btn2").click();
+      }
     }
 });
           
