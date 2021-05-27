@@ -113,7 +113,7 @@
     <span class="glyphicon glyphicon-search"></span>
     <i class="bi bi-arrow-right arrow" style="font-size: 25px;color:black"></i>
   </button>
-  <button type="button" class="btn btn-warning"  id="btn3">
+  <button type="button" class="btn btn-warning" onclick="fncBtn3()"  id="btn3">
  <span class="glyphicon glyphicon-search"></span>
  <i class="bi bi-arrow-right arrow" style="font-size: 25px;color:black"></i>
 </button>
@@ -300,33 +300,65 @@
          
           //********* Function url
           
-          $(document).ready(function(){
-  $("#btn3").click(function(){
-        var txt1=document.getElementById("input2").value;
-    if(txt1!=''){
+function fncBtn3(){
+  var txt1=document.getElementById("input2").value;
+  if(txt1!=''){
       document.getElementById("lblerreur").style.display="none";
-      $("body").show("slow", function(){
       window.location="pageThree.html?text2="+document.getElementById("input2").value;
-    });
     }else
       {
       document.getElementById("lblerreur").style.display="block";
     }
-  });
+}
+
+document.getElementById("input2")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13 && document.getElementById("input1").style.display=="none") {
+        document.getElementById("btn3").click();
+    }
+});
+
+//******** Evente Enter In inpits *******
+document.getElementById("input2")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13 && document.getElementById("input1").style.display=="none") {
+        document.getElementById("btn3").click();
+    }
+});
+document.getElementById("input1")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("btn1").click();
+    }
+});
+document.getElementById("input2")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("btn1").click();
+    }
+});
+document.getElementById("input3")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("btn1").click();
+    }
+});
+
+document.getElementById("input4")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("btn1").click();
+    }
 });
           
+          
           //******** Function scroll *******
-//       var prevScrollpos = window.pageYOffset;
-//       if (window.matchMedia("(max-width: 600px)").matches) {
-//       window.onscroll = function() {
-//       var currentScrollPos = window.pageYOffset;
-//         if (prevScrollpos < currentScrollPos) {
-//           document.getElementById("contform1").style.display = "none";
-//           $(".menu2 > li a").css("color", "#f4f4f4");
-//         }
-//         prevScrollpos = currentScrollPos;       
-//       }
-//     }
               if (window.matchMedia("(max-width: 600px)").matches) {
     window.onscroll = function() {myFunction()};
 
