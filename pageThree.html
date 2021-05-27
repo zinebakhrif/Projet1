@@ -67,7 +67,7 @@
 
      <!-- **********Input recherche ************ -->
     <div class="flex-pg3 animate" id="grid1">
-        <form action="#" id="form3">
+        <form action="javascript:void(0)" id="form3">
             <div class="flex-container-pg3" id="contform1">   
                 <input type="text" id="input5" name="text1" placeholder="choose your destination" class="item5" >
             <span id="spanErreur">*</span>
@@ -234,6 +234,15 @@
 
     }
   });
+});
+        
+            //******** Evente Enter In input *******
+document.getElementById("input5")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("btnville").click();
+    }
 });
 //**********  add Ville ***
 const queryString = window.location.search;
