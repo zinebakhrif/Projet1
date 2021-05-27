@@ -520,11 +520,24 @@ float: left;
           border-top: 5px solid black;
         }
         .flex-left div#divtop{
-          width: 85%;
+          /* width: 85%; */
+          width: 90%;
           margin-left: auto;
           margin-right: auto;
-
+          text-align: center;
+          position: relative;
         }
+        .styBtnSearch{
+          font-size: 20px;
+          color: black;
+          position: absolute;
+          top: 38px;
+          border-radius: 50%;
+          background: wheat;
+          padding: 4px 8px;
+          right: -20px;
+        }
+
         .flex-left div#divbottom{
           width: 80%;
           margin-left: auto;
@@ -632,6 +645,10 @@ float: left;
         }
         .flex-left div#divtop{
           width: 95%;
+        }
+        .styBtnSearch{
+          top: 34px;
+          right: -21px;
         }
         .flex-left div#div1,.flex-left div#div2{
           width: 90%;
