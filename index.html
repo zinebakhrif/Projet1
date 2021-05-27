@@ -317,7 +317,7 @@ function fncBtn3(){
 document.getElementById("input2")
     .addEventListener("keyup", function(event) {
     event.preventDefault();
-    if (event.keyCode === 13 && document.getElementById("input1").style.display=="none") {
+    if (event.keyCode === 13 && document.getElementById("btn3").style.display!="none") {
         document.getElementById("btn3").click();
     }
 });
