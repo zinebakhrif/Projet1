@@ -109,7 +109,7 @@
     <input type="text" id="input3" name="text3" placeholder="Quand" class="item3" >
     <input type="text" id="input4" name="text4" placeholder="Qui" class="item4" >
 
-    <button type="button" class="btn btn-warning" onclick="myshow1()" id="btn1">
+    <button type="button" class="btn btn-warning" onclick="myshow(this.id)" id="btn1">
     <span class="glyphicon glyphicon-search"></span>
     <i class="bi bi-arrow-right arrow" style="font-size: 25px;color:black"></i>
   </button>
@@ -119,7 +119,7 @@
 </button>
   <label id="lblerreur">veuillez renseigner tous les champ!</label>
 
-  <button type="button" class="btn btn-warning"  id="btn2" onclick="myshow2()">
+  <button type="button" class="btn btn-warning"  id="btn2" onclick="myshow(this.id)">
     <span class="glyphicon glyphicon-search"></span>
     <i class="bi bi-arrow-right arrow" style="font-size: 25px;color:black"></i>
   </button>
@@ -321,52 +321,65 @@ document.getElementById("input2")
 
 //******** Evente Enter In inpits *******
 
+document.getElementById("input1")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault()
+    if (window.matchMedia("(min-width: 601px)").matches) {
+    if (event.keyCode === 13){
+      document.getElementById("btn1").click();
+    }
+  }
+      if (window.matchMedia("(max-width: 600px)").matches) {
+      if (event.keyCode === 13){
+      document.getElementById("btn2").click();
+      }   
+    }
+});
 
-// document.getElementById("input1")
-//     .addEventListener("keyup", function(event) {
-//     event.preventDefault();
-//     if (event.keyCode === 13) {
-//       if(document.getElementById("btn1").style.display=="block"){
-//         document.getElementById("btn1").click();
-//       }else{
-//         document.getElementById("btn2").click();
-//       }
-//     }
-// });
-// document.getElementById("input2")
-//     .addEventListener("keyup", function(event) {
-//     event.preventDefault();
-//     if (event.keyCode === 13) {
-//       if(document.getElementById("btn1").style.display=="block"){
-//         document.getElementById("btn1").click();
-//       }else{
-//         document.getElementById("btn2").click();
-//       }
-//     }
-// });
-// document.getElementById("input3")
-//     .addEventListener("keyup", function(event) {
-//     event.preventDefault();
-//     if (event.keyCode === 13) {
-//       if(document.getElementById("btn1").style.display=="block"){
-//         document.getElementById("btn1").click();
-//       }else{
-//         document.getElementById("btn2").click();
-//       }
-//     }
-// });
+document.getElementById("input2")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault()
+    if (window.matchMedia("(min-width: 601px)").matches) {
+    if (event.keyCode === 13){
+      document.getElementById("btn1").click();
+    }
+  }
+      if (window.matchMedia("(max-width: 600px)").matches) {
+      if (event.keyCode === 13){
+      document.getElementById("btn2").click();
+      }   
+    }
+});
 
-// document.getElementById("input4")
-//     .addEventListener("keyup", function(event) {
-//     event.preventDefault();
-//     if (event.keyCode === 13) {
-//       if(document.getElementById("btn1").style.display=="block"){
-//         document.getElementById("btn1").click();
-//       }else{
-//         document.getElementById("btn2").click();
-//       }
-//     }
-// });
+document.getElementById("input3")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault()
+    if (window.matchMedia("(min-width: 601px)").matches) {
+    if (event.keyCode === 13){
+      document.getElementById("btn1").click();
+    }
+  }
+      if (window.matchMedia("(max-width: 600px)").matches) {
+      if (event.keyCode === 13){
+      document.getElementById("btn2").click();
+      }   
+    }
+});
+
+document.getElementById("input4")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault()
+    if (window.matchMedia("(min-width: 601px)").matches) {
+    if (event.keyCode === 13){
+      document.getElementById("btn1").click();
+    }
+  }
+      if (window.matchMedia("(max-width: 600px)").matches) {
+      if (event.keyCode === 13){
+      document.getElementById("btn2").click();
+      }   
+    }
+});
           
           
           //******** Function scroll *******
