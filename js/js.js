@@ -17,11 +17,11 @@ window.onclick = function(event) {
 function BtnLike(elmnt) {
   if(elmnt.style.background == "white")
   {
-    this.style.background=="red";
-    this.style.color=="white";
+    elmnt.style.background="red";
+    elmnt.style.color="white";
   }else{
-    this.style.background="white";
-    this.style.color="red"; 
+    elmnt.style.background="white";
+    elmnt.style.color="red"; 
   }
   }
 
