@@ -13,6 +13,17 @@ window.onclick = function(event) {
     }
 }
     
+//********** Button Like **********/
+function BtnLike(elmnt) {
+  if(elmnt.style.background == "white")
+  {
+    this.style.background=="red";
+    this.style.color=="white";
+  }else{
+    this.style.background="white";
+    this.style.color="red"; 
+  }
+  }
 
 
 
