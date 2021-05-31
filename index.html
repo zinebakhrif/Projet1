@@ -320,8 +320,11 @@ document.getElementById("input2")
 });
 
 //******** Evente Enter In inpits *******
-
-document.getElementById("input1")
+var myInputs = document.getElementsByTagName("input");
+    var p;
+    for (p = 0; p < myInputs.length; p++) {
+      
+      myInputs[p]
     .addEventListener("keyup", function(event) {
     event.preventDefault()
     if (window.matchMedia("(min-width: 601px)").matches) {
@@ -335,51 +338,7 @@ document.getElementById("input1")
       }   
     }
 });
-
-document.getElementById("input2")
-    .addEventListener("keyup", function(event) {
-    event.preventDefault()
-    if (window.matchMedia("(min-width: 601px)").matches) {
-    if (event.keyCode === 13){
-      document.getElementById("btn1").click();
-    }
-  }
-      if (window.matchMedia("(max-width: 600px)").matches) {
-      if (event.keyCode === 13){
-      document.getElementById("btn2").click();
-      }   
-    }
-});
-
-document.getElementById("input3")
-    .addEventListener("keyup", function(event) {
-    event.preventDefault()
-    if (window.matchMedia("(min-width: 601px)").matches) {
-    if (event.keyCode === 13){
-      document.getElementById("btn1").click();
-    }
-  }
-      if (window.matchMedia("(max-width: 600px)").matches) {
-      if (event.keyCode === 13){
-      document.getElementById("btn2").click();
-      }   
-    }
-});
-
-document.getElementById("input4")
-    .addEventListener("keyup", function(event) {
-    event.preventDefault()
-    if (window.matchMedia("(min-width: 601px)").matches) {
-    if (event.keyCode === 13){
-      document.getElementById("btn1").click();
-    }
-  }
-      if (window.matchMedia("(max-width: 600px)").matches) {
-      if (event.keyCode === 13){
-      document.getElementById("btn2").click();
-      }   
-    }
-});
+}
           
           
           //******** Function scroll *******
