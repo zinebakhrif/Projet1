@@ -321,6 +321,7 @@
 <div  class="tab-pane" id="tab3">
   <form  id="formReset" class="modal-con" action="#" method="post">
     <div class="containerlogin">
+        <i class="bi bi-arrow-left styBack" id="BtnBack"></i>
   <p class="titleReset">FORGET PASSWORD</p>
   <p class="txtEmail">Enter your e-mail adress below to reset your password.</p>
   <label for="email"><b>Email</b></label>
@@ -347,11 +348,14 @@
         document.getElementById("tab2").style.display="none";
         document.getElementById("tab3").style.display="block";
       }
-      document.getElementById("btnLog").addEventListener("click",function(){
+      function FncBtnLogin(){
         document.getElementById("tab1").style.display="block";
         document.getElementById("tab2").style.display="none";
         document.getElementById("tab3").style.display="none";
-      });
+      }
+      document.getElementById("btnLog").addEventListener("click",FncBtnLogin);
+      document.getElementById("BtnBack").addEventListener("click",FncBtnLogin);
+
       document.getElementById("btnReg").addEventListener("click",function(){
         document.getElementById("tab1").style.display="none";
         document.getElementById("tab2").style.display="block";
