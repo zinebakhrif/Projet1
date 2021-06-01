@@ -1096,6 +1096,10 @@ button.loginfm:hover ,button#btncancel:hover {
   font-weight: BOLD;
   color: #04aa6d;
 }
+   .styBack{
+     font-size: 30px;
+     color:black;
+     }
 
 .containerlogin {
   padding: 25px;
@@ -1198,7 +1202,11 @@ span.psw {
   .titleReset{
     font-size: 13px;
   }
-  
+    }
+  .styBack{
+    font-size: 24px;
+    }
+	
 }
 
 
