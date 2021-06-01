@@ -262,34 +262,78 @@
   </div>
 </div>
     
-     <!--           start Login             -->
+ <!--           start Login             -->
  <div id="id01" class="modal">
-  
-  <form id="form2" class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <p>Log in </p>
-    </div>
-    <hr>
+  <div class="animate modal-content1">
+    <span  onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    
+<ul class="nav nav-tabs" style="text-align:center">
+  <li class="active" style="width:50%" id="btnLog"><a data-toggle="tab" href="#tab1">Login</a></li>
+  <li style="width:50%" id="btnReg"><a data-toggle="tab" href="#tab2">Register</a></li>
+</ul>
+<div class="tab-content" >
+  <!-- ******************* Form Login *********************-->
 
+<div class="tab-pane active" id="tab1">
+<form  id="formLog" class="modal-con" action="#" method="post">
+
+<div class="containerlogin">
+  <label for="uname"><b>Username</b></label>
+  <input type="text" placeholder="Enter Username" name="uname" required>
+
+  <label for="psw"><b>Password</b></label>
+  <input type="password" placeholder="Enter Password" name="psw" required>
+    
+  <button class="loginfm" type="submit">Login</button>
+  <label>
+    <input type="checkbox" checked="checked" name="remember"> Remember me
+  </label>
+</div>
+
+<div class="containerlogin" style="background-color:#f1f1f1">
+  <button id="btncancel" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+  <span class="psw">Forgot <a href="#" onclick="showFrmReg()" >password?</a></span>
+</div>
+</form>
+</div>
+
+<!-- ******************* Form Register *********************-->
+<div  class="tab-pane" id="tab2">
+<form  id="formReg" class="modal-con" action="#" method="post">
+
+<div class="containerlogin">
+<label for="email"><b>Email</b></label>
+<input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+<label for="psw"><b>Password</b></label>
+<input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+<label for="psw-repeat"><b>Repeat Password</b></label>
+<input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    
+  <label>
+    <input type="checkbox" checked="checked" name="remember"> I agree to the Terms of Service and Privacy Policy
+  </label>
+        <button class="loginfm" type="submit">Register</button>
+</div>
+</form>
+</div>
+<div  class="tab-pane" id="tab3">
+  <form  id="formReset" class="modal-con" action="#" method="post">
     <div class="containerlogin">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button id="loginfm" type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="containerlogin" style="background-color:#f1f1f1">
-      <button id="btncancel" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
+  <p class="titleReset">FORGET PASSWORD</p>
+  <p class="txtEmail">Enter your e-mail adress below to reset your password.</p>
+  <label for="email"><b>Email</b></label>
+  <input type="email" placeholder="Enter Email" name="email" id="email" required>
+  
+    <button class="loginfm" type="submit">Reset </button>
+  </div>
   </form>
+  </div>
+
+
+</div>
+</div>
 </div>
   <!--           End Login                -->
 
@@ -297,8 +341,25 @@
   
     <script src="./js/js.js" ></script>
       <script>
+          //********** Button Login **************
+      function showFrmReg(){
+        document.getElementById("tab1").style.display="none";
+        document.getElementById("tab2").style.display="none";
+        document.getElementById("tab3").style.display="block";
+      }
+      document.getElementById("btnLog").addEventListener("click",function(){
+        document.getElementById("tab1").style.display="block";
+        document.getElementById("tab2").style.display="none";
+        document.getElementById("tab3").style.display="none";
+      });
+      document.getElementById("btnReg").addEventListener("click",function(){
+        document.getElementById("tab1").style.display="none";
+        document.getElementById("tab2").style.display="block";
+        document.getElementById("tab3").style.display="none";
+      });
+//**********End Button Login **************
          
-          //********* Function url
+          //********* Function url ****************
           
 function fncBtn3(){
   var txt1=document.getElementById("input2").value;
