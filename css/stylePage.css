@@ -1003,29 +1003,61 @@ float: left;
 
       /*--------------------------- start Form Login ----------------*/
 
+
       /* Full-width input fields */
+      .modal {
+        display: none;
+        position: fixed; /* Stay in place */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(41, 4, 4); /* Fallback color */
+        background-color: rgba(0,0,0,0.4) !important; /* Black w/ opacity */
+      }
+      .tab-pane{
+      background-color: white !important;
+      }
+      .tab-content{
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      .modal-content1{
+        background-color: #fefefe !important;
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        width: 43%; /* Could be more or less, depending on screen size */
+        border-radius: 10px;
+        position:relative;
+      }
+      .containerlogin{
+        display: block;
+      }
 
-      form#form2 input[type=text], input[type=password] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-      }
-      form#form2 input[type=text]::placeholder, input[type=password]::placeholder{
-        font-size: 16px;
-      }
-      form#form2 input[type=text]:focus, input[type=password]:focus{
-        border: 2px solid rgb(43 187 196 / 77%) ;
-        outline: none;
-        }
-.header .navbar ul.menu1 li.lien6:hover {
+      form#formLog input[type=text], input[type=password],
+      form#formReg input[type=text], input[type=email]{
+     width: 100%;
+     padding: 12px 20px;
+     margin: 8px 0;
+     display: inline-block;
+     border: 1px solid #ccc;
+     box-sizing: border-box;
+   }
+   form#formLog input[type=text]::placeholder, form#formReg input[type=text]::placeholder, 
+   input[type=password]::placeholder,input[type=email]::placeholder{
+     font-size: 16px;
+   }
+   form#formLog input[type=text]:focus,
+   form#formReg input[type=text]:focus,
+    input[type=password]:focus,input[type=email]:focus{
+     border: 2px solid rgb(43 187 196 / 77%) ;
+     outline: none;
+     }
+  .header .navbar ul.menu1 li.lien6:hover {
   opacity: 0.8;
-}
-
+  }
 /* Set a style for all buttons */
-button#loginfm{
+button.loginfm{
   background-color: #04AA6D;
   color: white;
   padding: 14px 20px;
@@ -1045,7 +1077,7 @@ button#btncancel{
   border-radius: 10px;
 }
 
-button#loginfm:hover ,button#btncancel:hover {
+button.loginfm:hover ,button#btncancel:hover {
   opacity: 0.8;
 }
 /* Extra styles for the cancel button */
@@ -1054,19 +1086,16 @@ button#loginfm:hover ,button#btncancel:hover {
   padding: 10px 18px;
   background-color: #f44336;
 }
-
-/* Center the image and position the close button */
-.imgcontainer {
+ .txtEmail{
+  font-size: 15px;  
+}
+.titleReset{
+  font-size: 20px;
+  padding: 10px;
   text-align: center;
-  margin: 15px 0 0 0;
-  position: relative;
+  font-weight: BOLD;
+  color: #04aa6d;
 }
-.imgcontainer p{
-  font-size: 25px;
-  font-weight: 600;
-
-}
-
 
 .containerlogin {
   padding: 25px;
@@ -1077,40 +1106,15 @@ span.psw {
   padding-top: 16px;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 43%; /* Could be more or less, depending on screen size */
-  border-radius: 10px;
-}
-.containerlogin:last-child{
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
 
 /* The Close Button (x) */
 .close {
   position: absolute;
-  right: 25px;
-  top: -7%;
+  right: 23px;
   color: #000;
   font-size: 35px;
   font-weight: bold;
+  z-index:1;
 }
 
 .close:hover,
@@ -1118,9 +1122,24 @@ span.psw {
   color: red;
   cursor: pointer;
 }
-hr{
-  margin-top: 5px;
+
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
 }
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
 
 /* Add Zoom Animation */
 .animate {
@@ -1138,25 +1157,32 @@ hr{
   to {transform: scale(1)}
 }
 @media screen and (max-width: 900px){
-  .modal-content{
+  .modal-content1{
     width:80%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .modal-content{
-    width:80%;
+  .modal-content1{
     margin-top: 13%;
   }
 
-  form#form2 input[type=text], input[type=password]{
+  form#formLog input[type=text], input[type=password],
+  form#formReg input[type=text], input[type=email]{
     padding: 10px 15px;
   }
-  form#form2 input[type=text]::placeholder, input[type=password]::placeholder{
+
+  form#formLog input[type=text]::placeholder,
+  form#formReg input[type=text]::placeholder,
+   input[type=password]::placeholder,input[type=email]::placeholder{
     font-size: 13px;
   }
-
-  form#form2 .modal-content{
+   .close{
+    right: 4px;
+    top: 6px;
+    font-size: 30px;
+   }
+  form#formLog .modal-content1{
     padding: 0;
   }
   button#btncancel{
@@ -1165,8 +1191,16 @@ hr{
   .containerlogin{
     padding: 0 10px 8px 10px;
   }
+
+  .txtEmail{
+    font-size: 15px;  
+  }
+  .titleReset{
+    font-size: 13px;
+  }
   
 }
+
 
       /*--------------------------- End Form Login ----------------*/
 
