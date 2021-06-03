@@ -254,6 +254,7 @@ float: left;
   position: absolute;
   right: 20px;
   top: 10px;
+  display: none;
 }
 
   @media (max-width:1070px){
@@ -1054,6 +1055,9 @@ float: left;
         position:relative;
         padding: 4px;
         margin: 13px auto;
+      }
+      #idtxtProfiel {
+        background-color: #fbe08f!important;
       }
       
       p.p1,p.p2{
