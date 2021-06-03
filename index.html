@@ -377,7 +377,7 @@
 document.getElementById("IdLogin").addEventListener("click", function() {
   var valInpt1 = document.getElementById("inptTxtUser").value;
   var valInpt2 = document.getElementById("inptPwUser").value;
-  if (valInpt1!="" || valInpt2!=""){
+  if (valInpt1!="" && valInpt2!=""){
     document.getElementById("a1").style.display="none";
     document.getElementById("a2").style.display="block";
     myFctBtnLog();
