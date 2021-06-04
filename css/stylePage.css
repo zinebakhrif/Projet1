@@ -1052,6 +1052,9 @@ float: left;
       span.s1{
         padding-right: 7px;
       }
+      #iconuser{
+         display: none;
+       }
        
       .allsContent{
       border: 1px solid #ccc;
