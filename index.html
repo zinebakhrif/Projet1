@@ -69,7 +69,7 @@
               </li>
               <li class="lien6">
                 <a id="a1" href="#"  onclick="showModale()">
-                  <span class="s1" id="ltr1">Login</span><i class="fa fa-user"></i>
+                  <span class="s1" id="ltr1">Login</span><i id="iconuser" class="fa fa-user"></i>
                 </a>
               </li>
 
@@ -380,6 +380,7 @@ document.getElementById("IdLogin").addEventListener("click", function() {
 //******** Function Form Profiel Custemer ************
 function myFctBtnLog() {
   document.getElementById("id01").style.display="none";
+    document.getElementById("iconuser").style.display="inline";
   var str1 = document.getElementById("inptTxtUser").value;
   var res1 = str1.slice(0,4);  
   document.getElementById("ltr1").innerHTML = res1; 
