@@ -119,7 +119,7 @@
   <div class="flex-container" id="contform1">   
     <input type="text" id="input1" name="text1" placeholder="D'ou" class="item1" >
     <input type="text" id="input2" name="text2" placeholder="Vers ou" class="item2" >
-    <input type="text" id="input3" name="text3" placeholder="Quand" class="item3" >
+    <input type="date" id="input3" name="text3" placeholder="Quand" class="item3" >
     <input type="text" id="input4" name="text4" placeholder="Qui" class="item4" >
 
     <button type="button" class="btn btn-warning" onclick="myshow(this.id)" id="btn1">
@@ -142,8 +142,8 @@
 
   </div>
      <!-- Resulta recheche -->
-     <div class="divtable w3-animate-bottom" id="frm" style="display: none;">
-  <div class="flex-container3">
+     <div class="divtable w3-animate-bottom" id="frm" >
+  <div class="flex-container3" id="frmauto" >
     <div class="flex-item-left" id="table1">
     <table style="width:100%">
       <tr onclick="window.location='pageTribTraget.html';">
@@ -224,6 +224,16 @@
       </table>
     </div>
   </div> 
+
+  <div id="frmTrip">
+    <div><p>Trip 1</p><p>Tetouan</p><p>Merakech</p><p>21/07</p><p><span>200dh</span></p></div>
+    <div><p>Trip 1</p><p>Tetouan</p><p>Merakech</p><p>21/07</p><p><span>200dh</span></p></div>
+    <div><p>Trip 1</p><p>Tetouan</p><p>Merakech</p><p>21/07</p><p><span>200dh</span></p></div>
+    <div><p>Trip 1</p><p>Tetouan</p><p>Merakech</p><p>21/07</p><p><span>200dh</span></p></div>
+    <p id="idShowMore">Show more</p>
+  </div>
+
+  
   </div>
 
   </div>
@@ -380,7 +390,7 @@ document.getElementById("IdLogin").addEventListener("click", function() {
 //******** Function Form Profiel Custemer ************
 function myFctBtnLog() {
   document.getElementById("id01").style.display="none";
-    document.getElementById("iconuser").style.display="inline";
+  document.getElementById("iconuser").style.display="inline";
   var str1 = document.getElementById("inptTxtUser").value;
   var res1 = str1.slice(0,4);  
   document.getElementById("ltr1").innerHTML = res1; 
