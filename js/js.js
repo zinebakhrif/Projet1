@@ -234,18 +234,6 @@ $(document).ready(function(){
     });
   });
   $(document).ready(function(){
-    $("#link2").click(function(){
-      $("#input1").show();
-      $("#input3").show();
-      $("#input2").hide();
-      $("#input4").show();
-      $("#btn2").show();
-      $("#btn3").hide();
-      $("#contform1").toggle();
-      $("#frm").hide();
-    });
-  });
-  $(document).ready(function(){
     $("#link3").click(function(){
       $("#contform1").toggle();
       $("#frm").hide();
@@ -254,7 +242,7 @@ $(document).ready(function(){
       $("#input1").hide();
       $("#input3").hide();
       $("#input4").hide();
-      $("#btn2").show();
+      $("#input2").show();
     });
   });
   $(document).ready(function(){
@@ -266,7 +254,7 @@ $(document).ready(function(){
       $("#input1").hide();
       $("#input3").hide();
       $("#input4").hide();
-      $("#btn2").show();
+      $("#input2").show();
     });
   });
 
