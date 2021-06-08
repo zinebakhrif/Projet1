@@ -173,7 +173,6 @@ $(document).ready(function(){
       }else
         {
         document.getElementById("lblerreur").style.display="block";
-        alert("erreur");
       }
     }
     else{
