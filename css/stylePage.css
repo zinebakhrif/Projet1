@@ -848,12 +848,14 @@ float: left;
 			 outline: none;
 		 }
 
-  div#frmTrip{
+  div.divFrmTrip{
     margin:0 20px;
     font-family: 'Poppins'; 
+  }
+  div#frmTrip{ 
     display: none;
   }
-  div#frmTrip div{
+  div.divFrmTrip div{
     display: flex;
     align-items: flex-end;
     padding-top: 15px;
@@ -861,10 +863,27 @@ float: left;
     text-align: center;
     font-size: 16px;
   }
-  div#frmTrip div p{
-   flex: 20%;
+  div.divFrmTrip div:last-child{
+    border-bottom:none!important;
   }
-  div#frmTrip p#idShowMore{
+  div.divFrmTrip div p{
+   flex: 20%;
+   color: #747272;
+  }
+  div.divFrmTrip div span.btnclose{
+    background: red;
+    border-radius: 50%;
+    padding-top: 3px;
+    margin-bottom: 3px;
+    color: white;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+   }
+   div.divFrmTrip div span.btnclose:hover{
+     transform: scale(1.1);
+   }
+  div.divFrmTrip p#idShowMore{
     padding: 15px 0 0 0;
     margin: 0;
     font-weight: bold;
@@ -873,17 +892,41 @@ float: left;
     font-size: 18px;
     cursor: pointer;
   }
-  div#frmTrip p#idShowMore:hover{
+  div.divFrmTrip p#idShowMore:hover{
     color:#f8d001;
   }
 
-  div#frmTrip div p span{
+  div.divFrmTrip div p span{
     border-radius: 15px;
     padding: 5px 13px;
     color: white;
-    background-color:#6acf6a ;
+    background-color:#67eb1c ;
   }
 
+  div.divcontent-pg3 div.divtotal{
+    color: white;
+    position: relative;
+    margin: 12px;
+  }
+  div.divcontent-pg3 p.Ptotal{
+    display: inline-block;
+    padding: 10px 120px;
+    border-radius: 25px;
+    background: #4ab70c;
+    font-size: 23px;
+    position: absolute;
+    right: 80px;
+  }
+  div.divcontent-pg3 div.divNameProf{
+   padding-top: 50px;
+  }
+  div.divcontent-pg3 p.PNameProf{
+    width: 73%;
+    font-size: 31px;
+    color: #f8f1cd;
+    margin: 50px auto;
+    font-family: 'Poppins';
+  }
 
 
 
@@ -970,29 +1013,54 @@ float: left;
          padding-top: 0;
          }
 
-         div#frmTrip{
+         div.divFrmTrip{
           margin:0 8px;
         }
-        div#frmTrip div{
+        div.divFrmTrip div{
           padding-top: 10px;
           font-size: 9px;
         }
-        div#frmTrip div p{
+        div.divFrmTrip div p{
          flex: 20%;
         }
-        div#frmTrip p#idShowMore{
+        div.divFrmTrip p#idShowMore{
           padding: 5px 0 0 0;
           font-weight: 400;
           font-size: 13px;
         }
       
-        div#frmTrip div p span{
+        div.divFrmTrip div p span{
           border-radius: 10px;
           padding: 1px 6px;
         }
-        div#frmTrip div p{
+        div.divFrmTrip div p{
           padding: 0 2px;
         }
+        div.divFrmTrip div span.btnclose {
+          padding-top: 2px;
+          margin-bottom: 8px;
+          width: 15px;
+          height: 15px;
+      }
+      .divtable#content-Profile {
+        width: 75% !important;
+        border-radius: 20px!important;
+      }
+      div.divcontent-pg3 p.Ptotal {
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 14px;
+        right: 10px;
+       }
+       div.divcontent-pg3 div.divNameProf {
+        padding-top: 20px;
+      }
+      div.divcontent-pg3 p.PNameProf {
+        width: 86%;
+        font-size: 21px;
+        margin: 25px auto;
+       }
+
       }
 
        /* style resulte recherch  */
@@ -1042,8 +1110,16 @@ float: left;
        padding-top:30px;
        padding-bottom:20px;
        border-radius: 10px 10px 35px 35px ;
-       display: none;
       }
+      .divtable#frm{
+        display: none;
+       }
+       .divtable#content-Profile{
+        width: 64% ;
+        margin: auto!important;
+        top: 0!important;
+        border-radius: 35px!important;
+       }
       td{
         color:#b1b1b1;
         padding-bottom: 17px;
@@ -1581,6 +1657,7 @@ button.loginfm:hover ,button#btncancel:hover {
   background-position: center;
   background-size: 100% 100%;
  }
+ 
  .flex-pg3{
   padding-top: 40px;
   }
