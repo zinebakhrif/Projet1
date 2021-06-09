@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Vendor CSS Files -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <script
+    src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+    data-auto-a11y="true"
+  ></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+    </style>
+    
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/stylePage.css">
+  <script src="jquery.includeHTML.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+</head>
+<body id="body" style="background:#2e2e2e" >
+    <div  id="app">
+                      <!-- start header  -->
+                      <div class="header">
+                        <div class="nav" id="nav3">
+                          <div class="div1">
+                            <a href="index.html"><img src="./img/logo.png" alt="logo"></a>
+                          </div>
+                          <div class="div2" >
+                            <ul class="menu1">
+                             <li class="lien5">
+                              <a href="javascript:void(0)">Blog</a>
+                            </li>
+                            <li class="lien6">
+                              <a id="a1" href="javascript:void(0)"  onclick="document.getElementById('id01').style.display='block'">Login</a>
+                            </li>
+                            <li class="lienShop">
+                              <a href="javascript:void(0)" class="bi bi-bag-fill"></a>
+                            </li>
+                          </ul>
+                        </div> 
+                     </div>
+                    </div>
+         <!-- End header -->
+            <!--------------------------- CONTENT ---------------->
+
+     <div class="divcontent-pg3"  >
+       <div class="divNameProf"><p class="PNameProf">Nome's Profile</p></div>
+
+        <div class="divtable" id="content-Profile" >
+        <div class="divFrmTrip" >
+            <div><p>Name</p><p>Trip</p><p>21/07</p><p><span>200dh</span></p><span class="btnclose">&#10005;</p></div>
+            <div><p>Name</p><p>Activité</p><p>21/07</p><p><span>200dh</span></p><span class="btnclose">&#10005;</span></div>
+            <div><p>Name</p><p>Excursion</p><p>21/07</p><p><span>200dh</span></p><span class="btnclose">&#10005;</span></div>
+            <div><p>Name</p><p>Trip</p><p>21/07</p><p><span>200dh</span></p><span class="btnclose">&#10005;</span></div>
+            <div><p>Name</p><p>Activité</p><p>21/07</p><p><span>200dh</span></p><span class="btnclose">&#10005;</span></div>
+            <div><p>Name</p><p>Activité</p><p>21/07</p><p><span>200dh</span></p><span class="btnclose">&#10005;</span></div>
+            <div><p>Name</p><p>Excursion</p><p>21/07</p><p><span>200dh</span></p><span class="btnclose">&#10005;</span></div>
+            <div><p>Name</p><p>Target</p><p>21/07</p><p><span>200dh</span></p><span class="btnclose">&#10005;</span></div>
+          </div>
+        </div>
+        <div class="divtotal"><p class="Ptotal">Totale : <span id="idTotal">00000</span> DH</p></div>
+    </div>
+    
+
+    <div class="container1-pg3">
+<!-- <img src="imag1.jpeg"> -->
+    </div>
+
+
+
+
+   <!---------------------------End CONTENT ---------------->
+
+
+
+
+
+</div>
+
+
+
+  
+    <script src="/js/js.js" ></script>
+
+    <script>
+
+// var val1= document.getElementsByClassName("intro");
+//            var j;
+//            var total=0;
+//         for (j = 0; j < val1.length; j++) {
+//            var z=parseInt(val1[j].innerText);
+//              total+=z;             
+//              }
+//              document.getElementById('idTotal').innerHTML=total;  
+
+
+var close = document.getElementsByClassName("btnclose");
+var i;
+  for (i = 0; i < close.length; i++) {
+  close[i].addEventListener("click", function(){
+       var div = this.parentElement;
+       div.style.display = "none"; 
+   
+         }); 
+      } 
+
+    </script>
+
+
+
+</body>
+</html>
+
+</html>
+
+
+
