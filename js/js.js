@@ -108,83 +108,86 @@ $(document).ready(function(){
     var txt2=document.getElementById("input2").value;
     var txt3=document.getElementById("input3").value;
     var txt4=document.getElementById("input4").value;
+          
+   var idFrm =document.getElementById("frm");
+    var idfrmauto =document.getElementById("frmauto");
+    var idFfrmTrip =document.getElementById("frmTrip");
+    var idlblerreur=document.getElementById("lblerreur");
 
     if(id=="btn1" && document.getElementById("input1").style.display!="none"&& document.getElementById("input2").style.display!="none"){
       if(txt1!='' && txt2!='' && txt3!='' && txt4!=''){
-        document.getElementById("frm").style.display="block";
-        document.getElementById("frmauto").style.display="flex";
-        document.getElementById("frmTrip").style.display="none";
-        document.getElementById("lblerreur").style.display="none"; 
+        idFrm.style.display="block";
+        idfrmauto.style.display="block";
+        idFfrmTrip.style.display="none";
+        idlblerreur.style.display="none";
       }else
         {
-        document.getElementById("lblerreur").style.display="block";
+        idlblerreur.style.display="block";
       }
     }else if(id=="btn1" && document.getElementById("l2").style.color=="rgb(248, 208, 1)"){
       if(txt1!=''&& txt3!='' && txt4!=''){
-        document.getElementById("frm").style.display="block";
-        document.getElementById("frmauto").style.display="none";
-        document.getElementById("frmTrip").style.display="block";
-        document.getElementById("lblerreur").style.display="none";
+        idFrm.style.display="block";
+        idfrmauto.style.display="none";
+        idFfrmTrip.style.display="block";
+        idlblerreur.style.display="none";
       }else
         {
-        document.getElementById("lblerreur").style.display="block";
+        idlblerreur.style.display="block";
       }
 
     }else if(id=="btn1" && document.getElementById("l3").style.color=="rgb(248, 208, 1)"){
       if(txt2!=''){
-        document.getElementById("lblerreur").style.display="none";
+        idlblerreur.style.display="none";
         window.location="pageThree.html?text2="+document.getElementById("input2").value;
       }else
         {
-        document.getElementById("lblerreur").style.display="block";
+        idlblerreur.style.display="block";
       }
     }else if(id=="btn1" && document.getElementById("l4").style.color=="rgb(248, 208, 1)"){
       if(txt2!=''){
-        document.getElementById("lblerreur").style.display="none";
+       idlblerreur.style.display="none";
         window.location="pageThree.html?text2="+document.getElementById("input2").value;
       }else
         {
-        document.getElementById("lblerreur").style.display="block";
+        idlblerreur.style.display="block";
       }
     } else if(id=="btn2" && document.getElementById("input1").style.display!="none"&& document.getElementById("input2").style.display!="none"){
       if(txt1!='' && txt2!='' && txt3!='' && txt4!=''){
-        document.getElementById("lblerreur").style.display="none";
+       idlblerreur.style.display="none";
         document.getElementById("contform1").style.display="none";
-        document.getElementById("frm").style.display="block";
-        document.getElementById("frmTrip").style.display="none";
-        document.getElementById("frmauto").style.display="block";
-        document.getElementById("table2").style.display="block";
-        document.getElementById("table2").style.display="none";
+        idFrm.style.display="block";
+        idFfrmTrip.style.display="none";
+        idfrmauto.style.display="block";
       }else
         {
-        document.getElementById("lblerreur").style.display="block";
+        idlblerreur.style.display="block";
       }
     }else if(id=="btn2" && document.getElementById("link2").style.color=="rgb(248, 208, 1)"){
       if(txt1!='' && txt3!='' && txt4!=''){
-        document.getElementById("lblerreur").style.display="none";
+        idlblerreur.style.display="none";
         document.getElementById("contform1").style.display="none";
-        document.getElementById("frm").style.display="block";
-        document.getElementById("frmauto").style.display="none";
-        document.getElementById("frmTrip").style.display="block";
+        idFrm.style.display="block";
+        idfrmauto.style.display="none";
+        idFfrmTrip.style.display="block";
       }else
         {
         document.getElementById("lblerreur").style.display="block";
       }
     }else if(id=="btn2" && document.getElementById("link3").style.color=="rgb(248, 208, 1)"){
       if(txt2!=''){
-        document.getElementById("lblerreur").style.display="none";
+        idlblerreur.style.display="none";
         window.location="pageThree.html?text2="+document.getElementById("input2").value;
       }else
         {
-        document.getElementById("lblerreur").style.display="block";
+        idlblerreur.style.display="block";
       }
     }else if(id=="btn2" && document.getElementById("link4").style.color=="rgb(248, 208, 1)"){
       if(txt2!=''){
-        document.getElementById("lblerreur").style.display="none";
+        idlblerreur.style.display="none";
         window.location="pageThree.html?text2="+document.getElementById("input2").value;
       }else
         {
-        document.getElementById("lblerreur").style.display="block";
+        idlblerreur.style.display="block";
       }
     }
     else{
