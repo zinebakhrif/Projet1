@@ -48,7 +48,6 @@ $(document).ready(function(){
       event.preventDefault();
       $(".container").css("width", "67%");
       $(".divtable").css("display", "none");
-       $("#btn3").css("display", "none");
        $("#btn2").css("display", "none");
       $("#btn1").css("display", "block");
       $("#lblerreur").css("display", "none");
@@ -153,7 +152,7 @@ $(document).ready(function(){
         document.getElementById("contform1").style.display="none";
         document.getElementById("frm").style.display="block";
         document.getElementById("frmTrip").style.display="none";
-        document.getElementById("frmauto").style.display="flex";
+        document.getElementById("frmauto").style.display="block";
         document.getElementById("table2").style.display="block";
         document.getElementById("table2").style.display="none";
       }else
@@ -193,43 +192,6 @@ $(document).ready(function(){
     }  
   }
 
-
-
-
-
-  // function myshow(id){
-  //   if(id=="btn1"){
-  //     var txt1=document.getElementById("input1").value;
-  //     var txt2=document.getElementById("input2").value;
-  //     var txt3=document.getElementById("input3").value;
-  //     var txt4=document.getElementById("input4").value;
-  //     if(txt1!='' && txt2!='' && txt3!='' && txt4!=''){
-  //       document.getElementById("frm").style.display="block";
-  //       document.getElementById("lblerreur").style.display="none";
-  
-  //     }else
-  //       {
-  //       document.getElementById("lblerreur").style.display="block";
-  //     }
-  //   }else if(id=="btn2"){
-  //     var txt1=document.getElementById("input1").value;
-  //     var txt2=document.getElementById("input2").value;
-  //     var txt3=document.getElementById("input3").value;
-  //     var txt4=document.getElementById("input4").value;
-  //     if(txt1!='' && txt2!='' && txt3!='' && txt4!=''){
-  //       document.getElementById("lblerreur").style.display="none";
-  //       document.getElementById("contform1").style.display="none";
-  //       document.getElementById("frm").style.display="block";
-  //       document.getElementById("table2").style.display="block";
-  //       document.getElementById("table2").style.display="none";
-  //     }else
-  //       {
-  //       document.getElementById("lblerreur").style.display="block";
-  //     }
-  //   }else{
-  //     return;      
-  //   }  
-  // }
   
 
 
