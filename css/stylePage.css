@@ -1107,7 +1107,7 @@ float: left;
        border-radius: 10px 10px 35px 35px ;
       }
       .divtable#frm{
-        /* display: none; */
+        display: none;
        }
        .divtable#content-Profile{
         width: 64% ;
