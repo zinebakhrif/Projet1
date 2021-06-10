@@ -1727,7 +1727,7 @@ button.loginfm:hover ,button#btncancel:hover {
 
 .container1-pg3{
   width: 95%;
-  height: 100%;
+  height: 100vh;
   display: block;
   margin-left: auto;
   margin-right: auto;
