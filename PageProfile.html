@@ -59,7 +59,7 @@
             <!--------------------------- CONTENT ---------------->
 
      <div class="divcontent-pg3"  >
-       <div class="divNameProf"><p class="PNameProf">Nome's Profile</p></div>
+       <div class="divNameProf"><p class="PNameProf" id="NameProfile">Nome's</p></div>
 
         <div class="divtable" id="content-Profile" >
         <div class="divFrmTrip" >
@@ -98,6 +98,14 @@
     <script src="/js/js.js" ></script>
 
     <script>
+        
+          // ****** Get value in URL******* 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const txtvalue = urlParams.get('user')
+document.getElementById('NameProfile').innerHTML=txtvalue;
+
+        
 
 // var val1= document.getElementsByClassName("intro");
 //            var j;
