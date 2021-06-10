@@ -107,23 +107,34 @@ document.getElementById('NameProfile').innerHTML=txtvalue;
 
         
 
-// var val1= document.getElementsByClassName("intro");
-//            var j;
-//            var total=0;
-//         for (j = 0; j < val1.length; j++) {
-//            var z=parseInt(val1[j].innerText);
-//              total+=z;             
-//              }
-//              document.getElementById('idTotal').innerHTML=total;  
 
+var val1= document.getElementsByClassName("intro");
+           var j;
+           var total=0;
+        for (j = 0; j < val1.length; j++) {
+           var z=parseInt(val1[j].innerText);
+             total+=z;             
+             }
+             document.getElementById('idTotal').innerHTML=total;  
+ 
+ 
+ 
 
-var close = document.getElementsByClassName("btnclose");
-var i;
-  for (i = 0; i < close.length; i++) {
-  close[i].addEventListener("click", function(){
-       var div = this.parentElement;
-       div.style.display = "none"; 
-   
+        var close = document.getElementsByClassName("btnclose");
+        var i;
+        var vltotal=  document.getElementById('idTotal').innerText;
+       var total=parseInt(vltotal);
+
+      for (i = 0; i < close.length; i++) {
+         close[i].addEventListener("click", function(){
+          var div = this.parentElement;
+           div.style.display = "none"; 
+           var j;
+        for (j = 0; j < val1.length; j++) {
+           var z=parseInt(val1[j].innerText);
+             }
+           total=total-z; 
+            document.getElementById('idTotal').innerHTML=total;        
          }); 
       } 
 
