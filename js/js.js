@@ -18,6 +18,69 @@ window.onclick = function(event) {
     $( ".datepicker" ).datepicker();
   } );
 
+          // ************* Function close Page **************
+      
+      function ClosePage(){
+        document.getElementById('idstyleDvDetail').style.display='none';
+        document.getElementById('dvslider').style.display='none';
+         document.getElementById('dvgrid1').style.visibility='visible';
+         document.getElementById('dvgrid2').style.visibility='visible';
+     }
+
+  // ************* Function Show Detail **************
+  function showDetailPlan(id){
+         document.getElementById('idstyleDvDetail').style.display='block';
+         document.getElementById('dvslider').style.display='block';
+         var val1=document.getElementById(id);
+         var y = val1.getElementsByTagName("span");
+         document.getElementById('NameAct').innerHTML=y[0].innerText;
+         document.getElementById('dvgrid1').style.visibility='hidden';
+       }
+       function showDetailActivitie2(id){
+         document.getElementById('idstyleDvDetail').style.display='block';
+         document.getElementById('dvslider').style.display='block';
+         var val2=document.getElementById(id);
+         document.getElementById('NameAct').innerHTML=val2.innerText;
+         document.getElementById('dvgrid2').style.visibility='hidden';
+       }
+
+//  ******************* Function Add Prix **********
+function addPrix(id) {
+ x= document.getElementById(id).innerText;
+ y= document.getElementById("prix").innerText;
+ z=parseInt(y);
+
+ 
+   if(x =="+"){
+  document.getElementById(id).innerHTML="-";
+  document.getElementById("prix").innerHTML=z+100;
+   }else{
+     document.getElementById(id).innerHTML="+";
+  document.getElementById("prix").innerHTML=z-100;
+   }
+
+}
+            
+// ************ click rows table *******
+
+var table = document.getElementById('table1');
+for(var i = 0; i < table.rows.length; i++) {
+  table.rows[i].addEventListener('click', function() {
+    for(var j = 0; j < this.cells.length-1; j++) {
+      msg = this.cells[j].innerHTML;
+    }
+    document.getElementById("prix").innerHTML=msg;
+    $("tr").css("background", "none");
+        $(this).css("color", "#f8d001"); 
+    this.style.background="#6d6d65a8";
+
+    $("p.text1").html("+");
+
+  });
+}
+
+
+
 // *************** Form Login *************** 
         function showModale(){        
           var valueUser = document.getElementById("ltr1");
