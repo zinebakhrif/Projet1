@@ -1,4 +1,20 @@
+// ************ click rows table *******
 
+var table = document.getElementById('table1');
+for(var i = 0; i < table.rows.length; i++) {
+  table.rows[i].addEventListener('click', function() {
+    for(var j = 0; j < this.cells.length-1; j++) {
+      msg = this.cells[j].innerHTML;
+    }
+    document.getElementById("prix").innerHTML=msg;
+    $("tr").css("background", "none");
+        $(this).css("color", "#f8d001"); 
+    this.style.background="#6d6d65a8";
+
+    $("p.text1").html("+");
+
+  });
+}
          //*************** slider Activity *************
 
 var slideIndex = 1;
