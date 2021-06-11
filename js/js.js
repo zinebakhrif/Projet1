@@ -13,6 +13,116 @@ window.onclick = function(event) {
     }
 }
 
+  //****************** Input Date ********** 
+  $( function() {
+    $( ".datepicker" ).datepicker();
+  } );
+
+// *************** Form Login *************** 
+        function showModale(){        
+          var valueUser = document.getElementById("ltr1");
+          if(valueUser.innerText=="Login"){
+         document.getElementById("id01").style.display="block";
+          }else{
+            showProfiel();
+          }
+        }
+//****** Function button Login **********
+
+document.getElementById("IdLogin").addEventListener("click", function() {
+  var valInpt1 = document.getElementById("inptTxtUser").value;
+  var valInpt2 = document.getElementById("inptPwUser").value;
+  if (valInpt1!="" && valInpt2!=""){
+    myFctBtnLog();
+  }else{
+    document.getElementById("SpanErreur1").style.visibility = "visible";
+    document.getElementById("SpanErreur2").style.visibility = "visible";
+  }
+});
+
+//******** Function Form Profiel Custemer ************
+function myFctBtnLog() {
+  document.getElementById("id01").style.display="none";
+  document.getElementById("iconuser").style.display="inline";
+  var str1 = document.getElementById("inptTxtUser").value;
+  var res1 = str1.slice(0,4);  
+  document.getElementById("ltr1").innerHTML = res1; 
+}
+//*************** Form Button  Profile *********** 
+function showProfiel() {
+var idall=document.getElementById("idAllsContent");
+ if(idall.style.display==="none"){
+  idall.style.display = "block";
+  }else{
+  idall.style.display = "none";
+}
+}
+
+
+
+//*************** Function Form Login ************
+
+          //********** Button Login **************
+      function showFrmReg(){
+        document.getElementById("tab1").style.display="none";
+        document.getElementById("tab2").style.display="none";
+        document.getElementById("tab3").style.display="block";
+      }
+      function FncBtnLogin(){
+        document.getElementById("tab1").style.display="block";
+        document.getElementById("tab2").style.display="none";
+        document.getElementById("tab3").style.display="none";
+      }
+      document.getElementById("btnLog").addEventListener("click",FncBtnLogin);
+      document.getElementById("BtnBack").addEventListener("click",FncBtnLogin);
+
+      document.getElementById("btnReg").addEventListener("click",function(){
+        document.getElementById("tab1").style.display="none";
+        document.getElementById("tab2").style.display="block";
+        document.getElementById("tab3").style.display="none";
+      });
+//**********End Button Login **************
+         
+          
+
+//******** Evente Enter In inputs *******
+var idcon= document.getElementById("contform1");
+var myInputs = idcon.getElementsByTagName("input");
+    var p;
+    for (p = 0; p < myInputs.length; p++) {
+      
+      myInputs[p]
+    .addEventListener("keyup", function(event) {
+    event.preventDefault()
+    if (window.matchMedia("(min-width: 601px)").matches) {
+    if (event.keyCode === 13){
+      document.getElementById("btn1").click();
+       
+  
+  }
+      }
+      if (window.matchMedia("(max-width: 600px)").matches) {
+      if (event.keyCode === 13){
+      document.getElementById("btn2").click();
+      }   
+    }
+});
+}
+                 
+          //******** Function scroll *******
+              if (window.matchMedia("(max-width: 600px)").matches) {
+    window.onscroll = function() {myFunction()};
+
+  function myFunction() {
+     if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+      document.getElementById("contform1").style.display = "none";
+     $(".menu2 > li a").css("color", "#f4f4f4");
+   }
+  }
+    }
+
+
+
 
     
 //********** Button Like **********/
