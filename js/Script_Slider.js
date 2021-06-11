@@ -1,34 +1,4 @@
 
-         //*************** slider Activity *************
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides1 = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides1.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides1.length}
-  for (i = 0; i < slides1.length; i++) {
-      slides1[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace("active", "");
-  }
-  slides1[slideIndex-1].style.display = "block";  
-}
-
-
-
   //******** slider 1 ***************
 
   const container = document.querySelector(".grid-item");
