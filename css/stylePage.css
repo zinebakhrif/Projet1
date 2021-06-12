@@ -31,6 +31,11 @@ body {
   box-sizing: border-box;
 }
 
+iframe#IdIframeNavbar{
+  border: none!important;
+  height: 103px!important;
+  width: 100%!important;
+}
 
 
 .jarallax {
@@ -94,6 +99,9 @@ h1 {
   }
   .demo-table-cell a span.styspan {
     font-size: 17px;
+  }
+iframe#IdIframeNavbar{
+    height: 90px!important;
   }
 }
 
