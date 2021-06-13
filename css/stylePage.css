@@ -37,6 +37,11 @@ iframe#IdIframeNavbar{
   width: 100%!important;
 }
 
+iframe#IdIframePageBag{
+  width: 250px;
+  height: 212PX;
+  border-radius: 9px;
+}
 
 .jarallax {
   min-height: 100vh;
