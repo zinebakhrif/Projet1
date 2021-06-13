@@ -44,7 +44,19 @@
            <div class="dvShowMore"><p id="idShowMoreProf"> Show More</p></div>     
         </div>  
       <script src="./js/js.js" ></script>
-      <script src="./js/Script_Slider.js" ></script>   
+      <script src="./js/Script_Slider.js" ></script> 
+          <script>
+        // ************* Botton Remove Form Profile 
+var close = document.getElementsByClassName("btnRmv");
+        var i;
+      for (i = 0; i < close.length; i++) {
+         close[i].addEventListener("click", function(){
+          var div = this.parentElement;
+              div=div.parentElement;
+              div.style.display = "none";        
+         }); 
+      }
+      </script>
       
 </body>
 </html>
