@@ -18,16 +18,7 @@ window.onclick = function(event) {
     $( ".datepicker" ).datepicker();
   } );
 
-// ************* Botton Remove Form Profile 
-var close = document.getElementsByClassName("btnRmv");
-        var i;
-      for (i = 0; i < close.length; i++) {
-         close[i].addEventListener("click", function(){
-          var div = this.parentElement;
-              div=div.parentElement;
-              div.style.display = "none";        
-         }); 
-      } 
+ 
           // ************* Function close Page **************
       
       function ClosePage(){
