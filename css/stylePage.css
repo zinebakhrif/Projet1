@@ -2240,6 +2240,12 @@ div.divFrmShop div span.btnRmv{
  div.divFrmShop div span.btnRmv:hover{
    transform: scale(1.1);
  }
+ div.dvShowMore {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+ }
  div.dvShowMore p#idShowMoreProf{
   margin: 9px 0;
   font-weight: 500;
