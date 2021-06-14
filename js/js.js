@@ -62,7 +62,16 @@ function addPrix(id) {
 
 }
             
-
+function showBag() {
+  // var idall=document.getElementById("idAllsContent");
+  var idBag=document.getElementById("IdFormShop");
+   if(idBag.style.display==="none"){
+    // idall.style.display = "none";
+    idBag.style.display = "block";
+    }else{
+    idBag.style.display = "none";
+  }
+  }
 
 
 
