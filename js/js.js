@@ -63,10 +63,10 @@ function addPrix(id) {
 }
             
 function showBag() {
-  // var idall=document.getElementById("idAllsContent");
+  var idall=document.getElementById("idAllsContent");
   var idBag=document.getElementById("IdFormShop");
    if(idBag.style.display==="none"){
-    // idall.style.display = "none";
+    idall.style.display = "none";
     idBag.style.display = "block";
     }else{
     idBag.style.display = "none";
@@ -76,7 +76,8 @@ function showBag() {
 
 
 // *************** Form Login *************** 
-        function showModale(){        
+        function showModale(){  
+         document.getElementById("IdFormShop").style.display = "none";
           var valueUser = document.getElementById("ltr1");
           if(valueUser.innerText=="Login"){
          document.getElementById("id01").style.display="block";
