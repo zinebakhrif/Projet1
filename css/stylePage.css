@@ -2113,6 +2113,7 @@ div#dvslider span#spanclose:hover{
   }
   div#dvslider span#spanclose{
     margin: 10px 15px 0 15px;
+    position: relative;
   }
 
   .flex-left div#divtop p#NameAct{
