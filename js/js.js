@@ -149,21 +149,11 @@ var myInputs = idcon.getElementsByTagName("input");
     var p;
     for (p = 0; p < myInputs.length; p++) {
       
-      myInputs[p]
-    .addEventListener("keyup", function(event) {
+      myInputs[p].addEventListener("keyup", function(event) {
     event.preventDefault()
-    if (window.matchMedia("(min-width: 601px)").matches) {
     if (event.keyCode === 13){
-      document.getElementById("btn1").click();
-       
-  
-  }
+      document.getElementById("btn1").click();         
       }
-      if (window.matchMedia("(max-width: 600px)").matches) {
-      if (event.keyCode === 13){
-      document.getElementById("btn2").click();
-      }   
-    }
 });
 }
                  
@@ -216,8 +206,6 @@ $(document).ready(function(){
       event.preventDefault();
       $(".container").css("width", "67%");
       $(".divtable").css("display", "none");
-       $("#btn2").css("display", "none");
-      $("#btn1").css("display", "block");
       $("#lblerreur").css("display", "none");
         $("#contform1").css("display", "flex");
         $("#input1").css("display", "flex");
@@ -235,8 +223,6 @@ $(document).ready(function(){
       $(".divtable").css("display", "none");
       $(".flex-container3").css("display", "none");
       $("#frmTrip").css("display", "block");
-       $("#btn2").css("display", "none");
-      $("#btn1").css("display", "block");
       $("#lblerreur").css("display", "none");
         $("#contform1").css("display", "flex");
         $("#input1").css("display", "flex");
@@ -253,7 +239,6 @@ $(document).ready(function(){
       $("#lblerreur").css("display", "none");
       $(".container").css("width", "50%");
       $(".divtable").css("display", "none");
-      $("#btn1").css("display", "block");
       $("#contform1").css("display", "flex");
         $("#input1").css("display", "none");
         $("#input3").css("display", "none");
@@ -271,6 +256,7 @@ $(document).ready(function(){
     }
   }
 
+  // //********/  Function paege index Button serach in input 
   function myshow(id){
     var txt1=document.getElementById("input1").value;
     var txt2=document.getElementById("input2").value;
@@ -284,6 +270,9 @@ $(document).ready(function(){
 
     if(id=="btn1" && document.getElementById("input1").style.display!="none"&& document.getElementById("input2").style.display!="none"){
       if(txt1!='' && txt2!='' && txt3!='' && txt4!=''){
+        if (window.matchMedia("(max-width: 601px)").matches){
+          document.getElementById("contform1").style.display="none";
+        }
         idFrm.style.display="block";
         idfrmauto.style.display="block";
         idFfrmTrip.style.display="none";
@@ -292,8 +281,11 @@ $(document).ready(function(){
         {
         idlblerreur.style.display="block";
       }
-    }else if(id=="btn1" && document.getElementById("l2").style.color=="rgb(248, 208, 1)"){
+    }else if(document.getElementById("link2").style.color=="rgb(248, 208, 1)" || document.getElementById("l2").style.color=="rgb(248, 208, 1)"){
       if(txt1!=''&& txt3!='' && txt4!=''){
+        if (window.matchMedia("(max-width: 601px)").matches){
+          document.getElementById("contform1").style.display="none";
+        }
         idFrm.style.display="block";
         idfrmauto.style.display="none";
         idFfrmTrip.style.display="block";
@@ -303,7 +295,7 @@ $(document).ready(function(){
         idlblerreur.style.display="block";
       }
 
-    }else if(id=="btn1" && document.getElementById("l3").style.color=="rgb(248, 208, 1)"){
+    }else if(document.getElementById("link3").style.color=="rgb(248, 208, 1)" || document.getElementById("l3").style.color=="rgb(248, 208, 1)"){
       if(txt2!=''){
         idlblerreur.style.display="none";
         window.location="pageThree.html?text2="+document.getElementById("input2").value;
@@ -311,7 +303,7 @@ $(document).ready(function(){
         {
         idlblerreur.style.display="block";
       }
-    }else if(id=="btn1" && document.getElementById("l4").style.color=="rgb(248, 208, 1)"){
+    }else if(document.getElementById("link4").style.color=="rgb(248, 208, 1)" || document.getElementById("l4").style.color=="rgb(248, 208, 1)"){
       if(txt2!=''){
        idlblerreur.style.display="none";
         window.location="pageThree.html?text2="+document.getElementById("input2").value;
@@ -319,48 +311,9 @@ $(document).ready(function(){
         {
         idlblerreur.style.display="block";
       }
-    } else if(id=="btn2" && document.getElementById("input1").style.display!="none"&& document.getElementById("input2").style.display!="none"){
-      if(txt1!='' && txt2!='' && txt3!='' && txt4!=''){
-       idlblerreur.style.display="none";
-        document.getElementById("contform1").style.display="none";
-        idFrm.style.display="block";
-        idFfrmTrip.style.display="none";
-        idfrmauto.style.display="block";
-      }else
-        {
-        idlblerreur.style.display="block";
-      }
-    }else if(id=="btn2" && document.getElementById("link2").style.color=="rgb(248, 208, 1)"){
-      if(txt1!='' && txt3!='' && txt4!=''){
-        idlblerreur.style.display="none";
-        document.getElementById("contform1").style.display="none";
-        idFrm.style.display="block";
-        idfrmauto.style.display="none";
-        idFfrmTrip.style.display="block";
-      }else
-        {
-        document.getElementById("lblerreur").style.display="block";
-      }
-    }else if(id=="btn2" && document.getElementById("link3").style.color=="rgb(248, 208, 1)"){
-      if(txt2!=''){
-        idlblerreur.style.display="none";
-        window.location="pageThree.html?text2="+document.getElementById("input2").value;
-      }else
-        {
-        idlblerreur.style.display="block";
-      }
-    }else if(id=="btn2" && document.getElementById("link4").style.color=="rgb(248, 208, 1)"){
-      if(txt2!=''){
-        idlblerreur.style.display="none";
-        window.location="pageThree.html?text2="+document.getElementById("input2").value;
-      }else
-        {
-        idlblerreur.style.display="block";
-      }
+    }else{
+      return;
     }
-    else{
-      return;      
-    }  
   }
 
   
@@ -372,7 +325,6 @@ $(document).ready(function(){
       $("#input2").show();
       $("#input3").show();
       $("#input4").show();
-      $("#btn2").show();
       $("#contform1").toggle();
       $("#frm").hide();
     });
@@ -383,7 +335,6 @@ $(document).ready(function(){
       $("#input3").show();
       $("#input2").hide();
       $("#input4").show();
-      $("#btn2").show();
       $("#contform1").toggle();
       $("#frm").hide();
     });
@@ -392,7 +343,6 @@ $(document).ready(function(){
     $("#link3").click(function(){
       $("#contform1").toggle();
       $("#frm").hide();
-      $("#btn2").show();
       $("#input1").hide();
       $("#input3").hide();
       $("#input4").hide();
@@ -402,7 +352,6 @@ $(document).ready(function(){
   $(document).ready(function(){
     $("#link4").click(function(){
       $("#contform1").toggle();
-      $("#btn2").show();
       $("#frm").hide();
       $("#input1").hide();
       $("#input3").hide();
