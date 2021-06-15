@@ -648,6 +648,7 @@ float: left;
         }
         .dvGrids{
           position: relative;
+	  margin-bottom: 35px;
          }
        .styleDvDetail{
         position: absolute;
