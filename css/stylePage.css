@@ -1489,6 +1489,12 @@ button.loginfm:hover ,button#btncancel:hover {
         width: 250px;
         height: 160px;
       }
+      div.item img{
+        border-radius: 30px;
+        width: 252px;
+        height: 162px;
+        position: absolute;
+      }
       
   .grid-container div.textslide1{
     margin-left: auto;
