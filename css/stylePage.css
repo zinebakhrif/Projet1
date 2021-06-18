@@ -1507,8 +1507,8 @@ button.loginfm:hover ,button#btncancel:hover {
       }
       div.item img{
         border-radius: 30px;
-        width: 252px;
-        height: 162px;
+        width: 250px;
+        height: 160px;
         position: absolute;
       }
       
@@ -1624,8 +1624,8 @@ button.loginfm:hover ,button#btncancel:hover {
       height: 140px;
     }
     div.item img{
-      width: 231px;
-      height: 141px;
+      width: 230px;
+      height: 140px;
     }
     .grid-item{
       left: 0;
