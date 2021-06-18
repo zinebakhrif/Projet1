@@ -1581,16 +1581,17 @@ button.loginfm:hover ,button#btncancel:hover {
   }
 
   .dvtext p{
-  position: relative;
-  top: 123px;
-  color: #2c2c2c;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 600;
-  font-family: 'Poppins';
-  pointer-events:visible;
-  background: linear-gradient(360deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
-  padding-bottom: 15px;
+    position: relative;
+    top: 116px;
+    color: #2c2c2c;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Poppins';
+    pointer-events: visible;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+    padding-top: 9px;
+    height: 45px;
 }
   
   .dvtext p:hover{
@@ -1634,19 +1635,19 @@ button.loginfm:hover ,button#btncancel:hover {
       width: 40px;
       height: 40px;
       margin-left: 208PX;
-      margin-top: -15px;
+      margin-top: -11px;
   }
   .dvcircle p {
     margin-top: 6px;
     font-size: 18px;
   }
     .dvtext p{
-    top: 115px;
-    font-size: 16px;
-    padding-bottom: 2px;
+      top: 96px;
+      font-size: 16px;
+      padding-top: 15px;
     }
     .btntext{
-      top:70px;
+      top: 86px;
       font-size: 15px;
     }
 
