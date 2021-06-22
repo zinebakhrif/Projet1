@@ -857,6 +857,7 @@ float: left;
 			 border-color: #f8cf03;
 			 outline: none;
 		 }
+
      div#container-Profile{
       height: 60vh;
       z-index: -1;
@@ -1563,7 +1564,9 @@ button.loginfm:hover ,button#btncancel:hover {
     position:absolute;
     background:white;
     border-radius:50%;
-    margin-left: 223px;
+    /* margin-left: 223px;
+    margin-top: -15px; */
+    margin-left: 260px;
     margin-top: -15px;
     border: 2px solid #ffc107;
     color: #ffc107;
@@ -2353,10 +2356,17 @@ div.divFrmShop div span.btnRmv{
    margin: 50px auto;
    font-family: 'Poppins';
  }
+ div.container_Cmd{
+   width: 70%;
+   padding-right: 15px;
+   padding-left: 15px;
+   margin-right: auto;
+   margin-left: auto;
+ }
  .divtable#content-Commande {
   width: 64%;
   margin: auto!important;
-  top: 0!important;
+  top: -20px!important;
   border-radius: 35px!important;
 }
 .divtable.divLastCmd {
@@ -2384,7 +2394,7 @@ div.divFrmTrip div span.btnOk{
   margin-top: auto;
   margin-bottom: auto;
 }
- div#formInputCmd  input:not(#inputCmd4){
+ div#formInputCmd input:not(#inputCmd4){
   border-right: 1px solid #a8a383;  
   }
  .itemCmd1,.itemCmd2,.itemCmd3,.itemCmd4,.itemCmd5 {
@@ -2405,11 +2415,10 @@ border-top-right-radius: 30px;
 border-bottom-right-radius: 30px;
 width: 20%;
 }
-input.itemCmd1{
-border-top-left-radius: 25px;
-border-bottom-left-radius: 25px;
-}
- .flex-container input#inputCmd4{
+
+div#formInputCmd input#inputCmd4{
+   border-top-left-radius: 25px;
+   border-bottom-left-radius: 25px;
    border: none;  
    padding-inline-start: 6px !important;
   }
@@ -2422,12 +2431,16 @@ border-bottom-left-radius: 25px;
   div#formInputCmd{
     top: -20px!important;
   }
+  div.container_Cmd{
+    width: 90%;
+  }
   .divtable.divLastCmd {
     height: 40vh!important;
   }
   .divtable#content-Commande {
     border-radius: 25px!important;
     width: 80%!important;
+    top: -10px!important;
    }
    .itemCmd1,.itemCmd2{
     flex: 18%;
@@ -2438,8 +2451,11 @@ border-bottom-left-radius: 25px;
   .itemCmd4{
   flex: 18%; 
  }
- .flex-container input::placeholder{
-   font-size: 15px;
+ div#formInputCmd input{
+  padding-inline-start: 0px!important;
+ }
+ div#formInputCmd input::placeholder{
+   font-size: 12px;
  }
  button#idBtnSerchCmd {
   width: 40px !important;
