@@ -1956,7 +1956,7 @@ div.dv1{
     display: none;
 }
 div.dvsld{
-height: 85% !important;
+height: 85vh !important;
 }
 .styleDvDetail{
   display: none;
@@ -2184,9 +2184,7 @@ div#dvslider span#spanclose:hover{
   .flex-left div.divBtm{
     padding-top: 0;
   }
-  div.dvsld{ 
-      height: 95% !important;
-    }
+
   .slideshow-container{
     width: 85%;
   }
@@ -2315,7 +2313,7 @@ div.divFrmShop div span.btnRmv{
    
   div.StyBag {
     position:fixed;
-    z-index: 2;
+    z-index: 3;
     width: 225px;
     right: 25px;
     top: 76px;
