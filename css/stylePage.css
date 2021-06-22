@@ -1126,9 +1126,9 @@ float: left;
        }
        .divtable#content-Profile{
         width: 64% ;
-        margin: auto!important;
-        top: 0!important;
-        border-radius: 35px!important;
+        margin: auto;
+        top: 0;
+        border-radius: 35px;
        }
       td{
         color:#b1b1b1;
