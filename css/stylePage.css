@@ -859,6 +859,7 @@ float: left;
 		 }
      div#container-Profile{
       height: 60vh;
+      z-index: -1;
     }
 
   div.divFrmTrip{
@@ -1685,6 +1686,9 @@ button.loginfm:hover ,button#btncancel:hover {
   background-size: 100% 100%;
   position: relative;
   border-top: 1px solid #000000;
+ }
+ div#idContentProfile{
+  height: 100vh;
  }
  
  .flex-pg3{
