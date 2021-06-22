@@ -1673,6 +1673,7 @@ button.loginfm:hover ,button#btncancel:hover {
   background-size: 100% 100%;
   margin-top: -3px;
   position: relative;
+  border: 1px solid #313131;
  }
  
  .flex-pg3{
