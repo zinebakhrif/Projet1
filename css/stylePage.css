@@ -986,7 +986,7 @@ float: left;
          .container{
           width: 80%;
          }
-        .flex-container#contform1 {
+        div#contform1 {
           bottom:20px;
           width: 100%;
           padding: 10px;
