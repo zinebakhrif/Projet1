@@ -2379,6 +2379,11 @@ div.divFrmTrip div span.btnOk{
  div.divFrmTrip div span.btnOk:hover{
    transform: scale(1.1);
  }
+ div#formInputCmd input{
+  height: 30px!important;
+  margin-top: auto;
+  margin-bottom: auto;
+}
  div#formInputCmd  input:not(#inputCmd4){
   border-right: 1px solid #a8a383;  
   }
