@@ -774,9 +774,9 @@ float: left;
 	outline: none;
 	 }
      .btn-warning:hover{
-	border-color:#ffc107;
-	background-color:#ffc107 ;
-	}
+	  border-color:#ffc107;
+	  background-color:#ffc107 ;
+	 }
      button#btn1:active{
        outline: none;
        background:#ffc107;
@@ -819,8 +819,8 @@ float: left;
   .glyphicon-search{
 	font-weight: 300;
 	 font-size: 25px;
-        right: 1.5px;
-        top:2px;
+   right: 1.5px;
+    top:2px;
 		 }		  
 	
   .flex-container input{
@@ -829,8 +829,8 @@ float: left;
 	border:none;
 	width: 20%;
 	outline: none;
-        padding-inline-start: 14px;
-        font-size: 20px;
+  padding-inline-start: 14px;
+  font-size: 20px;
 		  }
 
          input.item1{
@@ -847,11 +847,11 @@ float: left;
 		border-bottom-left-radius: 25px;
 	  }
 
-	  .flex-container input::placeholder{
+	  div#contform1 input::placeholder{
 		   padding-left: 20px;
 		   font-size: 20px;
 	   }
-    .flex-container input:not(#input4){
+     div#contform1 input:not(#input4){
 		border-right: 1px solid #a8a383;  
 		 }
 		 .btn:focus{
@@ -877,7 +877,7 @@ float: left;
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    align-items: flex-end;
+    align-items: baseline;
     padding-top: 15px;
     border-bottom: 1px solid lightgray;
     text-align: center;
@@ -893,12 +893,11 @@ float: left;
   div.divFrmTrip div span.btnclose{
     background: red;
     border-radius: 50%;
-    padding-top: 3px;
-    margin-bottom: 3px;
+    padding-top: 5px;
     color: white;
     cursor: pointer;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
    }
    div.divFrmTrip div span.btnclose:hover{
      transform: scale(1.1);
@@ -978,7 +977,7 @@ float: left;
           bottom: 66px;
           z-index: 2;
          }
-         .btn{
+         button#btn1{
           position: fixed;
           right: 20px;
           bottom: 54px;
@@ -987,7 +986,7 @@ float: left;
          .container{
           width: 80%;
          }
-        .flex-container {
+        .flex-container#contform1 {
           bottom:20px;
           width: 100%;
           padding: 10px;
@@ -1000,10 +999,10 @@ float: left;
           .item1,.item2,.item3,.item4{
             flex: 100%;
           }
-          .flex-container input:not(#input4){
+          div#contform1 input:not(#input4){
           border-right:none;  
           }
-          .flex-container input{
+          div#contform1 input{
           border-bottom: 1px solid #a8a383;  
           }
           input.item1{
@@ -1019,11 +1018,11 @@ float: left;
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
           }
-          .flex-container input::placeholder{
+          div#contform1 input::placeholder{
           padding-left:0;
           font-size: 15px;
         }
-        .flex-container input{
+        div#contform1 input{
           padding-inline-start: 0;
           font-size: 14px;
           margin:8px;
@@ -1058,9 +1057,8 @@ float: left;
         }
         div.divFrmTrip div span.btnclose {
           padding-top: 2px;
-          margin-bottom: 8px;
-          width: 15px;
-          height: 15px;
+          width: 19px;
+          height: 16px;
       }
       .divtable#content-Profile {
         width: 75% !important;
@@ -1674,6 +1672,7 @@ button.loginfm:hover ,button#btncancel:hover {
   background-position: center;
   background-size: 100% 100%;
   margin-top: -3px;
+  position: relative;
  }
  
  .flex-pg3{
@@ -1749,13 +1748,13 @@ button.loginfm:hover ,button#btncancel:hover {
 
 .container1-pg3{
   width: 95%;
-  height: 100vh;
+  height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
   font-family: sans-serif;
-
+  position: relative;
 }
 
 .row-1-pg3{
@@ -2324,3 +2323,120 @@ div.divFrmShop div span.btnRmv{
 
  }
 
+ /* ************* Style page Commande Voiture **********/
+
+ div.divcontent-pg3 div.divNameCmd{
+  padding-bottom: 10px;
+ }
+ p.PNameCmd{
+   width: 73%;
+   font-size: 31px;
+   color: #f8f1cd;
+   margin: 50px auto;
+   font-family: 'Poppins';
+ }
+ .divtable#content-Commande {
+  width: 64%;
+  margin: auto!important;
+  top: 0!important;
+  border-radius: 35px!important;
+}
+.divtable.divLastCmd {
+  height: 55vh!important;
+  overflow-y: auto;
+}
+div.divFrmTrip div span.btnOk{
+  background: #67eb1c;
+  border-radius: 50%;
+  padding-top: 5px;
+  color: white;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  margin-right: 20px;
+ }
+ div.divFrmTrip div span.btnOkHisto{
+  margin-right: 0px !important;
+ }
+ div.divFrmTrip div span.btnOk:hover{
+   transform: scale(1.1);
+ }
+ div#formInputCmd  input:not(#inputCmd4){
+  border-right: 1px solid #a8a383;  
+  }
+ .itemCmd1,.itemCmd2,.itemCmd3,.itemCmd4,.itemCmd5 {
+  background-color: #f8f2ce;
+  }
+  .itemCmd1,.itemCmd2{
+    flex: 24%;
+  }
+  .itemCmd3{
+  flex: 19%;
+}
+.itemCmd4{
+  flex: 17%;
+}
+
+ input.itemCmd4{
+border-top-right-radius: 30px;
+border-bottom-right-radius: 30px;
+width: 20%;
+}
+input.itemCmd1{
+border-top-left-radius: 25px;
+border-bottom-left-radius: 25px;
+}
+ .flex-container input#inputCmd4{
+   border: none;  
+   padding-inline-start: 6px !important;
+  }
+  .btn-warning:hover{
+     transform: scale(1.1)!important;
+	 }
+
+ @media only screen and (max-width: 600px) {
+
+  div#formInputCmd{
+    top: -20px;
+  }
+
+  .divtable#content-Commande {
+    border-radius: 25px!important;
+   }
+   .itemCmd1,.itemCmd2{
+    flex: 18%;
+  }
+  .itemCmd3{
+  flex: 18%;
+  }
+  .itemCmd4{
+  flex: 18%; 
+ }
+ .flex-container input::placeholder{
+   font-size: 15px;
+ }
+ button#idBtnSerchCmd {
+  width: 40px !important;
+  height: 40px !important;
+	 }
+   button#idBtnSerchCmd .arrow {
+    font-size: 18px!important;
+  }
+
+ p.PNameCmd{
+  width: 86%;
+  font-size: 16px;
+  margin: 25px auto;
+ }
+ div.divFrmTrip div span.btnOk {
+  padding-top: 2px;
+  width: 19px;
+  height: 16px;
+}
+div.flex-container div span.btnOkHisto {
+  margin-right: 7px;
+  margin-left: 5px;
+}
+
+
+}
