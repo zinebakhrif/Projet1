@@ -139,7 +139,49 @@
 
   
     <script src="./js/js.js" ></script>
- <script src="./js/Script_Slider.js" ></script>
+ <script>
+       // *************Function Button OK Or No ***************
+  var spanHstq1=document.getElementById("btnHistor1");
+  var spanHstq2=document.getElementById("btnHistor2");
+  var spanHstq3=document.getElementById("btnHistor3");
+  var spanHstq4=document.getElementById("btnHistor4");
+
+function myFncOK(num){
+if(num==1){
+spanHstq1.style.background="#67eb1c";
+spanHstq1.innerHTML="OK";
+}else if(num==2){
+spanHstq2.style.background="#67eb1c";
+spanHstq2.innerHTML="OK";
+}else if(num==3){
+spanHstq3.style.background="#67eb1c";
+spanHstq3.innerHTML="OK";
+}else if(num==4){
+spanHstq4.style.background="#67eb1c";
+spanHstq4.innerHTML="OK";
+}else{
+return;
+}
+}
+
+function myFncNo(num){
+if(num==1){
+spanHstq1.style.background="red";
+spanHstq1.innerHTML="&#10005;";
+}else if(num==2){
+spanHstq2.style.background="red";
+spanHstq2.innerHTML="&#10005;";
+}else if(num==3){
+spanHstq3.style.background="red";
+spanHstq3.innerHTML="&#10005;";
+}else if(num==4){
+spanHstq4.style.background="red";
+spanHstq4.innerHTML="&#10005;";
+}else{
+return;
+}
+}
+ </script>
 
 
 
