@@ -436,13 +436,13 @@ function decrement1(num) {
     if(total>0){
       document.getElementById('input4').value =total+"Voyageurs";
     }else{
-      document.getElementById('input4').value =0; 
+      document.getElementById('input4').value =""; 
     }
   }else{
     if(total>0){
     document.getElementById('inputCmd4').value =total+"Voyageurs";      
     }else{
-      document.getElementById('inputCmd4').value =0; 
+      document.getElementById('inputCmd4').value =""; 
     }
    }
 }
@@ -470,13 +470,13 @@ function decrement2(num) {
     if(total>0){
       document.getElementById('input4').value =total+"Voyageurs";
     }else{
-      document.getElementById('input4').value =0; 
+      document.getElementById('input4').value =""; 
     }
   }else{
     if(total>0){
     document.getElementById('inputCmd4').value =total+"Voyageurs";      
     }else{
-      document.getElementById('inputCmd4').value =0; 
+      document.getElementById('inputCmd4').value =""; 
     }
    }
 }
@@ -504,13 +504,13 @@ function decrement3(num){
     if(total>0){
       document.getElementById('input4').value =total+"Voyageurs";
     }else{
-      document.getElementById('input4').value =0; 
+      document.getElementById('input4').value =""; 
     }
   }else{
     if(total>0){
     document.getElementById('inputCmd4').value =total+"Voyageurs";      
     }else{
-      document.getElementById('inputCmd4').value =0; 
+      document.getElementById('inputCmd4').value =""; 
     }
    }
 }
@@ -538,13 +538,13 @@ function decrement4(num){
     if(total>0){
       document.getElementById('input4').value =total+"Voyageurs";
     }else{
-      document.getElementById('input4').value =0; 
+      document.getElementById('input4').value =""; 
     }
   }else{
     if(total>0){
     document.getElementById('inputCmd4').value =total+"Voyageurs";
     }else{
-      document.getElementById('inputCmd4').value =0; 
+      document.getElementById('inputCmd4').value =""; 
     }
    }
 }
