@@ -269,6 +269,10 @@ $(document).ready(function(){
     var idfrmauto =document.getElementById("frmauto");
     var idFfrmTrip =document.getElementById("frmTrip");
     var idlblerreur=document.getElementById("lblerreur");
+    var idinput=document.getElementById("idFormInputQui");
+    if(idinput.style.display=="block"){
+      idinput.style.display="none";
+    }
 
     if(id=="btn1" && document.getElementById("input1").style.display!="none"&& document.getElementById("input2").style.display!="none"){
       if(txt1!='' && txt2!='' && txt3!='' && txt4!=''){
@@ -369,10 +373,12 @@ $(document).ready(function(){
   //***************** Function input qui ***********
 document.getElementById("input4").addEventListener("click",function(){
   var idinput=document.getElementById("idFormInputQui");
-  if(idinput.style.display==="none"){
+  var idRest=document.getElementById("frm");
+  if(idinput.style.display==="none"||idRest.style.display=="none"){
     if (window.matchMedia("(max-width: 601px)").matches){
     document.getElementById("contform1").style.display = "none";
     }
+    idRest.style.display = "none";
     idinput.style.display = "block";
    }else{
     idinput.style.display = "none";
