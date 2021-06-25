@@ -63,15 +63,14 @@ function addPrix(id) {
 }
             
 function showBag() {
-//   var idall=document.getElementById("idAllsContent");
   var idBag=document.getElementById("IdFormShop");
    if(idBag.style.display==="none"){
-//     idall.style.display = "none";
     idBag.style.display = "block";
     }else{
     idBag.style.display = "none";
   }
   }
+
 
 
 
@@ -204,6 +203,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("#l1").click(function(event){
       event.preventDefault();
+      document.getElementById("idFormInputQui").style.display="none";
       $(".container").css("width", "67%");
       $(".divtable").css("display", "none");
       $("#lblerreur").css("display", "none");
@@ -219,6 +219,7 @@ $(document).ready(function(){
   $(document).ready(function(){
     $("#l2").click(function(event){
       event.preventDefault();
+      document.getElementById("idFormInputQui").style.display="none";
       $(".container").css("width", "67%");
       $(".divtable").css("display", "none");
       $(".flex-container3").css("display", "none");
@@ -236,6 +237,7 @@ $(document).ready(function(){
   $(document).ready(function(){
     $("#l3,#l4").click(function(event){
       event.preventDefault();
+      document.getElementById("idFormInputQui").style.display="none";
       $("#lblerreur").css("display", "none");
       $(".container").css("width", "50%");
       $(".divtable").css("display", "none");
@@ -263,7 +265,7 @@ $(document).ready(function(){
     var txt3=document.getElementById("input3").value;
     var txt4=document.getElementById("input4").value;
           
-   var idFrm =document.getElementById("frm");
+    var idFrm =document.getElementById("frm");
     var idfrmauto =document.getElementById("frmauto");
     var idFfrmTrip =document.getElementById("frmTrip");
     var idlblerreur=document.getElementById("lblerreur");
@@ -327,6 +329,7 @@ $(document).ready(function(){
       $("#input4").show();
       $("#contform1").toggle();
       $("#frm").hide();
+      $("#idFormInputQui").hide();
     });
   });
   $(document).ready(function(){
@@ -337,12 +340,14 @@ $(document).ready(function(){
       $("#input4").show();
       $("#contform1").toggle();
       $("#frm").hide();
+      $("#idFormInputQui").hide();
     });
   });
   $(document).ready(function(){
     $("#link3").click(function(){
       $("#contform1").toggle();
       $("#frm").hide();
+      $("#idFormInputQui").hide();
       $("#input1").hide();
       $("#input3").hide();
       $("#input4").hide();
@@ -353,6 +358,7 @@ $(document).ready(function(){
     $("#link4").click(function(){
       $("#contform1").toggle();
       $("#frm").hide();
+      $("#idFormInputQui").hide();
       $("#input1").hide();
       $("#input3").hide();
       $("#input4").hide();
@@ -360,8 +366,148 @@ $(document).ready(function(){
     });
   });
 
+  //***************** Function input qui ***********
+document.getElementById("input4").addEventListener("click",function(){
+  var idinput=document.getElementById("idFormInputQui");
+  if(idinput.style.display==="none"){
+    if (window.matchMedia("(max-width: 601px)").matches){
+    document.getElementById("contform1").style.display = "none";
+    }
+    idinput.style.display = "block";
+   }else{
+    idinput.style.display = "none";
+ }
+});
+$(document).ready(function(){
+  $("#input1").click(function(){
+    $("#idFormInputQui").hide();
+  });
+  $("#input2").click(function(){
+    $("#idFormInputQui").hide();
+  });
+  $("#input3").click(function(){
+    $("#idFormInputQui").hide();
+  });
+});
+
+$(document).ready(function(){
+  $("#iconDown").click(function(){
+    $("#idFormInputQui").css("display", "none");
+    $("#contform1").css("display", "flex");
+  });
+
+});
+
+var valinput1 =document.getElementById('demoInput1');
+var valinput2 =document.getElementById('demoInput2');
+var valinput3 =document.getElementById('demoInput3');
+var valinput4 =document.getElementById('demoInput4');
 
 
+function increment1(num) {
+  var value1=parseInt(valinput1.value);
+  var value2=parseInt(valinput2.value);
+  var value3=parseInt(valinput3.value);
+  var value4=parseInt(valinput4.value);
+  var total=value1+value2+value3+value4+1;
+  document.getElementById('demoInput1').stepUp();
+  if(num===1){
+    document.getElementById('input4').value =total+"Voyageurs";
+  }else{
+    document.getElementById('inputCmd4').value =total+"Voyageurs";
+  }
+}
+function decrement1(num) {
+  var value1=parseInt(valinput1.value);
+  var value2=parseInt(valinput2.value);
+  var value3=parseInt(valinput3.value);
+  var value4=parseInt(valinput4.value);
+  var total=value1+value2+value3+value4-1;
+  document.getElementById('demoInput1').stepDown();
+  if(num===1){
+    document.getElementById('input4').value =total+"Voyageurs";
+  }else{
+    document.getElementById('inputCmd4').value =total+"Voyageurs";
+  }
+}
+  function increment2(num) {
+    var value1=parseInt(valinput1.value);
+    var value2=parseInt(valinput2.value);
+    var value3=parseInt(valinput3.value);
+    var value4=parseInt(valinput4.value);
+    var total=value1+value2+value3+value4+1;
+  document.getElementById('demoInput2').stepUp();
+  if(num===1){
+    document.getElementById('input4').value =total+"Voyageurs";
+  }else{
+    document.getElementById('inputCmd4').value =total+"Voyageurs";
+  }
+}
+function decrement2(num) {
+  var value1=parseInt(valinput1.value);
+  var value2=parseInt(valinput2.value);
+  var value3=parseInt(valinput3.value);
+  var value4=parseInt(valinput4.value);
+  var total=value1+value2+value3+value4-1;
+  document.getElementById('demoInput2').stepDown();
+  if(num===1){
+    document.getElementById('input4').value =total+"Voyageurs";
+  }else{
+    document.getElementById('inputCmd4').value =total+"Voyageurs";
+  }
+}
+  function increment3(num) {
+    var value1=parseInt(valinput1.value);
+    var value2=parseInt(valinput2.value);
+    var value3=parseInt(valinput3.value);
+    var value4=parseInt(valinput4.value);
+    var total=value1+value2+value3+value4+1;
+  document.getElementById('demoInput3').stepUp();
+  if(num===1){
+    document.getElementById('input4').value =total+"Voyageurs";
+  }else{
+    document.getElementById('inputCmd4').value =total+"Voyageurs";
+  }
+}
+function decrement3(num){
+  var value1=parseInt(valinput1.value);
+  var value2=parseInt(valinput2.value);
+  var value3=parseInt(valinput3.value);
+  var value4=parseInt(valinput4.value);
+  var total=value1+value2+value3+value4-1;
+  document.getElementById('demoInput3').stepDown();
+  if(num===1){
+    document.getElementById('input4').value =total+"Voyageurs";
+  }else{
+    document.getElementById('inputCmd4').value =total+"Voyageurs";
+  }
+}
+  function increment4(num) {
+    var value1=parseInt(valinput1.value);
+    var value2=parseInt(valinput2.value);
+    var value3=parseInt(valinput3.value);
+    var value4=parseInt(valinput4.value);
+    var total=value1+value2+value3+value4+1;
+  document.getElementById('demoInput4').stepUp();
+  if(num===1){
+    document.getElementById('input4').value =total+"Voyageurs";
+  }else{
+    document.getElementById('inputCmd4').value =total+"Voyageurs";
+  }
+}
+function decrement4(num){
+  var value1=parseInt(valinput1.value);
+  var value2=parseInt(valinput2.value);
+  var value3=parseInt(valinput3.value);
+  var value4=parseInt(valinput4.value);
+  var total=value1+value2+value3+value4-1;
+  document.getElementById('demoInput4').stepDown();
+  if(num===1){
+    document.getElementById('input4').value =total+"Voyageurs";
+  }else{
+    document.getElementById('inputCmd4').value =total+"Voyageurs";
+  }
+}
 
 
 
