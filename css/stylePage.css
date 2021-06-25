@@ -14,14 +14,16 @@
   -webkit-overflow-scrolling: touch;
 }
 
+
 body {
 	margin: 0;
 	padding: 0;
   height: 100%;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
-
      }
+     
+
 
 /************ Start jarallax *********/
 /* demo styles */
@@ -31,17 +33,7 @@ body {
   box-sizing: border-box;
 }
 
-iframe#IdIframeNavbar{
-  border: none!important;
-  height: 103px!important;
-  width: 100%!important;
-}
 
-iframe#IdIframePageBag{
-  width: 100%;
-  height: 214PX;
-  border-radius: 9px;
-}
 
 .jarallax {
   min-height: 100vh;
@@ -104,9 +96,6 @@ h1 {
   }
   .demo-table-cell a span.styspan {
     font-size: 17px;
-  }
-iframe#IdIframeNavbar{
-    height: 92px!important;
   }
 }
 
@@ -824,7 +813,7 @@ float: left;
 	  width: 20%;
   	outline: none;
     padding-inline-start: 14px;
-    font-size: 20px;
+    font-size: 17px;
 		  }
 
    input.item1{
@@ -2175,7 +2164,7 @@ div#dvslider span#spanclose:hover{
   div#dvslider span#spanclose{
     margin: 10px 15px 0 15px;
     position: relative;
-  }
+  } 
 
   .flex-left div#divtop p#NameAct{
     font-size: 16px;
@@ -2479,5 +2468,74 @@ div.flex-container div span.btnOkHisto {
   margin-left: 5px;
 }
 
+}
+
+ /******************* Style Input Qui **********************/
+ .divFormQui {
+  margin: 0 20px;
+  position: relative;
+  top: -55px;
+  padding-right: 2px;
+  background-color: #fff;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 10px 10px 35px 35px;
+}
+
+.divCont div{
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #6d6767;
+  margin: 7px 0;    
+}
+.divCont div div{
+  flex: 40%;
+}
+.divCont div.div1{
+  flex: 40%;
+  display: flex;
+  flex-flow: nowrap;
+}
+
+p.minus,p.plus{
+  padding:0 15px;
+  cursor:pointer;
+}
+div.divItem1 input{
+text-align:center;
+margin-left: 30px;
+border:none;
+outline:none;
+color: #6d6767;
+}
+div.divCont p#iconDown{
+text-align: center;
+margin-top: -10px;
+display: none;
+cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+.divFormQui{
+  top: 0;
+  border-top-right-radius: 35px;
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;  
+  margin: 0;
+  padding-top: 14px;
+  padding-bottom: 12px;
+ }
+ .divCont div {
+  margin: 4px 0;
+}
+div.divItem1 input {
+  margin-left: 0px;
+}
+div.divCont p#iconDown{
+  display: block;
+  }
 
 }
