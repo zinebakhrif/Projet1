@@ -26,7 +26,11 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap');
     </style>
-
+      <!-- input DaterangePicker -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/stylePage.css">
@@ -77,7 +81,7 @@
               <div class="flex-container" id="formInputCmd"> 
                 <input type="text" id="inputCmd1" name="text1" placeholder="D'ou" class="itemCmd1">
                 <input type="text" id="inputCmd2" name="text2" placeholder="Vers ou" class="itemCmd2">
-                <input type="text" class="datepicker itemCmd3" id="inputCmd3" placeholder="Quand">
+                <input type="text" class="itemCmd3" name="datefilter"  id="inputCmd3" placeholder="Quand">
                 <input type="text" id="inputCmd4" name="text4" placeholder="Qui" class="itemCmd4">       
                 <button type="button" class="btn btn-warning" id="idBtnSerchCmd">
                 <span class="glyphicon glyphicon-search"></span>
