@@ -2543,3 +2543,23 @@ div.divCont p#iconDown{
   }
 
 }
+
+ /******************** DateRangePicker ***********/
+ .daterangepicker .calendar-table th,
+  .daterangepicker .calendar-table td{
+    color: #7d7777;
+    font-size: 14px;
+ }
+ .daterangepicker td.active,
+  .daterangepicker td.active:hover{
+    background-color: #357ebd;
+    border-color: transparent;
+    color: #fff !important;
+  }
+  .daterangepicker .drp-calendar.right .calendar-table{
+    border-left: 1px solid #a7a0a0!important;
+  }
+  .daterangepicker .drp-calendar.right,
+  .daterangepicker .drp-calendar.left{
+    margin:8px;
+  }
