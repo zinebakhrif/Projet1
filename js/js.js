@@ -549,5 +549,20 @@ function decrement4(num){
    }
 }
 
+// *********** Function Input Quand DateTRangePicker*******
+
+$(function() {
+
+  $('input[name="datefilter"]').daterangepicker({
+      autoUpdateInput: false,
+      opens:"left",
+      autoApply:true
+  });
+
+  $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+  });
+});
+
 
 
