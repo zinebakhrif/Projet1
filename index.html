@@ -31,6 +31,12 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+          <!-- input DaterangePicker -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <!-- Jarallax -->
     <link href="./dist/jarallax.css" rel="stylesheet">
     <script src="./dist/jarallax.js"></script>
@@ -130,7 +136,7 @@
   <div class="flex-container" id="contform1">   
     <input type="text" id="input1" name="text1" placeholder="D'ou" class="item1" >
     <input type="text" id="input2" name="text2" placeholder="Vers ou" class="item2" >
-    <input type="text" class="datepicker item3" id="input3" placeholder="Quand">
+    <input type="text" class="item3" name="datefilter"  id="input3" placeholder="Quand">
     <input type="text" id="input4" name="text4" placeholder="Qui" class="item4" readonly>
 
     <button type="button" class="btn btn-warning" onclick="myshow(this.id)" id="btn1">
