@@ -752,6 +752,9 @@ float: left;
     color: red;
     padding-top: 5px;
     display: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0px;
     }
   .btn-warning {
 	background-color: #f8d001;
