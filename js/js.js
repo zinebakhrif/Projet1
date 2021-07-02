@@ -239,7 +239,7 @@ $(document).ready(function(){
       event.preventDefault();
       document.getElementById("idFormInputQui").style.display="none";
       $("#lblerreur").css("display", "none");
-      $(".container").css("width", "50%");
+      $(".container").css("width", "35%");
       $(".divtable").css("display", "none");
       $("#contform1").css("display", "flex");
         $("#input1").css("display", "none");
