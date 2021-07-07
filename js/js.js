@@ -251,11 +251,17 @@ $(document).ready(function(){
   });
 
   function reset() {
-    var myCollection = document.getElementsByTagName("input");
+    var inpt=document.getElementById("contform1");
+    var myCollection = inpt.getElementsByTagName("input");
     var i;
     for (i = 0; i < myCollection.length; i++) {
       myCollection[i].value = "";
     }
+    document.getElementById('demoInput1').value="0";
+    document.getElementById('demoInput2').value="0";
+    document.getElementById('demoInput3').value="0";
+    document.getElementById('demoInput4').value="0";
+
   }
 
   // //********/  Function paege index Button serach in input 
