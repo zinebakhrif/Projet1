@@ -412,145 +412,29 @@ var valinput3 =document.getElementById('demoInput3');
 var valinput4 =document.getElementById('demoInput4');
 
 
-function increment1(num) {
-  document.getElementById('demoInput1').stepUp();
-        
-  var value1=parseInt(valinput1.value);
-  var value2=parseInt(valinput2.value);
-  var value3=parseInt(valinput3.value);
-  var value4=parseInt(valinput4.value);
-  var total=value1+value2+value3+value4;
+function increment(num,id) {
+  id.parentElement.children[1].stepUp();
+  var total=parseInt(valinput1.value)+parseInt(valinput2.value)+parseInt(valinput3.value)+parseInt(valinput4.value);
+
   if(num===1){
     document.getElementById('input4').value =total+"Voyageurs";
   }else{
     document.getElementById('inputCmd4').value =total+"Voyageurs";
   }
 }
-function decrement1(num) {
-  document.getElementById('demoInput1').stepDown();
-        
-  var value1=parseInt(valinput1.value);
-  var value2=parseInt(valinput2.value);
-  var value3=parseInt(valinput3.value);
-  var value4=parseInt(valinput4.value);
-  var total=value1+value2+value3+value4;
+function decrement(num,id) {
+  id.parentElement.children[1].stepDown();
+  var total=parseInt(valinput1.value)+parseInt(valinput2.value)+parseInt(valinput3.value)+parseInt(valinput4.value);
   if(num===1){
     if(total>0){
       document.getElementById('input4').value =total+"Voyageurs";
     }else{
       document.getElementById('input4').value =""; 
+      document.getElementById('demoInput1').value =0; 
     }
   }else{
     if(total>0){
     document.getElementById('inputCmd4').value =total+"Voyageurs";      
-    }else{
-      document.getElementById('inputCmd4').value =""; 
-    }
-   }
-}
-  function increment2(num) {
-  document.getElementById('demoInput2').stepUp();
-          
-    var value1=parseInt(valinput1.value);
-    var value2=parseInt(valinput2.value);
-    var value3=parseInt(valinput3.value);
-    var value4=parseInt(valinput4.value);
-    var total=value1+value2+value3+value4;
-  if(num===1){
-    document.getElementById('input4').value =total+"Voyageurs";
-  }else{
-    document.getElementById('inputCmd4').value =total+"Voyageurs";
-  }
-}
-function decrement2(num) {
-  document.getElementById('demoInput2').stepDown();
-        
-  var value1=parseInt(valinput1.value);
-  var value2=parseInt(valinput2.value);
-  var value3=parseInt(valinput3.value);
-  var value4=parseInt(valinput4.value);
-  var total=value1+value2+value3+value4;
-  if(num===1){
-    if(total>0){
-      document.getElementById('input4').value =total+"Voyageurs";
-    }else{
-      document.getElementById('input4').value =""; 
-    }
-  }else{
-    if(total>0){
-    document.getElementById('inputCmd4').value =total+"Voyageurs";      
-    }else{
-      document.getElementById('inputCmd4').value =""; 
-    }
-   }
-}
-  function increment3(num) {
-  document.getElementById('demoInput3').stepUp();
-          
-    var value1=parseInt(valinput1.value);
-    var value2=parseInt(valinput2.value);
-    var value3=parseInt(valinput3.value);
-    var value4=parseInt(valinput4.value);
-    var total=value1+value2+value3+value4;
-  if(num===1){
-    document.getElementById('input4').value =total+"Voyageurs";
-  }else{
-    document.getElementById('inputCmd4').value =total+"Voyageurs";
-  }
-}
-function decrement3(num){
-  document.getElementById('demoInput3').stepDown();
-        
-  var value1=parseInt(valinput1.value);
-  var value2=parseInt(valinput2.value);
-  var value3=parseInt(valinput3.value);
-  var value4=parseInt(valinput4.value);
-  var total=value1+value2+value3+value4;
-  if(num===1){
-    if(total>0){
-      document.getElementById('input4').value =total+"Voyageurs";
-    }else{
-      document.getElementById('input4').value =""; 
-    }
-  }else{
-    if(total>0){
-    document.getElementById('inputCmd4').value =total+"Voyageurs";      
-    }else{
-      document.getElementById('inputCmd4').value =""; 
-    }
-   }
-}
-  function increment4(num) {
-  document.getElementById('demoInput4').stepUp();
-          
-    var value1=parseInt(valinput1.value);
-    var value2=parseInt(valinput2.value);
-    var value3=parseInt(valinput3.value);
-    var value4=parseInt(valinput4.value);
-    var total=value1+value2+value3+value4;
-  if(num===1){
-    document.getElementById('input4').value =total+"Voyageurs";
-  }else{
-    document.getElementById('inputCmd4').value =total+"Voyageurs";
-  }
-}
-function decrement4(num){
-  document.getElementById('demoInput4').stepDown();
-        
-  var value1=parseInt(valinput1.value);
-  var value2=parseInt(valinput2.value);
-  var value3=parseInt(valinput3.value);
-  var value4=parseInt(valinput4.value);
-  var total=value1+value2+value3+value4;
-  if(num===1){
-    if(total>0){
-      document.getElementById('input4').value =total+"Voyageurs";
-    }else{
-      document.getElementById('input4').value =""; 
-    }
-  }else{
-    if(total>0){
-    document.getElementById('inputCmd4').value =total+"Voyageurs";
     }else{
       document.getElementById('inputCmd4').value =""; 
     }
