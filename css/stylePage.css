@@ -745,7 +745,7 @@ float: left;
     height: auto;
    }
    .container{
-    width: 67%;
+    width: 70%;
    }
 
   label#lblerreur{
@@ -822,6 +822,10 @@ float: left;
     padding-inline-start: 14px;
     font-size: 17px;
 		  }
+      .flex-container input#input3{
+        width: 95%!important;
+        height: 100%;
+          }
 
    input.item1{
 	     padding-inline-start: 20px;
@@ -1013,6 +1017,9 @@ float: left;
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
           }
+          .flex-container input#input3{
+            height: auto;
+              }
           div#contform1 input::placeholder{
           padding-left:0;
           font-size: 15px;
@@ -1078,11 +1085,11 @@ float: left;
 
        /* style resulte recherch  */
 
-       table{
+       div#frm table{
          margin:5px 0;
        }
          
-       tr{
+       div#frm table tr{
         cursor: pointer;
        }
 
@@ -1128,13 +1135,13 @@ float: left;
         top: 0;
         border-radius: 35px;
        }
-      td{
+       div#frm table td{
         color:#b1b1b1;
         padding-bottom: 17px;
         padding-right: 2px;
         width: 19%;
       }
-      td:last-child{
+      div#frm table td:last-child{
         color:#91d65f;
         font-weight: bold;
       }
@@ -1154,7 +1161,7 @@ float: left;
       }
    
       @media (max-width: 770px) {
-        td{
+        div#frm table td{
           padding-bottom: 12px;
         }
       }
@@ -2547,22 +2554,181 @@ div.divCont p#iconDown{
 
 }
 
+
  /******************** DateRangePicker ***********/
- .daterangepicker .calendar-table th,
-  .daterangepicker .calendar-table td{
-    color: #7d7777;
-    font-size: 14px;
+ .daterangepicker{
+   border: none;
+   top: 153px!important;
+   border-radius: 0px 0px 35px 35px;
+   transform: translate(-15%, -1px) !important;
+   width: 60%;
  }
- .daterangepicker td.active,
-  .daterangepicker td.active:hover{
-    background-color: #357ebd;
-    border-color: transparent;
-    color: #fff !important;
+ .stydp1{
+   right: 9px !important;
+ }
+ .stydp2{
+  right:auto!important;
+}
+ .daterangepicker:before, .daterangepicker:after{
+  display: none!important;
+ }
+  
+  .daterangepicker .drp-calendar.right {
+      border-left: 1px solid #a7a0a0!important;
+      margin: 20px 0px;
+      padding: 4px 8px;
+      width: 48%;
+      max-width: 50%;
   }
-  .daterangepicker .drp-calendar.right .calendar-table{
-    border-left: 1px solid #a7a0a0!important;
+  .daterangepicker .drp-calendar.left {
+      margin: 20px 0px;
+      padding: 0 15px;
+      width: 50%;
+      max-width: 50%;
   }
-  .daterangepicker .drp-calendar.right,
-  .daterangepicker .drp-calendar.left{
-    margin:8px;
+
+
+  .daterangepicker .drp-calendar.left .table-condensed th.next{
+    visibility: hidden;
   }
+
+
+
+ .daterangepicker .calendar-time{
+  border: 1px solid #a49595;
+  width: 90px;
+  display: flex;
+  border-radius: 18px;
+  flex-wrap: nowrap;
+ }
+  .daterangepicker select.hourselect, 
+  .daterangepicker select.minuteselect, 
+  .daterangepicker select.secondselect,
+  .daterangepicker select.ampmselect{
+    -webkit-appearance: none;
+    background:transparent;
+    color: #7d7777;
+    border: none;
+    width: 35px;
+    display: flex;
+    padding-left: 10px;
+  }
+
+
+  .daterangepicker.show-calendar .drp-buttons{
+    display: none!important;
+  }
+
+  @media only screen and (max-width: 1090px){
+    .daterangepicker{
+      top: 154px!important;
+    }
+  }
+    @media only screen and (max-width: 960px){
+      .daterangepicker{
+        top: 140px!important;
+      }
+    }
+    @media only screen and (max-width: 820px){
+      .daterangepicker{
+        transform: translate(-8%,-1px) !important;
+      }
+
+    }
+    @media only screen and (max-width: 790px){
+
+      .daterangepicker{
+        width: 65% !important;
+        transform: translate(-7%, -2px) !important;
+        border-radius: 7px 7px 35px 35px;
+      }
+      
+    }
+      @media only screen and (max-width: 700px){
+        .daterangepicker{
+          top: 133px!important;
+        }
+        .daterangepicker .drp-calendar.right {
+              margin-right: 15px;
+          }
+          .daterangepicker .drp-calendar.left {
+              margin: 15px 15px;
+          }
+        }
+
+
+        @media only screen and (max-width: 600px){
+          .drp-calendar.right .calendar-table{
+            display: none;
+          }
+          .daterangepicker{
+            transform: translate(0) !important;
+            top: auto!important;
+            bottom: 65px!important;
+            width: 55%!important;
+          }
+          .daterangepicker .drp-calendar.left .table-condensed th.next{
+            visibility: visible;
+          }
+          .daterangepicker .calendar-time{
+            margin-left: 5px;
+          }
+          .daterangepicker .drp-calendar.right{
+            position: absolute;
+            right: 0px;
+            bottom: 38px;
+            width: 45%;
+            float: right;
+            border-left: none!important;
+            padding: 0;
+          }
+        .drp-calendar.left.single{
+          padding: 0;
+          margin: 10px 10px;
+          width: 90%;
+          max-width: 90%;
+        }
+          .daterangepicker.show-calendar .drp-buttons{
+            display: block!important;
+          }
+          .daterangepicker .drp-selected{
+            display: none!important;
+          }
+          button.cancelBtn.btn.btn-sm.btn-default {
+            display: none!important;
+        }
+
+        .drp-calendar.right div.calendar-time{
+          float: right;
+        }
+        button.applyBtn.btn.btn-sm.btn-primary{
+          margin-left: 0;
+          margin-right: 15px;
+        }
+        .daterangepicker.ltr.show-calendar.openscenter {
+          border-radius: 25px 25px 15px 15px !important;
+      }
+    }
+    @media only screen and (max-width: 453px){
+      .daterangepicker{
+        width: 67%!important;
+      }
+      .daterangepicker .drp-calendar.right{
+        bottom: 34px;
+      }
+
+    }
+    @media only screen and (max-width: 350px){
+      .daterangepicker{
+        width: 70%!important;
+        transform: translate(8%,-1px) !important;
+      }
+
+    }
+    @media only screen and (max-width: 320px){
+      .daterangepicker{
+        width: 76%!important;
+        transform: translate(3%,-1px) !important;
+      }
+
+    }
