@@ -1,6 +1,6 @@
 
 /* init Jarallax */
-        jarallax(document.querySelectorAll('.jarallax'));
+jarallax(document.querySelectorAll('.jarallax'));
 
 
 //----------- Login-----------
@@ -14,10 +14,6 @@ window.onclick = function(event) {
 }
 
   //****************** Input Date ********** 
-  $( function() {
-    $( ".datepicker" ).datepicker();
-  } );
-
  
           // ************* Function close Page **************
       
@@ -61,15 +57,12 @@ function addPrix(id) {
    }
 
 }
-            
-function showBag() {
-  var idBag=document.getElementById("IdFormShop");
-   if(idBag.style.display==="none"){
-    idBag.style.display = "block";
-    }else{
-    idBag.style.display = "none";
-  }
-  }
+  //*** Function Show Bag */
+  $(document).ready(function(){
+    $("#btnBag").click(function(){
+      $("#IdFormShop").toggle();
+    });
+  });
 
 
 
@@ -77,8 +70,8 @@ function showBag() {
 // *************** Form Login *************** 
         function showModale(){  
          document.getElementById("IdFormShop").style.display = "none";
-          var valueUser = document.getElementById("ltr1");
-          if(valueUser.innerText=="Login"){
+          var valueUser = document.getElementById("iconuser");
+          if(valueUser.style.display!="inline"){
          document.getElementById("id01").style.display="block";
           }else{
             showProfiel();
@@ -97,13 +90,13 @@ document.getElementById("IdLogin").addEventListener("click", function() {
   }
 });
 
-//******** Function Form Profiel Custemer ************
+//******** Function Form Profiel customer ************
 function myFctBtnLog() {
   document.getElementById("id01").style.display="none";
   document.getElementById("iconuser").style.display="inline";
-  var str1 = document.getElementById("inptTxtUser").value;
-  var res1 = str1.slice(0,4);  
-  document.getElementById("ltr1").innerHTML = res1; 
+  // var str1 = document.getElementById("inptTxtUser").value;
+  // var res1 = str1.slice(0,4);  
+  // document.getElementById("ltr1").innerHTML = res1; 
 }
 //*************** Form Button  Profile *********** 
 function showProfiel() {
@@ -114,6 +107,8 @@ var idall=document.getElementById("idAllsContent");
   idall.style.display = "none";
 }
 }
+
+
 
 
 
@@ -139,8 +134,7 @@ var idall=document.getElementById("idAllsContent");
         document.getElementById("tab3").style.display="none";
       });
 //**********End Button Login **************
-         
-          
+
 
 //******** Evente Enter In inputs *******
 var idcon= document.getElementById("contform1");
@@ -203,8 +197,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("#l1").click(function(event){
       event.preventDefault();
-      document.getElementById("idFormInputQui").style.display="none";
-      $(".container").css("width", "67%");
+      $(".container").css("width", "70%");
       $(".divtable").css("display", "none");
       $("#lblerreur").css("display", "none");
         $("#contform1").css("display", "flex");
@@ -212,15 +205,22 @@ $(document).ready(function(){
         $("#input2").css("display", "flex");
         $("#input3").css("display", "flex");
         $("#input4").css("display", "flex");
+        $("#kt_daterangepicker_4").css("display", "flex");
         $("#input2").css("border-right", "1px solid #a8a383");
         $(".flex-container").css("flex", "100%");
+        $("#idFormInputQui").hide();
+        document.getElementById('input4').value="";
+      $(".daterangepicker").css("position"," absolute");
+      $(".daterangepicker").css("margin-left"," auto!important");
+      $(".daterangepicker").css("margin-right"," auto!important");
+      $(".daterangepicker").removeClass("stydp1");
+      $(".daterangepicker").addClass("stydp2");
     });
   });
   $(document).ready(function(){
     $("#l2").click(function(event){
       event.preventDefault();
-      document.getElementById("idFormInputQui").style.display="none";
-      $(".container").css("width", "67%");
+      $(".container").css("width", "70%");
       $(".divtable").css("display", "none");
       $(".flex-container3").css("display", "none");
       $("#frmTrip").css("display", "block");
@@ -230,22 +230,31 @@ $(document).ready(function(){
         $("#input3").css("display", "flex");
         $("#input4").css("display", "flex");
         $("#input2").css("display", "none");
+        $("#kt_daterangepicker_4").css("display", "flex");
         $(".flex-container").css("flex", "100%");
+        $("#idFormInputQui").hide();
+        document.getElementById('input4').value="";
+        $(".daterangepicker").removeClass("stydp2");
+        $(".daterangepicker").addClass("stydp1");
+      $(".daterangepicker").css("position"," absolute", 'important');
+      $(".daterangepicker").css("margin-left"," auto", 'important');
+      $(".daterangepicker").css("margin-right"," auto", 'important');
     });
   });
 //    Lien 2 
   $(document).ready(function(){
     $("#l3,#l4").click(function(event){
       event.preventDefault();
-      document.getElementById("idFormInputQui").style.display="none";
+      $("#idFormInputQui").hide();
       $("#lblerreur").css("display", "none");
-      $(".container").css("width", "35%");
+      $(".container").css("width", "40%");
       $(".divtable").css("display", "none");
       $("#contform1").css("display", "flex");
         $("#input1").css("display", "none");
         $("#input3").css("display", "none");
         $("#input4").css("display", "none");
         $("#input2").css("display", "flex");
+        $("#kt_daterangepicker_4").css("display", "none");
         $("#input2").css("border-right", "none");
     });
   });
@@ -393,12 +402,14 @@ document.getElementById("input4").addEventListener("click",function(){
 $(document).ready(function(){
   $("#input1").click(function(){
     $("#idFormInputQui").hide();
+    $("#lblerreur").hide();
   });
   $("#input2").click(function(){
     $("#idFormInputQui").hide();
+    $("#lblerreur").hide();
   });
-  $("#input3").click(function(){
-    $("#idFormInputQui").hide();
+  $("#input4").click(function(){
+    $("#lblerreur").hide();
   });
 });
 
@@ -421,11 +432,10 @@ var valinput4 =document.getElementById('demoInput4');
 function increment(num,id) {
   id.parentElement.children[1].stepUp();
   var total=parseInt(valinput1.value)+parseInt(valinput2.value)+parseInt(valinput3.value)+parseInt(valinput4.value);
-
   if(num===1){
-    document.getElementById('input4').value =total+"Voyageurs";
+    document.getElementById('input4').value =total+"  Voyageurs";
   }else{
-    document.getElementById('inputCmd4').value =total+"Voyageurs";
+    document.getElementById('inputCmd4').value =total+"  Voyageurs";
   }
 }
 function decrement(num,id) {
@@ -433,34 +443,52 @@ function decrement(num,id) {
   var total=parseInt(valinput1.value)+parseInt(valinput2.value)+parseInt(valinput3.value)+parseInt(valinput4.value);
   if(num===1){
     if(total>0){
-      document.getElementById('input4').value =total+"Voyageurs";
+      document.getElementById('input4').value =total+"  Voyageurs";
     }else{
       document.getElementById('input4').value =""; 
       document.getElementById('demoInput1').value =0; 
     }
   }else{
     if(total>0){
-    document.getElementById('inputCmd4').value =total+"Voyageurs";      
+    document.getElementById('inputCmd4').value =total+"  Voyageurs";      
     }else{
       document.getElementById('inputCmd4').value =""; 
     }
    }
 }
 
+
+ 
 // *********** Function Input Quand DateTRangePicker*******
 
-$(function() {
+  // date & time
+  $('#kt_daterangepicker_4').daterangepicker({
+    timePicker: true,
+    timePicker24Hour:true,
+    opens:'center',
+    locale: {
+     format: 'MM/DD/YYYY h:mm A'
+    }
+   }, function(start, end, label) {
+    $('#kt_daterangepicker_4 .item3').val( start.format('MM/DD/YYYY h:mm') + ' - ' + end.format('MM/DD/YYYY h:mm'));
+   });
 
-  $('input[name="datefilter"]').daterangepicker({
-      autoUpdateInput: false,
-      opens:"left",
-      autoApply:true
-  });
-
-  $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
-      $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+// ******Responsive Mobile ***********
+$(document).ready(function(){
+  $("#input3").click(function(){
+    $(".applyBtn").html("Enregisrer");
+    $("#lblerreur").hide();
+    $("#idFormInputQui").hide();
   });
 });
 
+ $('.drp-calendar.left').addClass('single');
 
-
+ $('.calendar-table').on('DOMSubtreeModified', function() {
+   var el = $(".prev.available").parent().children().last();
+   if (el.hasClass('next available')) {
+     return;
+   }
+   el.addClass('next available');
+   el.append('<span></span>');
+ }); 
