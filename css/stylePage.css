@@ -1085,11 +1085,11 @@ float: left;
 
        /* style resulte recherch  */
 
-       div#frm table{
+       div#table1 table{
          margin:5px 0;
        }
          
-       div#frm table tr{
+       div#table1 table tr, table#table1 tr{
         cursor: pointer;
        }
 
@@ -1135,17 +1135,17 @@ float: left;
         top: 0;
         border-radius: 35px;
        }
-       div#frm table td{
+       div#table1 table td, table#table1 td{
         color:#b1b1b1;
         padding-bottom: 17px;
         padding-right: 2px;
         width: 19%;
       }
-      div#frm table td:last-child{
+      div#table1 table td:last-child{
         color:#91d65f;
         font-weight: bold;
       }
-      td.tdprix1,td.tdprix2{
+      table#table1 td.tdprix1,table#table1 td.tdprix2{
         color:#91d65f;
         font-weight: bold;
       }
@@ -1161,7 +1161,7 @@ float: left;
       }
    
       @media (max-width: 770px) {
-        div#frm table td{
+        div#table1 table td, table#table1 td{
           padding-bottom: 12px;
         }
       }
