@@ -31,8 +31,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    
-          <!-- input DaterangePicker -->
+      <!-- input DaterangePicker -->
       <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -84,7 +83,7 @@
               </li>
 
               <li class="lien7">
-                <a href="javascript:void(0)" onclick="showBag()"class="bi bi-bag-fill"></a>
+                <a href="javascript:void(0)"  id="btnBag"class="bi bi-bag-fill"></a>
               </li>             
             </ul>
           </div> 
@@ -108,7 +107,6 @@
          </div>
 
      </div>
-    
          <!-- End header -->
             <!---------------------------Start Profiel  ---------------->
             <div class="allsContent animate" id="idAllsContent">
@@ -134,11 +132,12 @@
  <div class="row" >
 
   <div class="flex-container" id="contform1">   
-    <input type="text" id="input1" name="text1" placeholder="D'ou" class="item1" >
-    <input type="text" id="input2" name="text2" placeholder="Vers ou" class="item2" >
-    <input type="text" class="item3" name="datefilter"  id="input3" placeholder="Quand">
-    <input type="text" id="input4" name="text4" placeholder="Qui" class="item4" readonly>
-
+    <input type="text" id="input1" name="text1" placeholder="D'ou" class="item1" required>
+    <input type="text" id="input2" name="text2" placeholder="Vers ou" class="item2" required>
+    <div id='kt_daterangepicker_4' class="item3">
+    <input type="text" id="input3" name="datetimes" placeholder="Quand" class="item3" required>
+    </div>
+    <input type="text" id="input4" name="text4" placeholder="Qui" class="item4" readonly required>
     <button type="button" class="btn btn-warning" onclick="myshow(this.id)" id="btn1">
     <span class="glyphicon glyphicon-search"></span>
     <i class="bi bi-arrow-right arrow" style="font-size: 25px;color:black"></i>
@@ -147,28 +146,28 @@
 
   </div> 
   </div>
-          <!-- *************** Input Qui **********-->
+  <!-- *************** Input Qui **********-->
   <div class="divFormQui w3-animate-bottom" id="idFormInputQui" style="display: none;">
     <div class="divCont">
       <p id="iconDown"><i style="font-size:24px" class="fa">&#xf0d7;</i></p>
       <div><div>Adults</div><div class="divItem1">
       <p onclick="decrement(1,this)" class="minus">&#10092;</p>
-      <input id=demoInput1 type=number placeholder="0" value=0 min=0 max=50 class="numberPlace" readonly>
+      <input id=demoInput1 type=number placeholder="0" value="0" min=0 max=50 class="numberPlace" readonly>
       <p onclick="increment(1,this)" class="minus">&#x276D;</p>
       </div></div>
       <div><div>Enfants</div><div class="divItem1">
       <p onclick="decrement(1,this)" class="plus">&#10092;</p>
-      <input id=demoInput2 type=number placeholder="0" value=0 min=0 max=50 class="numberPlace" readonly>
+      <input id=demoInput2 type=number placeholder="0" value="0" min=0 max=50 class="numberPlace" readonly>
       <p onclick="increment(1,this)" class="minus">&#x276D;</p>
       </div></div>
       <div><div>Bebe</div><div class="divItem1">
       <p onclick="decrement(1,this)" class="plus">&#10092;</p>
-      <input id=demoInput3 type=number placeholder="0" value=0 min=0 max=50 class="numberPlace" readonly>
+      <input id=demoInput3 type=number placeholder="0" value="0" min=0 max=50 class="numberPlace" readonly>
       <p onclick="increment(1,this)" class="minus">&#x276D;</p>
       </div></div>
       <div><div>Bagages</div><div class="divItem1">
       <p onclick="decrement(1,this)" class="plus">&#10092;</p>
-      <input id=demoInput4 type=number placeholder="0" value=0 min=0 max=50 class="numberPlace" readonly>
+      <input id=demoInput4 type=number placeholder="0" value="0" min=0 max=50 class="numberPlace" readonly>
       <p onclick="increment(1,this)" class="minus">&#x276D;</p>
       </div></div>
       
@@ -355,9 +354,10 @@
 </div>
   <!--           End Login                -->
 
-
-  
     <script src="./js/js.js" ></script>
+
+<script type="text/javascript">
+</script>
 
 
 </body>
