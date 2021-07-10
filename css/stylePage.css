@@ -747,6 +747,9 @@ float: left;
    .container{
     width: 70%;
    }
+   div#contform1{
+     display: flex;
+   }
 
   label#lblerreur{
     color: red;
@@ -1166,6 +1169,9 @@ float: left;
         }
       }
       @media (max-width: 600px) {
+        .divtable#frm{
+          display: none;
+         }
         .glyphicon{
           display: none;
         }
@@ -2569,6 +2575,9 @@ div.divCont p#iconDown{
  .stydp2{
   right:auto!important;
 }
+.WidthMax{
+  right: 105px !important;
+}
  .daterangepicker:before, .daterangepicker:after{
   display: none!important;
  }
@@ -2618,7 +2627,16 @@ div.divCont p#iconDown{
   .daterangepicker.show-calendar .drp-buttons{
     display: none!important;
   }
-
+  @media only screen and (max-width: 1920px){
+    .daterangepicker{
+      width: 56%;
+    }
+  }
+  @media only screen and (max-width: 1440px){
+    .daterangepicker{
+      width: 60%;
+    }
+  }
   @media only screen and (max-width: 1090px){
     .daterangepicker{
       top: 154px!important;
