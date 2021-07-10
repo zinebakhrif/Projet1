@@ -214,6 +214,7 @@ $(document).ready(function(){
       $(".daterangepicker").css("margin-left"," auto!important");
       $(".daterangepicker").css("margin-right"," auto!important");
       $(".daterangepicker").removeClass("stydp1");
+      $(".daterangepicker").removeClass("WidthMax");
       $(".daterangepicker").addClass("stydp2");
     });
   });
@@ -235,10 +236,15 @@ $(document).ready(function(){
         $("#idFormInputQui").hide();
         document.getElementById('input4').value="";
         $(".daterangepicker").removeClass("stydp2");
-        $(".daterangepicker").addClass("stydp1");
       $(".daterangepicker").css("position"," absolute", 'important');
       $(".daterangepicker").css("margin-left"," auto", 'important');
       $(".daterangepicker").css("margin-right"," auto", 'important');
+      if($(window).width()<=1920){
+        $(".daterangepicker").addClass("WidthMax");
+      }else{
+        $(".daterangepicker").removeClass("WidthMax");
+        $(".daterangepicker").addClass("stydp1");
+      }
     });
   });
 //    Lien 2 
