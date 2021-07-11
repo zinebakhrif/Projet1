@@ -18,24 +18,34 @@ window.onclick = function(event) {
           // ************* Function close Page **************
       
       function ClosePage(){
-        document.getElementById('idstyleDvDetail').style.display='none';
-        document.getElementById('dvslider').style.display='none';
+        document.getElementById('idDvDetailPlan').style.display='none';
+        document.getElementById('idDvDetailActive').style.display='none';
+        document.getElementById('dvslider1').style.display='none';
+        document.getElementById('dvslider2').style.display='none';
          document.getElementById('dvgrid1').style.visibility='visible';
          document.getElementById('dvgrid2').style.visibility='visible';
      }
 
   // ************* Function Show Detail **************
   function showDetailPlan(id){
-         document.getElementById('idstyleDvDetail').style.display='block';
-         document.getElementById('dvslider').style.display='block';
+         document.getElementById('idDvDetailPlan').style.display='block';
+         document.getElementById('idDvDetailActive').style.display='none';
+         document.getElementById('dvslider1').style.display='block';
+         document.getElementById('dvslider2').style.display='none';
          var val1=document.getElementById(id);
          var y = val1.getElementsByTagName("span");
-         document.getElementById('NameAct').innerHTML=y[0].innerText;
-         document.getElementById('idTxtSld').innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit,";
-         document.getElementById("ifram2").src="https://www.google.com/maps/place/Marrakesh/data=!4m2!3m1!1s0xdafee8d96179e51:0x5950b6534f87adb8?sa=X&ved=2ahUKEwjdzpuvudvxAhVPY8AKHZ06D6QQ8gEwAHoECAQQAQ";
-         document.getElementById("spanLike").innerHTML="9000";
-         document.getElementById("spanprix").innerHTML="300";     
-        }
+         document.getElementById('NamePlan').innerHTML=y[0].innerText;
+         document.getElementById('dvgrid1').style.visibility='hidden';
+       }
+       function showDetailActivitie2(id){
+         document.getElementById('idDvDetailActive').style.display='block';
+         document.getElementById('idDvDetailPlan').style.display='none';
+         document.getElementById('dvslider1').style.display='none';
+         document.getElementById('dvslider2').style.display='block';
+         var val2=document.getElementById(id);
+         document.getElementById('NameAct').innerHTML=val2.innerText;
+         document.getElementById('dvgrid2').style.visibility='hidden';
+       }
 
 //  ******************* Function Add Prix **********
 function addPrix(id) {
@@ -232,14 +242,15 @@ $(document).ready(function(){
         $("#idFormInputQui").hide();
         document.getElementById('input4').value="";
         $(".daterangepicker").removeClass("stydp2");
+        $(".daterangepicker").addClass("stydp1");
       $(".daterangepicker").css("position"," absolute", 'important');
       $(".daterangepicker").css("margin-left"," auto", 'important');
       $(".daterangepicker").css("margin-right"," auto", 'important');
       if($(window).width()<=1920){
         $(".daterangepicker").addClass("WidthMax");
+        $(".daterangepicker").removeClass("stydp1");
       }else{
         $(".daterangepicker").removeClass("WidthMax");
-        $(".daterangepicker").addClass("stydp1");
       }
     });
   });
