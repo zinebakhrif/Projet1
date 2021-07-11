@@ -1944,7 +1944,7 @@ div.dv1{
 
 
 /**************** Style Page Four  ****************/
-.flex-left div#divtop p#NameAct{
+.flex-left div#divtop p#NamePlan,.flex-left div#divtop p#NameAct{
   color: white;
   font-size: 22px;
 }
@@ -1955,7 +1955,7 @@ div.dv1{
   margin-right: auto;
 }
 
- div#dvslider{
+ div.dvslider{
     width: 100%;
     height: 95%;
     background: rgb(46 46 46 / 70%);
@@ -1966,13 +1966,15 @@ div.dv1{
 }
 div.dvsld{
 height: 85vh !important;
+top: 0;
 }
 .styleDvDetail{
   display: none;
 }
 
-.mySlides {display: none;border-radius: 25px;}
-.mySlides img {vertical-align: middle;border-radius: 25px;}
+.mySlides1,.mySlides2 {display: none;border-radius: 25px;}
+.mySlides1 img,.mySlides2 img {vertical-align: middle;border-radius: 25px;}
+
 
 /* Slideshow container */
 .slideshow-container {
@@ -2082,7 +2084,7 @@ height: 85vh !important;
   max-width: 80%;
 }
 
-.dvBtmSld p#idpicon {
+.dvBtmSld p.idpicon {
   color: red;
   background: white;
   border-radius: 10px;
@@ -2090,7 +2092,7 @@ height: 85vh !important;
   cursor:pointer;
 }
 
-.dvBtmSld p#idpicon span#spanIcon{
+.dvBtmSld p.idpicon span#spanIcon{
   padding-right: 10px;
 }
 
@@ -2105,7 +2107,7 @@ height: 85vh !important;
 .dvBtmSld p#idpicon:hover,.dvBtmSld p#idpPrix:hover{
   opacity: 0.9;
 }
-.dvBtmSld p#idpicon:active {
+.dvBtmSld p.idpicon:active {
     color: white;
     background: red;
 }
@@ -2114,7 +2116,7 @@ height: 85vh !important;
   background: white;
 }
 
-div#dvslider .flex-right p {
+div.dvslider .flex-right p {
   color: white;
   font-size: 1vw;
   padding-bottom: 10vh;
@@ -2123,26 +2125,27 @@ div#dvslider .flex-right p {
   line-height: 26px;
 }
 
-div#dvslider .flex-right .google-map2{
+div.dvslider .flex-right .google-map2{
   width: 85%;
   margin: auto;
 }
 
 
-div#dvslider .flex-right .google-map2 iframe#ifram2{
+div.dvslider .flex-right .google-map2 iframe#ifram2,
+div.dvslider .flex-right .google-map2 iframe#ifram3{
   width: 100%;
   border-radius: 20px;
   height: 155px;
 }
 
-div#dvslider span#spanclose{
+div.dvslider span#spanclose{
     color: white;
     font-size: 25px;
     float: right;
     margin: 15px; 
     cursor: pointer; 
 }
-div#dvslider span#spanclose:hover{
+div.dvslider span#spanclose:hover{
   color: red;
 }
 
@@ -2155,7 +2158,8 @@ div#dvslider span#spanclose:hover{
     padding-bottom: 6vh;
     line-height: 23px;
   }
-  div#dvslider .flex-right .google-map2 iframe#ifram2{
+  div.dvslider .flex-right .google-map2 iframe#ifram2,
+  div.dvslider .flex-right .google-map2 iframe#ifram3{
     height: 80px;
   }
 }
@@ -2165,28 +2169,28 @@ div#dvslider span#spanclose:hover{
     width: 100%;
   }
 
-  div#dvslider .flex-right p{
+  div.dvslider .flex-right p{
     font-size: 1.4vw;
     padding-bottom: 5vh;
     line-height: 21px;
     width: 100%;
   }
-  div#dvslider .flex-right .google-map2{
+  div.dvslider .flex-right .google-map2{
     width: 95%;
   }
 }
 @media only screen and (max-width: 600px) {
 
-  div#dvslider .flex-left{
+  div.dvslider .flex-left{
     padding: 0;
     margin-top: -20px;
   }
-  div#dvslider span#spanclose{
+  div.dvslider span#spanclose{
     margin: 10px 15px 0 15px;
     position: relative;
   } 
 
-  .flex-left div#divtop p#NameAct{
+  .flex-left div#divtop p#NameAct,.flex-left div#divtop p#NamePlan{
     font-size: 16px;
     margin:0;
   }
@@ -2201,20 +2205,21 @@ div#dvslider span#spanclose:hover{
     margin: 8px auto 0px auto;
     max-width: 65%;
   }
-  .dvBtmSld p#idpicon,.dvBtmSld p#idpPrix{
+  .dvBtmSld p.idpicon,.dvBtmSld p#idpPrix{
     border-radius: 8px;
     padding: 5px 8px;
     margin:0;
   }
-  div#dvslider .flex-right{
+  div.dvslider .flex-right{
     padding: 6px 10px;
   }
-  div#dvslider .flex-right p{
+  div.dvslider .flex-right p{
     font-size: 9px;
     line-height: 12px;
     padding: 4px;
   }
-  div#dvslider .flex-right .google-map2 iframe#ifram2{
+  div.dvslider .flex-right .google-map2 iframe#ifram2,
+  div.dvslider .flex-right .google-map2 iframe#ifram3{
     height: 125px;
   }
 
@@ -2227,7 +2232,7 @@ div#dvslider span#spanclose:hover{
 }
 
 @media only screen and (max-width: 320px) {
-  div#dvslider .flex-right p{
+  div.dvslider .flex-right p{
     font-size: 10px;
     line-height: 15px;
   }
@@ -2575,9 +2580,7 @@ div.divCont p#iconDown{
  .stydp2{
   right:auto!important;
 }
-.WidthMax{
-  right: 105px !important;
-}
+
  .daterangepicker:before, .daterangepicker:after{
   display: none!important;
  }
