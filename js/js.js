@@ -27,15 +27,23 @@ window.onclick = function(event) {
      }
 
   // ************* Function Show Detail **************
-  function showDetailPlan(id){
-         document.getElementById('idDvDetailPlan').style.display='block';
-         document.getElementById('idDvDetailActive').style.display='none';
-         document.getElementById('dvslider1').style.display='block';
-         document.getElementById('dvslider2').style.display='none';
-         var val1=document.getElementById(id);
-         var y = val1.getElementsByTagName("span");
-         document.getElementById('NamePlan').innerHTML=y[0].innerText;
-         document.getElementById('dvgrid1').style.visibility='hidden';
+  function showDetailPlan(id,num){
+         if(num==1){
+          document.getElementById('idDvDetailPlan').style.display='block';
+          document.getElementById('idDvDetailActive').style.display='none';
+          document.getElementById('dvslider1').style.display='block';
+          document.getElementById('dvslider2').style.display='none';
+          var val1=document.getElementById(id);
+          var y = val1.getElementsByTagName("span");
+          document.getElementById('NamePlan').innerHTML=y[0].innerText;
+          document.getElementById('dvgrid1').style.visibility='hidden';
+         }else{
+          document.getElementById('NameAct').innerHTML=document.getElementById(id).children[0].innerHTML;
+          document.getElementById('idDvDetailActive').style.display='block';
+          document.getElementById('idDvDetailPlan').style.display='none';
+          document.getElementById('dvslider1').style.display='none';
+          document.getElementById('dvslider2').style.display='block'; 
+         }
        }
        function showDetailActivitie2(id){
          document.getElementById('idDvDetailActive').style.display='block';
@@ -47,6 +55,7 @@ window.onclick = function(event) {
          document.getElementById('dvgrid2').style.visibility='hidden';
        }
 
+      //  document.querySelector(".img1").children[0].src="./img/img1.jpg";
 //  ******************* Function Add Prix **********
 function addPrix(id) {
  x= document.getElementById(id).innerText;
@@ -100,9 +109,6 @@ document.getElementById("IdLogin").addEventListener("click", function() {
 function myFctBtnLog() {
   document.getElementById("id01").style.display="none";
   document.getElementById("iconuser").style.display="inline";
-  // var str1 = document.getElementById("inptTxtUser").value;
-  // var res1 = str1.slice(0,4);  
-  // document.getElementById("ltr1").innerHTML = res1; 
 }
 //*************** Form Button  Profile *********** 
 function showProfiel() {
@@ -431,7 +437,6 @@ $(document).ready(function(){
     $("#idFormInputQui").css("display", "none");
     $("#contform1").css("display", "flex");
   });
-
 });
 
 //************* Function Button Plus Minus Input Qui   */
