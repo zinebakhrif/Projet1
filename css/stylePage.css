@@ -1962,11 +1962,11 @@ div.dv1{
     position: absolute;
     z-index: 2;
     margin-top: 0;
-    display: none;
 }
 div.dvsld{
 height: 85vh !important;
 top: 0;
+display: none;
 }
 .styleDvDetail{
   display: none;
